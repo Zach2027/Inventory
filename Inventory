@@ -1,3 +1,5 @@
+import random
+
 print('''This is a gladiator game that will bring you through the depths
 of battle with rewards and gear, while playing, it will take you through the
 key situations of the dual. With every win you get closer to freedom (reach 100 fame to become free)
@@ -39,11 +41,21 @@ while health > 0:
     print(f"as you clash your {weapon_1} against his sword, you see a cople things you can do")
     health_1 = 60 
     while health_1 > 0:
-        attack_1 = input(f"you can (1) try to trade blows hoping for the upper hand, you can (2) play it slow and out last your oponient")
-
-
-
-
+        attack_1 = input(f"you can (1) try to trade blows trying for the upper hand, you can (2) play it slow and out last your oponient, or go for the final blow(3)")
+        if attack_1 == "1":
+            trade_blows_1 = random.choice(["hit","miss","critical miss"])
+            if trade_blows_1 == "hit":
+                health_1 = health_1 - damage
+            if trade_blows_1 == "miss":
+                health_1 = health_1 - damage*0.5
+            if trade_blows_1 == "critical miss":
+                health = health - 15 + sheild
+        if attack_1 == "2":
+            play_slow_1 = random.choice(["1","2","3","4"])
+            if play_slow_1 == "1":
+                health = health - 10 + sheild 
+            else:
+                health_1 = health_1 - 0.25*damage
 
 
 
