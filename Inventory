@@ -1,34 +1,45 @@
-
-print("""This game is an aventure game that takes place back in time
-You will go on adventures in order to defeat the red dragon.
-Don't die and the best of luck to you""")
-health == 100
-While health > 0:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+print('''This is a gladiator game that will bring you through the depths
+of battle with rewards and gear, while playing, it will take you through the
+key situations of the dual. With every win you get closer to freedom (reach 100 fame to become free)
+Good luck to you''')
+name = input("what is your name soldeir")
+print('''You have been captured and your fist fight a waits''')
+print('''As you step towards the thunding gates, 
+    you get offered a choice, 
+    your pick will stay with you for the rest of your life
+      (some gear gives you health, damage or maybe sheild, 
+      these will help you survive)''')
+fame = 0
+health = 100
+damage = 0
+sheild = 0
+while health > 0:
+  
+   
+    choice_1 = input("Would like an axe(1) or a long sword(2)")
+    while int(choice_1) != 1 and int(choice_1) != 2:
+        choice_1 = input("please enter a 1 or a 2")
+        if choice_1 == "1" or choice_1 == "2":
+            break
+    if choice_1 == "1":
+        weapon_1 = "Axe"
+        damage = damage + 20
+    if choice_1 == "2":
+        weapon_1 = "Long Sword"
+        damage = damage + 10
+        sheild = sheild + 5
+    
+    print("As you step put the gates with your new " + weapon_1 + ", you see your oponent,")
+    print('''He is a rather smaller oponint with a trash weapon, it looks as if it has existed for centaries, 
+    great for these lowere class fights
+          
+    The battle begins''')    
+    print('''the rather small man attacks with his sword, 
+    through out the battle you see key openings and these openings are where you need to strike.''') 
+    print(f"as you clash your {weapon_1} against his sword, you see a cople things you can do")
+    health_1 = 60 
+    while health_1 > 0:
+        attack_1 = input(f"you can (1) try to trade blows hoping for the upper hand, you can (2) play it slow and out last your oponient")
 
 
 
