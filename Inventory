@@ -30,25 +30,28 @@ while health > 0:
             break
     if choice_1 == "1":
         weapon_1 = "Axe"
-        damage = damage + 20
+        damage = int(damage) + 20
     if choice_1 == "2":
         weapon_1 = "Long Sword"
         damage = damage + 10
         sheild = sheild + 5
-    input(stats)
+
+    health_1 = 60
     input("As you step put the gates with your new " + weapon_1 + ", you see your oponent,")
-    input('''He is a rather smaller oponint with a trash weapon, it looks as if it has existed for centaries, 
-    great for these lowere class fights''')
-          
+    input(f'''you size your self up against your oponent and relize that your bigger. 
+          You have {health} health while the man only has {health_1} health
+          you have {damage} damage but your not quite sure about the man
+          you also have {sheild} defence but you also don't know the mans defence''')
+
     input('''The battle begins''')    
     print('''It is a rather small man who has a sharpend shiny silver sword. 
-    Through out the battle you see key openings and these openings are where you need to strike.''') 
+    Through out the battle you're going to see key openings and these openings are where you need to strike.''') 
     input(f"As you clash your {weapon_1} against the man's sword, you see a cople things you can do")
-    health_1 = 100 
+
     while health_1 > 0:
         attack_1 = input("""you can (1) attempt to trade blows trying for the upper hand, 
                     you can (2) play it slow and out last your oponient, 
-                    or go for the final blow(3)""")
+                    or go for the final blow (3)""")
         if attack_1 == "1":
             trade_blows_1 = random.choice(["hit","miss","critical miss"])
             if trade_blows_1 == "hit":
@@ -56,13 +59,13 @@ while health > 0:
                 print(f"You get a clean hit and you have {health} left, your opponent has {health_1} health left")
             if trade_blows_1 == "miss":
                 health_1 = health_1 - damage*0.5
-                print(f"You stale mate, comeing off with a small victory.  You have {health} left, your opponent has {health_1} health left")
+                print(f"You find a small and daughtful opening that you take, comeing off with a small victory.  You have {health} left, your opponent has {health_1} health left")
             if trade_blows_1 == "critical miss":
                 health = health - 15 + sheild
                 print(f"You miss horribly, You have {health} left, your opponent has {health_1} helth left")
         if attack_1 == "2":
-            play_slow_1 = random.choice(["1","2","3","4"])
-            if play_slow_1 == "1":
+            play_slow_1 = random.choice(["lose","win","win","win"])
+            if play_slow_1 == "lose":
                 health = health - 10 + sheild 
             else:
                 health_1 = health_1 - 0.25*damage
