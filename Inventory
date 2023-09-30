@@ -4,17 +4,22 @@ print('''This is a gladiator game that will bring you through the depths
 of battle with rewards and gear, while playing, it will take you through the
 key situations of the dual. With every win you get closer to freedom (reach 100 fame to become free)
 Good luck to you''')
-name = input("what is your name soldeir")
-print('''You have been captured and your fist fight a waits''')
+name = input("what is your name Gladiator")
+print('''You are slave forced into battle and your fist fight a waits''')
 print('''As you step towards the thunding gates, 
     you get offered a choice, 
     your pick will stay with you for the rest of your life
       (some gear gives you health, damage or maybe sheild, 
-      these will help you survive)''')
+      these will help you survive in battle)''')
 fame = 0
 health = 100
 damage = 0
 sheild = 0
+
+stats = (f"""your health is {health}, 
+your Damage is {damage}, 
+you have a defence of {sheild}, 
+and you have {fame} fame""")
 while health > 0:
   
    
@@ -30,26 +35,31 @@ while health > 0:
         weapon_1 = "Long Sword"
         damage = damage + 10
         sheild = sheild + 5
-    
-    print("As you step put the gates with your new " + weapon_1 + ", you see your oponent,")
-    print('''He is a rather smaller oponint with a trash weapon, it looks as if it has existed for centaries, 
-    great for these lowere class fights
+    input(stats)
+    input("As you step put the gates with your new " + weapon_1 + ", you see your oponent,")
+    input('''He is a rather smaller oponint with a trash weapon, it looks as if it has existed for centaries, 
+    great for these lowere class fights''')
           
-    The battle begins''')    
-    print('''the rather small man attacks with his sword, 
-    through out the battle you see key openings and these openings are where you need to strike.''') 
-    print(f"as you clash your {weapon_1} against his sword, you see a cople things you can do")
-    health_1 = 60 
+    input('''The battle begins''')    
+    print('''It is a rather small man who has a sharpend shiny silver sword. 
+    Through out the battle you see key openings and these openings are where you need to strike.''') 
+    input(f"As you clash your {weapon_1} against the man's sword, you see a cople things you can do")
+    health_1 = 100 
     while health_1 > 0:
-        attack_1 = input(f"you can (1) try to trade blows trying for the upper hand, you can (2) play it slow and out last your oponient, or go for the final blow(3)")
+        attack_1 = input("""you can (1) attempt to trade blows trying for the upper hand, 
+                    you can (2) play it slow and out last your oponient, 
+                    or go for the final blow(3)""")
         if attack_1 == "1":
             trade_blows_1 = random.choice(["hit","miss","critical miss"])
             if trade_blows_1 == "hit":
                 health_1 = health_1 - damage
+                print(f"You get a clean hit and you have {health} left, your opponent has {health_1} health left")
             if trade_blows_1 == "miss":
                 health_1 = health_1 - damage*0.5
+                print(f"You stale mate, comeing off with a small victory.  You have {health} left, your opponent has {health_1} health left")
             if trade_blows_1 == "critical miss":
                 health = health - 15 + sheild
+                print(f"You miss horribly, You have {health} left, your opponent has {health_1} helth left")
         if attack_1 == "2":
             play_slow_1 = random.choice(["1","2","3","4"])
             if play_slow_1 == "1":
