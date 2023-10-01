@@ -37,7 +37,7 @@ while health > 0:
         sheild = sheild + 5
 
     health_1 = 60
-    input("As you step put the gates with your new " + weapon_1 + ", you see your oponent,")
+    input("As you step out the gates of rome with your new " + weapon_1 + ", you see your oponent,")
     input(f'''you size your self up against your oponent and relize that your bigger. 
           You have {health} health while the man only has {health_1} health
           you have {damage} damage but your not quite sure about the man
@@ -51,27 +51,61 @@ while health > 0:
     while health_1 > 0:
         attack_1 = input("""you can (1) attempt to trade blows trying for the upper hand, 
                     you can (2) play it slow and out last your oponient, 
-                    or go for the final blow (3)""")
+                    or go for the a big blow (3)""")
         if attack_1 == "1":
             trade_blows_1 = random.choice(["hit","miss","critical miss"])
             if trade_blows_1 == "hit":
                 health_1 = health_1 - damage
-                print(f"You get a clean hit and you have {health} left, your opponent has {health_1} health left")
+                if health_1 > 0:
+                    print(f"You get a clean hit and you have {health} left, your opponent has {health_1} health left")
+                if health_1 <= 0:
+                    print(f'''As the man swings his sword to you, you manage to side step the blow, 
+                retaliating with a strike of you own.  As you swing your {weapon_1} at his head, you get a clean strike
+                sliceing his head clean off as you win the fight and the crowd''')
+
             if trade_blows_1 == "miss":
-                health_1 = health_1 - damage*0.5
-                print(f"You find a small and daughtful opening that you take, comeing off with a small victory.  You have {health} left, your opponent has {health_1} health left")
+                health_1 = health_1 - damage*0.25
+                if health_1 > 0:
+                    print(f"You find a small and daughtful opening that you take, comeing off with a small victory.  You have {health} left, your opponent has {health_1} health left")
+                if health_1 <= 0:
+                    print(f'''As a deadly wave of attacks come, you find your self with the high ground but the small man doesn't give up
+                          aproching you he tries to swing at your ankles jumping of you bring your {weapon_1} 
+                        down in his head spliting it right down the midle, winning the fight and the crowd.''')
             if trade_blows_1 == "critical miss":
                 health = health - 15 + sheild
-                print(f"You miss horribly, You have {health} left, your opponent has {health_1} helth left")
+                print(f'''You miss horribly, allowing the man to duck your attack slicing your ancle,
+                      You have {health} left, your opponent has {health_1} helth left''')
         if attack_1 == "2":
             play_slow_1 = random.choice(["lose","win","win","win"])
             if play_slow_1 == "lose":
-                health = health - 10 + sheild 
+                health = health - 15 + sheild 
+                print(f'''As you play it safe, you opponent finds an opening,
+                       throwing a rock at you leg cousing a deep cut to form, you have {health} 
+                       left while your openent has {health_1} health left''')
             else:
                 health_1 = health_1 - 0.25*damage
+                if health_1 > 0:
+                    print(f"""As you play it slow you manage to get a few small hits on your opponent.
+                      This does little damage and your opponent is at {health_1} health while your at {health} health.""")
+                if health_1 <= 0:
+                    print(f'''As you clash blades, you slide your {weapon_1} down the blade for the mans sword,
+                    with a little force you mange to cut the mans hands off killing him and winning the fight and the crowd.''')
+
+        if attack_1 == "3":
+            big_blow = random.choice(["win","win","lose","lose","lose"])
+            if big_blow == "win":
+                health_1 = health_1 - damage*2
+                if health_1 > 0:
+                    print(f"""You perform an amazing counter to the charging man, slashing him threw his chest, 
+                although this is non lethal, it did a huge amount of damage, you have {health} health left
+                and your bleeding opponent has {health_1} health left.""")
+                if health_1 <= 0:
+                    print('''As the small man presses you, you see an opening on his leg, 
+                    taking it you cut his leg off and go for the arm, sliceing it clean off, wining the battle, the day and the crowd.''')
+            if big_blow == "lose":
+                health = health - 35
+                print(f'''As you take a wrong step forward, the man sees this before you even make your move,
+                      stabbing you through your chest, you have {health} health and the man has {health_1} health left''')
 
 
-
-
-
-
+                
