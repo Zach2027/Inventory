@@ -107,5 +107,37 @@ while health > 0:
                 print(f'''As you take a wrong step forward, the man sees this before you even make your move,
                       stabbing you through your chest, you have {health} health and the man has {health_1} health left''')
 
+    input('3 days later')
+    fame = fame + 5
+    choice_2 = input(f'''Through out your recoving time, you put your time to good use.
+        You relized that you could (1) sharpen your {weapon_1}, (2) get a good healling meal or (3) attepmt to get a lesson from an old Gladiator''')
+    while int(choice_2) != 1 and int(choice_2) != 2 and int(choice_2) != 3:
+        choice_2 = input("please enter a 1, 2 or a 3")
+        if choice_2 == "1" or choice_2 == "2" or choice_2 == "3":
+            break            
 
-                
+    if choice_2 == "1":
+        damage = damage + 10
+        print(f'''You sharpen your {weapon_1} adding some damage to it.  
+            You now have {damage} damage.''')
+    if choice_2 == "2":
+        health = health + 30
+        print(f'''You find a good meal, healling your self up.  As you enjoy your warm meal,
+            you regain some health, bring yourself up to {health} health''')
+
+    if choice_2 == "3":
+        sheild = sheild + 7
+        print(f'''You find an old man with a lot of gray.  He to is a slave too, as your train, he points something out
+        you relize that this suggestion is meaning full.  You ask if there is anything else that the man sees,
+        in return he offers a leason, you take it and relized the this will help you with your defence.
+            Your new defence is {sheild} ''')
+
+    input(f'''As time goes on he heal your injureis, but their is something new, you hear word of a certain Gladiator
+    his name echos threw your camp, all anyone talkes about is a Gladiator named {name}.  Your also relized that you gained 
+    fame from your fight, puting you at {fame} fame.''')
+
+    print('''Your next fight is in one hour, as you prep, ''')
+
+
+
+
