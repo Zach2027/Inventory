@@ -5,8 +5,9 @@ of battle with rewards and gear, while playing, it will take you through the
 key situations of the dual. With every win you get closer to freedom (reach 100 fame to become free)
 Good luck to you''')
 name = input("what is your name Gladiator")
-print('''You are slave forced into battle and your fist fight a waits''')
-print('''As you step towards the thunding gates, 
+print('''You are slave forced into battle and your fist fight a waits.''')
+print('''
+      As you step towards the thunding gates, 
     you get offered a choice, 
     your pick will stay with you for the rest of your life
       (some gear gives you health, damage or maybe sheild, 
@@ -52,6 +53,10 @@ while health > 0:
         attack_1 = input("""you can (1) attempt to trade blows trying for the upper hand, 
                     you can (2) play it slow and out last your oponient, 
                     or go for the a big blow (3)""")
+        while int(attack_1) != 1 and int(attack_1) != 2 and int(attack_1) != 3:
+            attack_1 = input("please enter a 1, 2 or a 3")
+            if attack_1 == "1" or attack_1 == "2" or attack_1 == "3":
+                break
         if attack_1 == "1":
             trade_blows_1 = random.choice(["hit","miss","critical miss"])
             if trade_blows_1 == "hit":
@@ -118,16 +123,16 @@ while health > 0:
 
     if choice_2 == "1":
         damage = damage + 10
-        print(f'''You sharpen your {weapon_1} adding some damage to it.  
+        input(f'''You sharpen your {weapon_1} adding some damage to it.  
             You now have {damage} damage.''')
     if choice_2 == "2":
         health = health + 30
-        print(f'''You find a good meal, healling your self up.  As you enjoy your warm meal,
+        input(f'''You find a good meal, healling your self up.  As you enjoy your warm meal,
             you regain some health, bring yourself up to {health} health''')
 
     if choice_2 == "3":
         sheild = sheild + 7
-        print(f'''You find an old man with a lot of gray.  He to is a slave too, as your train, he points something out
+        input(f'''You find an old man with a lot of gray.  He to is a slave too, as you train, he points something out
         you relize that this suggestion is meaning full.  You ask if there is anything else that the man sees,
         in return he offers a leason, you take it and relized the this will help you with your defence.
             Your new defence is {sheild} ''')
@@ -135,8 +140,74 @@ while health > 0:
     input(f'''As time goes on he heal your injureis, but their is something new, you hear word of a certain Gladiator
     his name echos threw your camp, all anyone talkes about is a Gladiator named {name}.  Your also relized that you gained 
     fame from your fight, puting you at {fame} fame.''')
+    Korlox_health = 300
+    Korlox_damage = 10
+    input(f'''Your next fight is in one hour, as you prep and resarch for imformation on your oppenent, 
+          you find out your fighting a big guy. The mans name is Korlox the big.  Korlox is 4-0 on all his fights.
+          As you study his past fights, you see that Korlox has {Korlox_health} health when you only have a mere {health} health.
+          The upside is that your have {damage} when Korlox only has {Korlox_damage}.
+          You have {sheild} defence while Korlox has none.''')
+          
+    input('''In your next fight, you will have a different type of battle, being able to chose what strike your want to do.
+          Through this you will be able to have more options and the battle will be more intense.''')
+    
+    input('''You exit the Gates of an old beaten down arena.  Korlox stands infront of you, as you step out,
+        You see Korlox is holding a long axe.  As  the battle begins you start to circle each other, neither one daring to make the fist move
+        it is up to you and you see a cople things you can do''')
+    while Korlox_health > 0:
+        attack_2 = input('''You can (1) side strike, hoping for a clean hit, 
+            (2) Slice up, attempting for some damage
+            (3) go for the foot, trying to trip your openent or 
+            (4) go for a stab praying that you turn Korlox into a human kabob.''')
+        while int(attack_2) != 1 and int(attack_2) != 2 and int(attack_2) != 3 and int(attack_2) != 4:
+            attack_2 = input("please enter a 1, 2, 3 or a 4")
+            if attack_2 == "1" or attack_2 == "2" or attack_2 == "3" or attack_2 =="4":
+                break
+        
+        if attack_2 == "1":
+            side_strike = random.choice(["win", "win", "lose"])
+            if side_strike == "win":
+                Korlox_health = Korlox_health - damage
+                print(f"""You clash your {weapon_1} with Korlox's axe, you mange to slide your blade
+                    around Korlox's hilt slashing his arm. You have {health} left and Korlox has {Korlox_health} health left.""")
 
-    print('''Your next fight is in one hour, as you prep, ''')
+            if side_strike == "lose":
+                health = health - Korlox_damage
+                print(f"As you attack Korlox you get out played. Korlox steps to the side, cousing you to miss your attack and Korlox returns a wooden hilt to the face.  This puts you down to {health} health")
+
+        if attack_2 == "2":
+            slice_up = random.choice(["big_win","win","lose","lose"])
+            if slice_up == "big_win":
+                Korlox_health = Korlox_health - 2*damage
+                print(f"""As you clash the blade of your {weapon_1} against Korlox's axe, you mange to slice to knee of Korlox
+                    forcing him to open up which you take the opertunity to slice Korlox from his lower abbs to his chest
+                    forming a deep cut. Korlox has {Korlox_health} health left""")
+                
+            if slice_up == "win":
+                Korlox_health = Korlox_health - damage*0.75
+                print(f"""You mange to find a little opeing of Korlox's chest, swinging up, you make a small cut on his chest
+                Korlox has {Korlox_health} health left and you have {health} health left.""")
+            
+            if slice_up == "lose":
+                health = health - Korlox_damage
+                print(f"""You see an opening as you attack, you go for a leathal blow but Korlox side steps, returning a blade to the chest.
+                      Korlox has {Korlox_health} health left and you have {health} health left.""")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
