@@ -176,40 +176,85 @@ while health > 0:
                     with the monsters top half sliding off the his legs, you hear {name} chanting in the crowds. 
                     You won the battle but more importantly you won the crowd.''')
             if side_strike == "lose":
-                health = health - Korlox_damage
+                health = health - Korlox_damage + sheild
                 print(f"As you attack Korlox you get out played. Korlox steps to the side, cousing you to miss your attack and Korlox returns a wooden hilt to the face.  This puts you down to {health} health")
 
         if attack_2 == "2":
             slice_up = random.choice(["big_win","win","lose","lose"])
+
             if slice_up == "big_win":
                 Korlox_health = Korlox_health - 2*damage
-                print(f"""As you clash the blade of your {weapon_1} against Korlox's axe, you mange to slice to knee of Korlox
-                    forcing him to open up which you take the opertunity to slice Korlox from his lower abbs to his chest
-                    forming a deep cut. Korlox has {Korlox_health} health left""")
-                
+                if Korlox_health > 0:
+                    print(f"""As you clash the blade of your {weapon_1} against Korlox's axe, you mange to slice to knee of Korlox
+            forcing him to open up which you take the opertunity to slice Korlox from his lower abbs to his chest
+            forming a deep cut. Korlox has {Korlox_health} health left""")
+                else:
+                    print(f"""As Korlox swings his axe horizontaly at your head, you duck, sending an uppercut back with you {weapon_1}
+            slicing Korlox right in half, spliting him. As his huge body slams against the sand, your hear {name} {name} {name} fill the arena""")
+                    
             if slice_up == "win":
                 Korlox_health = Korlox_health - damage*0.75
-                print(f"""You mange to find a little opeing of Korlox's chest, swinging up, you make a small cut on his chest
+                if Korlox_health > 0:
+                    print(f"""You mange to find a little opeing of Korlox's chest, swinging up, you make a small cut on his chest
                 Korlox has {Korlox_health} health left and you have {health} health left.""")
-            
+                
+                else:
+                    print("""As Korlox lunges at you, you manage to side step the attack, sliceing Korlox's hands off.  
+                Although this is a non lethal strike, you have one the battle. Korlox drops to the ground, defenceless. 'kill!' 'kill!' 'kill!' 
+                start to fill the air. Korlox's life is in your hands.""")
+                    Korlox_life = input("Do you (1) listen to the crowd or (2), spare the fighters life")
+                    while int(Korlox_life) != 1 and int(Korlox_life) != 2:
+                        Korlox_life = input("please enter a 1 or a 2")
+                        if Korlox_life == "1" or Korlox_life == "2":
+                            break
+
+                    if Korlox_life == "1":
+                        fame = fame + 10
+                        ("You slice korlox's head clean off, gaining 5 fame.")
+                    if Korlox_life == "2":
+                        fame = fame + 10
+                        ("You dify the crowd, sparing Korlox's life.  By doing this you become more liked by all giving you 10 fame")
             if slice_up == "lose":
-                health = health - Korlox_damage
+                health = health - Korlox_damage + sheild
+
                 print(f"""You see an opening as you attack, you go for a leathal blow but Korlox side steps, returning a blade to the chest.
                       Korlox has {Korlox_health} health left and you have {health} health left.""")
 
+        
+        if attack_2 == "3":
+            foot = random.choice(["sweep","miss""sweep",])
+            if foot == "sweep":
+                Korlox_health = Korlox_health - damage*0.25
+                if Korlox_health > 0:
+                    print(f"""You sucsessfully sweep the leg of Korlox, cousing him to fall, this is an effective way to tire out Korlox
+                    this puts Korlox down to {Korlox_health} health while your at {health} health""")
+                else:
+                    print(f"As you Sweep Korlox's leg, he falls which gives you enough time throw your {weapon_1} down through Korlax's head, winning the crowd and the Fight.")
+
+            if foot == "miss":
+                health = health - Korlox_damage*1.5 +sheild
+                print(f"Korlax steps over you {weapon_1} which is swong at his leg, bashing you with his axe, you go down to {health} health and Korlax has {Korlox_health} health left")
+
+
+        if attack_2 == "4":
+            stab = random.choice(["big_win,lose,big_lose"])
+            if stab == "big_win":
+                Korlox_health = Korlox_health - damage*2
+                if Korlox_health > 0:
+                    print(f"""As Korlox swings down his axe, you manage to force the blade into a large stone.  
+                As Korlox is tring to get his axe free, you manage to impale him with the tip of your {weapon_1}
+                this puts Korlox at {Korlox_health} health while you have {health} health left.""")
+                else:
+                    print(f'''As Korlox and you exgange blows, you stab Korlox with the tip of your {weapon_1}, forcing it through Korlox you feel the tention be relived
+                    Then you relized that the tip of you {weapon_1} is sticking out the back of Korlox.  You won the battle and the crowd.''')
+            if stab == "lose":
+                health = health - Korlox_damage + sheild
+                print(f'''You go for the stab on Korlox but your too slow, taking the side of Korlox's axe to your head.
+                this puts you down to {health} health''')
             
-
-
-
-
-
-
-
-
-
-
-
-
+            if stab == "big_lose":
+                health = health - Korlox_damage*2 + sheild
+                print("You're starting to get slopy, Korlox is out lasting you")
 
 
 
