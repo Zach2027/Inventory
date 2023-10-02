@@ -254,9 +254,12 @@ while health > 0:
             
             if stab == "big_lose":
                 health = health - Korlox_damage*2 + sheild
-                print("You're starting to get slopy, Korlox is out lasting you")
-
-
+                print(f"""You're starting to get slopy, Korlox is out lasting you. Getting frustrated you go for a risky move that doesn't pay off
+                With Korlox easily moving out of the way, stabing you in the arm with a non leathal blox.
+                Your at {health} health and Korlox is at {Korlox_health} health.""")
+    fame = fame + 10
+    input(f"""Your victory is widely acknowledged.  Lots of people know the name {name}. 
+    You become very popular, your fame becomes {fame} as more people cheer for you""")
 
 
 
