@@ -168,9 +168,13 @@ while health > 0:
             side_strike = random.choice(["win", "win", "lose"])
             if side_strike == "win":
                 Korlox_health = Korlox_health - damage
-                print(f"""You clash your {weapon_1} with Korlox's axe, you mange to slide your blade
+                if Korlox_health > 0:
+                    print(f"""You clash your {weapon_1} with Korlox's axe, you mange to slide your blade
                     around Korlox's hilt slashing his arm. You have {health} left and Korlox has {Korlox_health} health left.""")
-
+                else:
+                    input(f'''As Korlox swings his axe down on you, you mange to step to the side and cut the giant in half.
+                    with the monsters top half sliding off the his legs, you hear {name} chanting in the crowds. 
+                    You won the battle but more importantly you won the crowd.''')
             if side_strike == "lose":
                 health = health - Korlox_damage
                 print(f"As you attack Korlox you get out played. Korlox steps to the side, cousing you to miss your attack and Korlox returns a wooden hilt to the face.  This puts you down to {health} health")
@@ -193,7 +197,7 @@ while health > 0:
                 print(f"""You see an opening as you attack, you go for a leathal blow but Korlox side steps, returning a blade to the chest.
                       Korlox has {Korlox_health} health left and you have {health} health left.""")
 
-
+            
 
 
 
