@@ -149,7 +149,7 @@ his name echos threw your camp, all anyone talkes about is a Gladiator named {na
 fame from your fight, puting you at {fame} fame.''')
     health = health + 30
     Korlox_health = 200
-    Korlox_strength = 10
+    Korlox_strength = 8
     input(f'''Your next fight is in one hour, as you prep and resarch for imformation on your oppenent, 
 you find out you're fighting a big guy. The man's name is Korlox the big.  Korlox is 4-0 on all his fights.
 As you study his past fights, you see that Korlox has {Korlox_health} health when you only have a mere {health} health.
@@ -267,13 +267,32 @@ Through this you will be able to have more options and the battle will be more i
                 With Korlox easily moving out of the way, stabing you in the arm with a non leathal blox.
                 Your at {health} health and Korlox is at {Korlox_health} health.""")
     if health <= 0:
+        print("You died")
         break
     fame = fame + 10
     input(f"""Your victory is widely acknowledged.  Lots of people know the name {name}. 
     You become very popular, your fame becomes {fame} as more people cheer for you""")
+    input(f'''The next few days are on the chiller side, you rest eat and sleep. This lasts for about a week before you gain enough strength to train''')    
+    input('''As you strength train, a man comes up to you and starts a conversation about how well you fought. 
+    He says that he was a slave in his early days and knows your going to be great and he is willing to help
+all he askes in return is for you to mention his name when you become great. 
+    The man then brings out 2 pairs of armor and says his name is Marcus Aurelius.''')
 
+    armor = input('''Would You like
+(1), A highly armord armor set that is made of heavy metal which will help protect you
+(2), A lighter chainmail armor set that will protect to a certain degree but is made to be adgile''')
 
+    if armor != "1" or "2":
+        armor = input("please entar a 1 or 2")
 
+    if armor == "1":
+        sheild = sheild + 8
+        print(f"Your armor helped your defence mayjorly puting it at {sheild}")
+
+    if armor == "2":
+        sheild = sheild + 3
+        strength = strength + 10
+        print(f"You take the light wieght chainmail armor which puts you defense at {sheild} and you relize that your stronger when you wear this armor puting you at {strength} strength")
 
 
 
