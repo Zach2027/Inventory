@@ -1,4 +1,5 @@
 import random
+
 print("Gladiator writen by Zach and edited by Kaz")
 print('''This is a gladiator game that will bring you through the depths
 of battle with rewards and gear, while playing, it will take you through the
@@ -16,6 +17,8 @@ fame = 0
 health = 100
 strength = 0
 shield = 0
+
+
 
 stats = (f"""your health is {health}, 
 your strength is {strength}, 
@@ -325,13 +328,10 @@ he comes out you size him up. ''')
 
 
 
-
-
-
 print("You DIE")
 #Kaz Ideas
-#def stats(current_health,current_strength,current_shield,current_fame):
-    # print(f"""your health is {health}, 
-    # your strength is {strength}, 
-    # you have a defense of {shield}, 
-    # and you have {fame} fame""")
+def print_stats(current_health,current_strength,current_shield,current_fame):
+    print(f"""your health is {current_health}, 
+    your strength is {current_strength}, 
+    you have a defense of {current_shield}, 
+    and you have {fame} fame""")
