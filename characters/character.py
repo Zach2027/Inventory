@@ -37,10 +37,10 @@ class Character:
 tigris = Character("Tigris", 100, 20, 10, axe)
 gladiator = Character("Gladiator", 200, 20, 0, axe)
 
-def main():
-    print(tigris)
-    print(gladiator)
-    tigris.attack(gladiator)
-    print(gladiator)
+# def main():
+#     print(tigris)
+#     print(gladiator)
+#     tigris.attack(gladiator)
+#     print(gladiator)
 
-main()
+# main()
