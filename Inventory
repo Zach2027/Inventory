@@ -1,5 +1,5 @@
 import random
-
+print("Gladiator writen by Zach and edited by Kaz")
 print('''This is a gladiator game that will bring you through the depths
 of battle with rewards and gear, while playing, it will take you through the
 key situations of the duel. With every win you get closer to freedom (reach 100 fame to become free)
@@ -282,7 +282,7 @@ all he askes in return is for you to mention his name when you become great.
 (1), A highly armord armor set that is made of heavy metal which will help protect you
 (2), A lighter chainmail armor set that will protect to a certain degree but is made to be adgile''')
 
-    if armor != "1" or "2":
+    if armor != "1" and armor != "2":
         armor = input("please entar a 1 or 2")
 
     if armor == "1":
@@ -294,7 +294,17 @@ all he askes in return is for you to mention his name when you become great.
         strength = strength + 10
         print(f"You take the light wieght chainmail armor which puts you defense at {shield} and you relize that your stronger when you wear this armor puting you at {strength} strength")
 
-
+    input(f'''As you get ready for your 3rd fight and your owner Antonius Proximo tells you that you and him need to talk.
+He tells you that you opponent is a mean killing machine coming out of retirement and he wants blood.  His name is Tigris of Gaul.  
+After long talk, Proximo tells you that he was a slave once. set free by the emporor. The pnly way to become free is to win the crowd.
+Antonius Proximo tells you that he wasn't great because of his skill but he was great because the crowd loved him.''')
+    Tigris_health = 100
+    Tigris_strength = 20
+    Tigris_shield =10    
+    print(f'''As you step out of the roaring gates of the same areana you just won in, you hear both names roaring, {name}, Tigris
+he comes out you size him up. ''')
+    
+    
 
 
 
@@ -320,7 +330,7 @@ all he askes in return is for you to mention his name when you become great.
 
 print("You DIE")
 #Kaz Ideas
-# def stats(current_health,current_strength,current_shield,current_fame):
+#def stats(current_health,current_strength,current_shield,current_fame):
     # print(f"""your health is {health}, 
     # your strength is {strength}, 
     # you have a defense of {shield}, 
