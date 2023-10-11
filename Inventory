@@ -1,6 +1,6 @@
 import random
 
-print('''This is a gladiator game that will bring you through the depths
+print('''This was a gladiator game that will bring you through the depths
 of battle with rewards and gear, while playing, it will take you through the
 key situations of the dual. With every win you get closer to freedom (reach 100 fame to become free)
 Good luck to you''')
