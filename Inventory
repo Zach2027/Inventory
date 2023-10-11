@@ -2,12 +2,12 @@ import random
 
 print('''This is a gladiator game that will bring you through the depths
 of battle with rewards and gear, while playing, it will take you through the
-key situations of the dual. With every win you get closer to freedom (reach 100 fame to become free)
+key situations of the duel. With every win you get closer to freedom (reach 100 fame to become free)
 Good luck to you''')
-name = input("what is your name Gladiator?  ")
+name = input("what is your new name Gladiator?  ")
 print('''
       You are a slave forced into battle and your first fight awaits.''')
-print('''As you step towards the thunding gates, 
+print('''As you step towards the thundering gates, 
 you get offered a choice, 
 your pick will stay with you for the rest of your life
 (some gear gives you health, strength or maybe defense, 
@@ -15,11 +15,11 @@ these will help you survive in battle)''')
 fame = 0
 health = 100
 strength = 0
-sheild = 0
+shield = 0
 
 stats = (f"""your health is {health}, 
 your strength is {strength}, 
-you have a defense of {sheild}, 
+you have a defense of {shield}, 
 and you have {fame} fame""")
 while health > 0:
   
@@ -35,7 +35,7 @@ while health > 0:
     if choice_1 == "2":
         weapon_1 = "Long Sword"
         strength = strength + 10
-        sheild = sheild + 3
+        shield = shield + 3
 
     health_1 = 60
     input("As you step out of the gates of rome with your new " + weapon_1 + ", you see your oponent,")
@@ -43,7 +43,7 @@ while health > 0:
     you size your self up against your oponent and relize that your bigger. 
 You have {health} health while the man only has {health_1} health
 you have {strength} strength but your not quite sure about the man
-you also have {sheild} defense but you also don't know the mans defense''')
+you also have {shield} defense but you also don't know the mans defense''')
 
     input('''The battle begins''')    
     print('''It is a rather small man who has a sharpend shiny silver sword. 
@@ -82,13 +82,13 @@ sliceing his head clean off as you win the fight and the crowd''')
 aproching you he tries to swing at your ankles jumping up you bring your {weapon_1} 
 down in his head spliting it right down the midle, winning the fight and the crowd.''')
             if trade_blows_1 == "critical miss":
-                health = health - 15 + sheild
+                health = health - 15 + shield
                 print(f'''  You miss horribly, allowing the man to duck your attack slicing your ancle,
 You have {health} left, your opponent has {health_1} helth left''')
         if attack_1 == "2":
             play_slow_1 = random.choice(["lose","win","win","win"])
             if play_slow_1 == "lose":
-                health = health - 15 + sheild 
+                health = health - 15 + shield 
                 print(f'''  As you play it safe, you opponent finds an opening,
 throwing a rock at you leg cousing a deep cut to form, you have {health} 
 left while your openent has {health_1} health left''')
@@ -138,11 +138,11 @@ stabbing you through your chest, you have {health} health and the man has {healt
     you regain some health, bring yourself up to {health} health''')
 
     if choice_2 == "3":
-        sheild = sheild + 3
+        shield = shield + 3
         input(f'''You find an old man with a lot of gray.  He to is a slave too, as you train, he points something out
     you relize that this suggestion is meaningful.  You ask if there is anything else that the man sees,
     in return he offers a leason, you take it and relized that this will help you with your defense.
-        Your new defense is {sheild} ''')
+        Your new defense is {shield} ''')
 
     input(f'''As time goes on you heal your injureis, but their is something new, you hear word of a certain Gladiator
 his name echos threw your camp, all anyone talkes about is a Gladiator named {name}.  Your also relized that you gained 
@@ -154,7 +154,7 @@ fame from your fight, puting you at {fame} fame.''')
 you find out you're fighting a big guy. The man's name is Korlox the big.  Korlox is 4-0 on all his fights.
 As you study his past fights, you see that Korlox has {Korlox_health} health when you only have a mere {health} health.
 The upside is that you have {strength} strength when Korlox only has {Korlox_strength} strength.
-You have {sheild} defense while Korlox has none.''')
+You have {shield} defense while Korlox has none.''')
           
     input('''In your next fight, you will have a different type of battle, being able to chose what strike your want to do.
 Through this you will be able to have more options and the battle will be more intense.''')
@@ -185,7 +185,7 @@ Through this you will be able to have more options and the battle will be more i
     with the monsters top half sliding off the his legs, you hear {name} chanting in the crowds. 
     You won the battle but more importantly you won the crowd.''')
             if side_strike == "lose":
-                health = health - Korlox_strength + sheild
+                health = health - Korlox_strength + shield
                 print(f"As you attack Korlox you get out played. Korlox steps to the side, causing you to miss your attack and Korlox returns a wooden hilt to the face.  This puts you down to {health} health")
 
         if attack_2 == "2":
@@ -224,7 +224,7 @@ Through this you will be able to have more options and the battle will be more i
                         fame = fame + 10
                         ("You dify the crowd, sparing Korlox's life.  By doing this you become more liked by all giving you 10 fame")
             if slice_up == "lose":
-                health = health - Korlox_strength + sheild
+                health = health - Korlox_strength + shield
 
                 print(f"""You see an opening as you attack, you go for a leathal blow but Korlox side steps, returning a blade to the chest.
                       Korlox has {Korlox_health} health left and you have {health} health left.""")
@@ -241,7 +241,7 @@ Through this you will be able to have more options and the battle will be more i
                     print(f"As you Sweep Korlox's leg, he falls which gives you enough time throw your {weapon_1} down through Korlax's head, winning the crowd and the Fight.")
 
             if foot == "miss":
-                health = health - Korlox_strength*1.5 +sheild
+                health = health - Korlox_strength*1.5 +shield
                 print(f"Korlax steps over you {weapon_1} which is swong at his leg, bashing you with his axe, you go down to {health} health and Korlax has {Korlox_health} health left")
 
 
@@ -257,12 +257,12 @@ Through this you will be able to have more options and the battle will be more i
                     print(f'''As Korlox and you exgange blows, you stab Korlox with the tip of your {weapon_1}, forcing it through Korlox you feel the tention be relived
                     Then you relized that the tip of you {weapon_1} is sticking out the back of Korlox.  You won the battle and the crowd.''')
             if stab == "lose":
-                health = health - Korlox_strength + sheild
+                health = health - Korlox_strength + shield
                 print(f'''You go for the stab on Korlox but your too slow, taking the side of Korlox's axe to your head.
                 this puts you down to {health} health''')
             
             if stab == "big_lose":
-                health = health - Korlox_strength*2 + sheild
+                health = health - Korlox_strength*2 + shield
                 print(f"""You're starting to get slopy, Korlox is out lasting you. Getting frustrated you go for a risky move that doesn't pay off
                 With Korlox easily moving out of the way, stabing you in the arm with a non leathal blox.
                 Your at {health} health and Korlox is at {Korlox_health} health.""")
@@ -286,72 +286,13 @@ all he askes in return is for you to mention his name when you become great.
         armor = input("please entar a 1 or 2")
 
     if armor == "1":
-        sheild = sheild + 8
-        print(f"Your armor helped your defence mayjorly puting it at {sheild}")
+        shield = shield + 8
+        print(f"Your armor helped your defence mayjorly puting it at {shield}")
 
     if armor == "2":
-        sheild = sheild + 3
+        shield = shield + 3
         strength = strength + 10
-        print(f"You take the light wieght chainmail armor which puts you defense at {sheild} and you relize that your stronger when you wear this armor puting you at {strength} strength")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        print(f"You take the light wieght chainmail armor which puts you defense at {shield} and you relize that your stronger when you wear this armor puting you at {strength} strength")
 
 
 
@@ -378,3 +319,9 @@ all he askes in return is for you to mention his name when you become great.
 
 
 print("You DIE")
+#Kaz Ideas
+# def stats(current_health,current_strength,current_shield,current_fame):
+    # print(f"""your health is {health}, 
+    # your strength is {strength}, 
+    # you have a defense of {shield}, 
+    # and you have {fame} fame""")
