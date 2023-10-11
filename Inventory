@@ -4,7 +4,7 @@ print('''This is a gladiator game that will bring you through the depths
 of battle with rewards and gear, while playing, it will take you through the
 key situations of the duel. With every win you get closer to freedom (reach 100 fame to become free)
 Good luck to you''')
-name = input("what is your new name Gladiator?  ")
+name = input("what is your name Gladiator?  ")
 print('''
       You are a slave forced into battle and your first fight awaits.''')
 print('''As you step towards the thundering gates, 
