@@ -7,14 +7,14 @@ def fight(player_character, enemy_character):
         attack(player_character, enemy_character)
 
 def attack():
-    attack_choice = input('''As you clash blades with your opponent you see a few things you can do
-(1)
-(2)
-(3)                      
-(4)                     
-(5)                          
-(6)                          
-(7)                          
+    attack_1_10 = input('''As you clash blades with your opponent you see a few things you can do:
+(1)Attempt to trade blows trying for the upper hand
+(2)Play it slow and out last your opponent
+(3)Go for the a big blow                      
+(4)Side strike, hoping for a clean hit,                     
+(5)Slice up, attempting for some damage                          
+(6)Go for the foot, trying to trip your openent                          
+(7)Go for a stab praying that you turn your opponent into a human kabob                          
 (8)
 (9)                                                    
 (0)    ''')
