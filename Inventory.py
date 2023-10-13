@@ -1,5 +1,7 @@
 import random
 from characters.character import Character
+from characters.character import korlox
+from characters.character import tigris
 print("Gladiator writen by Zach and edited by Kaz")
 print('''This is a gladiator game that will bring you through the depths
 of battle with rewards and gear, while playing, it will take you through the
