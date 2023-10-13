@@ -1,5 +1,5 @@
 import random
-import characters.character 
+from characters.character import *
 print("Gladiator writen by Zach and edited by Kaz")
 print('''This is a gladiator game that will bring you through the depths
 of battle with rewards and gear, while playing, it will take you through the
@@ -324,7 +324,7 @@ he comes out you size him up. ''')
 
 
 
-print("You DIE")
+print("You DIE. You are not a true gladiator of Rome.")
 #Kaz Ideas
 def print_stats(current_health,current_strength,current_shield,current_fame):
     print(f"""your health is {current_health}, 
