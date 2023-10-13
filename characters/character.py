@@ -6,7 +6,7 @@ class Weapon:
     def __init__(self, name, damage):
         self.name = name
         self.damage = damage
-
+silver_sword = Weapon("Silver Sword", 20)
 sword = Weapon("Sword", 10)
 axe = Weapon("Axe", 20)
 fist = Weapon("Unarmed", 1)
@@ -34,6 +34,7 @@ class Character:
         damage = (self.strength + self.weapon.damage) - enemy.shield
         enemy.health -= damage
         print(f"{self.name} attacks {enemy.name} with their {self.weapon.name} for {damage} damage")
+small_man = Character("Small Man", 60, 20, 0)
 korlox = Character("Korlox", 200, 15,0)
 tigris = Character("Tigris", 100, 20, 10, axe)
 gladiator = Character("Gladiator", 200, 20, 0, axe)
