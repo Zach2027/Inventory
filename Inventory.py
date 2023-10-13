@@ -298,7 +298,7 @@ all he askes in return is for you to mention his name when you become great.
 He tells you that you opponent is a mean killing machine coming out of retirement and he wants blood.  His name is Tigris of Gaul.  
 After long talk, Proximo tells you that he was a slave once. set free by the emporor. The pnly way to become free is to win the crowd.
 Antonius Proximo tells you that he wasn't great because of his skill but he was great because the crowd loved him.''')
-    import Tigris   
+    import tigris   
     print(f'''As you step out of the roaring gates of the same areana you just won in, you hear both names roaring, {name}, Tigris
 he comes out you size him up. ''')
     
