@@ -292,6 +292,7 @@ all he askes in return is for you to mention his name when you become great.
     if armor == "2":
         player.shield = player.shield + 3
         player.strength = player.strength + 10
+        
         print(f"You take the light wieght chainmail armor which puts you defense at {player.shield} and you relize that your stronger when you wear this armor puting you at {player.strength} strength")
 
     input(f'''As you get ready for your 3rd fight and your owner Antonius Proximo tells you that you and him need to talk.
