@@ -18,7 +18,8 @@ def attack():
 (8)
 (9)                                                    
 (0)    ''')
-   
+    if attack_1_10 != ("1") and attack_1_10 != ("2") and attack_1_10 != ("3") and attack_1_10 != ("4") and attack_1_10 != ("5") and attack_1_10 != ("6") and attack_1_10 != ("7") and attack_1_10 != ("8") and attack_1_10 != ("9") and attack_1_10 != ("0"):
+        attack_1_10 == input("please enter a 0-9")
 
 def main():
     print("Gladiator writen by Zach and edited by Kaz")
