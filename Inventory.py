@@ -40,7 +40,7 @@ def attack():
     aproching you he tries to swing at your ankles jumping up you bring your {weapon_1} 
     down in his head spliting it right down the midle, winning the fight and the crowd.''')
         if trade_blows_1 == "critical miss":
-            player.health = player.health - 15 + player.shield
+            player.health = player.health - enemy_1.strength*1.5 + player.shield
             print(f'''  You miss horribly, allowing your opponent to duck your attack slicing your ancle,
     You have {player.health} left, your opponent has {enemy_1.health} helth left''')
             
@@ -49,7 +49,7 @@ def attack():
     if attack_1_10 == "2":
         play_slow_1 = random.choice(["lose","win","win","win"])
         if play_slow_1 == "lose":
-            player.health = player.health - 15 + player.shield 
+            player.health = player.health - enemy_1.strength + player.shield 
             print(f'''  As you play it safe, you opponent finds an opening,
     throwing a rock at you leg cousing a deep cut to form, you have {player.health} 
     left while your openent has {enemy_1.health} health left''')
@@ -74,7 +74,7 @@ def attack():
                 print('''As the small man presses you, you see an opening on his leg, 
     taking it you cut his leg off and go for the arm, sliceing it clean off, wining the battle, the day and the crowd.''')
         if big_blow == "lose":
-            player.health = player.health - 20
+            player.health = player.health - enemy_1.strength
             print(f'''As you take a wrong step forward, the man sees this before you even make your move,
     stabbing you through your chest, you have {player.health} health and the man has {enemy_1.health} health left''')
 
@@ -130,7 +130,7 @@ slicing your opponent right in half, spliting him. As his huge body slams agains
                     fame = fame + 10
                     ("You dify the crowd, sparing your opponent's life.  By doing this you become more liked by all giving you 10 fame")
         if slice_up == "lose":
-            player.health = player.health - opponent_strength + player.shield
+            player.health = player.health - enemy_1.strength + player.shield
 
             print(f"""You see an opening as you attack, you go for a leathal blow but your opponent side steps, returning a blade to the chest.
     your opponent has {enemy_1.health} health left and you have {player.health} health left.""")
@@ -147,7 +147,7 @@ this puts Korlox down to {enemy_1.health} health while your at {player.health} h
                 print(f"As you Sweep Korlox's leg, he falls which gives you enough time throw your {weapon_1} down through Korlax's head, winning the crowd and the Fight.")
 
         if foot == "miss":
-            player.health = player.health - opponent_damage*1.5 +player.shield
+            player.health = player.health - enemy_1.strength*1.5 + player.shield
             print(f"Korlax steps over you {weapon_1} which is swong at his leg, bashing you with his axe, you go down to {player.health} health and Korlax has {enemy_1.health} health left")
 
 
@@ -158,20 +158,20 @@ this puts Korlox down to {enemy_1.health} health while your at {player.health} h
             if enemy_1.health > 0:
                 print(f"""As Korlox swings down his axe, you manage to force the blade into a large stone.  
     As Korlox is tring to get his axe free, you manage to impale him with the tip of your {weapon_1}
-    this puts Korlox at {Korlox_enemy_1.healthhealth} health while you have {player.health} health left.""")
+    this puts Korlox at {enemy_1.health} health while you have {player.health} health left.""")
             else:
                 print(f'''As Korlox and you exgange blows, you stab Korlox with the tip of your {weapon_1}, forcing it through Korlox you feel the tention be relived
     Then you relized that the tip of you {weapon_1} is sticking out the back of Korlox.  You won the battle and the crowd.''')
         if stab == "lose":
-            player.health = player.health - opponent_strength + player.shield
+            player.health = player.health - enemy_1.strength + player.shield
             print(f'''You go for the stab on Korlox but your too slow, taking the side of Korlox's axe to your head.
     this puts you down to {player.health} health''')
                 
         if stab == "big_lose":
-            player.health = player.health - opponent_strength*2 + player.shield
-            print(f"""You're starting to get slopy, Korlox is out lasting you. Getting frustrated you go for a risky move that doesn't pay off
+            player.health = player.health - enemy_1.strength*2 + player.shield
+            print(f"""You're starting to get slopy, {enemy_1} is out lasting you. Getting frustrated you go for a risky move that doesn't pay off
     With Korlox easily moving out of the way, stabing you in the arm with a non leathal blox.
-        Your at {player.health} health and Korlox is at {enemy_1.health} health.""")
+        Your at {player.health} health and {opponent_name} is at {enemy_1.health} health.""")
 
 
 
