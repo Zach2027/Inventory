@@ -103,8 +103,13 @@ def attack(player, enemy, attack_options):
         slice_up = random.choice(["big_win","win","lose","lose"])
 
         if slice_up == "big_win":
+<<<<<<< HEAD
             enemy.health = enemy.health - 2*player.strength
             if Korlox_health > 0:
+=======
+            enemy_1.health = enemy_1.health - 2*player.strength
+            if enemy_1.health > 0:
+>>>>>>> e1e9c07 (done)
                 print(f"""As you clash the blade of your {weapon_1} against your opponent's axe, you mange to slice his knee of your opponent
 forcing him to open up which you take the opertunity to slice your opponent from his lower abbs to his chest
 forming a deep cut. your opponent has {enemy.health} health left""")
@@ -133,7 +138,7 @@ slicing your opponent right in half, spliting him. As his huge body slams agains
                     ("You slice your opponent's head clean off, gaining 5 fame.")
                 if save_life == "2":
                     fame = fame + 10
-                    ("You dify the crowd, sparing your opponent's life.  By doing this you become more liked by all giving you 10 fame")
+                    ("You defy the crowd, sparing your opponent's life.  By doing this you become more liked by all giving you 10 fame")
         if slice_up == "lose":
             player.health = player.health - enemy.strength + player.shield
 
