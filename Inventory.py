@@ -1,7 +1,7 @@
 import random
 from characters.character import *
 from attacks import *
-
+change
 
 def fight(player_character, enemy_character,fight_number):
     options = [ATTACK_1, ATTACK_2, ATTACK_3, ATTACK_4, ATTACK_5, ATTACK_6, ATTACK_7, ATTACK_8]
