@@ -1,10 +1,10 @@
 import random
 from characters.character import *
 from attacks import *
-change
 
 def fight(player_character, enemy_character,fight_number):
     options = [ATTACK_1, ATTACK_2, ATTACK_3, ATTACK_4, ATTACK_5, ATTACK_6, ATTACK_7, ATTACK_8]
+
     input('''The battle begins''') 
     while enemy_character.health > 0 and player_character.health > 0:
         attack(player_character, enemy_character, options[:fight_number + 1])
@@ -136,11 +136,11 @@ slicing your opponent right in half, spliting him. As his huge body slams agains
         foot = random.choice(["sweep","miss","sweep",])
         if foot == "sweep":
             enemy.health = enemy.health - player.strength*0.25
-            if Korlox_health > 0:
-                print(f"""You sucsessfully sweep the leg of Korlox, cousing him to fall, this is an effective way to tire out Korlox
-this puts Korlox down to {enemy.health} health while your at {player.health} health""")
+            if enemy.health > 0:
+                print(f"""You sucsessfully sweep the leg of {enemy.name}, cousing him to fall, this is an effective way to tire out {enemy.name}
+this puts {enemy.name} down to {enemy.health} health while your at {player.health} health""")
             else:
-                print(f"As you Sweep Korlox's leg, he falls which gives you enough time throw your {weapon_1} down through Korlax's head, winning the crowd and the Fight.")
+                print(f"As you Sweep {enemy.name}'s leg, he falls which gives you enough time throw your {weapon_1} down through {enemy.name}'s head, winning the crowd and the Fight.")
 
         if foot == "miss":
             player.health = player.health - enemy.strength*1.5 + player.shield
@@ -152,15 +152,15 @@ this puts Korlox down to {enemy.health} health while your at {player.health} hea
         if stab == "big_win":
             enemy.health = enemy.health - player.strength*2
             if enemy.health > 0:
-                print(f"""As Korlox swings down his axe, you manage to force the blade into a large stone.  
-    As Korlox is tring to get his axe free, you manage to impale him with the tip of your {weapon_1}
-    this puts Korlox at {enemy.health} health while you have {player.health} health left.""")
+                print(f"""As {enemy.name} swings down his axe, you manage to force the blade into a large stone.  
+    As {enemy.name} is tring to get his axe free, you manage to impale him with the tip of your {weapon_1}
+    this puts {enemy.name} at {enemy.health} health while you have {player.health} health left.""")
             else:
-                print(f'''As Korlox and you exgange blows, you stab Korlox with the tip of your {weapon_1}, forcing it through Korlox you feel the tention be relived
-    Then you relized that the tip of you {weapon_1} is sticking out the back of Korlox.  You won the battle and the crowd.''')
+                print(f'''As {enemy.name} and you exgange blows, you stab {enemy.name} with the tip of your {weapon_1}, forcing it through {enemy.name} you feel the tention be relived
+    Then you relized that the tip of you {weapon_1} is sticking out the back of {enemy.name}.  You won the battle and the crowd.''')
         if stab == "lose":
             player.health = player.health - enemy.strength + player.shield
-            print(f'''You go for the stab on Korlox but your too slow, taking the side of Korlox's axe to your head.
+            print(f'''You go for the stab on {enemy.name} but your too slow, taking the side of {enemy.name}'s axe to your head.
     this puts you down to {player.health} health''')
                 
         if stab == "big_lose":
@@ -199,10 +199,7 @@ def main():
     player = Character(name, 100, 0, 0)
 
 
-    stats = (f"""your health is {player.health}, 
-    your strength is {player.strength}, 
-    you have a defense of {player.shield}, 
-    and you have {fame} fame""")
+   
     while player.health > 0:
         weapon_1 = input("Would like an axe(1) or a long sword(2)")
         while int(weapon_1) != 1 and int(weapon_1) != 2:
@@ -265,124 +262,32 @@ def main():
     his name echos threw your camp, all anyone talkes about is a Gladiator named {name}.  Your also relized that you gained 
     fame from your fight, puting you at {fame} fame.''')
         player.health = player.health + 30
-        Korlox_health = 200
-        Korlox_strength = 8
+
+
+
+
+
+
+
         input(f'''Your next fight is in one hour, as you prep and resarch for imformation on your oppenent, 
-    you find out you're fighting a big guy. The man's name is Korlox the big.  Korlox is 4-0 on all his fights.
-    As you study his past fights, you see that Korlox has {Korlox_health} health when you only have a mere {player.health} health.
-    The upside is that you have {player.strength} strength when Korlox only has {Korlox_strength} strength.
-    You have {player.shield} defense while Korlox has none.''')
+    you find out you're fighting a big guy. The man's name is {enemy.name} the big.  {enemy.name} is 4-0 on all his fights.
+    As you study his past fights, you see that {enemy.name} has {{enemy.name}_health} health when you only have a mere {player.health} health.
+    The upside is that you have {player.strength} strength when {enemy.name} only has {{enemy.name}_strength} strength.
+    You have {player.shield} defense while {enemy.name} has none.''')
             
         input('''In your next fight, you will have a different type of battle, being able to chose what strike your want to do.
     Through this you will be able to have more options and the battle will be more intense.''')
         
-        input('''You exit the Gates of an old beaten down arena.  Korlox stands infront of you, as you step out,
-        You see Korlox is holding a long axe.  As  the battle begins you start to circle each other, neither one daring to make the fist move
+        input(f'''You exit the Gates of an old beaten down arena.  {enemy.name} stands infront of you, as you step out,
+        You see {enemy.name} is holding a long axe.  As  the battle begins you start to circle each other, neither one daring to make the fist move
         it is up to you and you see a cople things you can do''')
-        while Korlox_health > 0 and player.health > 0:
-            attack_2 = input('''You can 
-                (1) side strike, hoping for a clean hit, 
-                (2) Slice up, attempting for some damage
-                (3) go for the foot, trying to trip your openent or 
-                (4) go for a stab praying that you turn Korlox into a human kabob.''')
-            while int(attack_2) != 1 and int(attack_2) != 2 and int(attack_2) != 3 and int(attack_2) != 4:
-                attack_2 = input("please enter a 1, 2, 3 or a 4")
-                if attack_2 == "1" or attack_2 == "2" or attack_2 == "3" or attack_2 == "4":
-                    break
-            
-            if attack_2 == "1":
-                side_strike = random.choice(["win", "win", "lose"])
-                if side_strike == "win":
-                    Korlox_health = Korlox_health - player.strength
-                    if Korlox_health > 0:
-                        print(f"""You clash your {weapon_1} with Korlox's axe, you mange to slide your blade
-        around Korlox's hilt slashing his arm. You have {player.health} health left and Korlox has {Korlox_health} health left.""")
-                    else:
-                        input(f'''As Korlox swings his axe down on you, you mange to step to the side and cut the giant in half.
-        with the monsters top half sliding off the his legs, you hear {name} chanting in the crowds. 
-        You won the battle but more importantly you won the crowd.''')
-                if side_strike == "lose":
-                    player.health = player.health - Korlox_strength + player.shield
-                    print(f"As you attack Korlox you get out played. Korlox steps to the side, causing you to miss your attack and Korlox returns a wooden hilt to the face.  This puts you down to {player.health} health")
-
-            if attack_2 == "2":
-                slice_up = random.choice(["big_win","win","lose","lose"])
-
-                if slice_up == "big_win":
-                    Korlox_health = Korlox_health - 2*player.strength
-                    if Korlox_health > 0:
-                        print(f"""As you clash the blade of your {weapon_1} against Korlox's axe, you mange to slice his knee of Korlox
-        forcing him to open up which you take the opertunity to slice Korlox from his lower abbs to his chest
-        forming a deep cut. Korlox has {Korlox_health} health left""")
-                    else:
-                        print(f"""As Korlox swings his axe horizontaly at your head, you duck, sending an uppercut back with you {weapon_1}
-        slicing Korlox right in half, spliting him. As his huge body slams against the sand, your hear {name} {name} {name} fill the arena""")
-                        
-                if slice_up == "win":
-                    Korlox_health = Korlox_health - player.strength*0.75
-                    if Korlox_health > 0:
-                        print(f"""You mange to find a little opeing of Korlox's chest, swinging up, you make a small cut on his chest
-                    Korlox has {Korlox_health} health left and you have {player.health} health left.""")
-                    
-                    else:
-                        print("""As Korlox lunges at you, you manage to side step the attack, sliceing Korlox's hands off.  
-                    Although this is a non lethal strike, you have one the battle. Korlox drops to the ground, defenseless. 'kill!' 'kill!' 'kill!' 
-                    start to fill the air. Korlox's life is in your hands.""")
-                        Korlox_life = input("Do you (1) listen to the crowd or (2), spare the fighters life")
-                        while int(Korlox_life) != 1 and int(Korlox_life) != 2:
-                            Korlox_life = input("please enter a 1 or a 2")
-                            if Korlox_life == "1" or Korlox_life == "2":
-                                break
-
-                        if Korlox_life == "1":
-                            fame = fame + 10
-                            ("You slice korlox's head clean off, gaining 5 fame.")
-                        if Korlox_life == "2":
-                            fame = fame + 10
-                            ("You dify the crowd, sparing Korlox's life.  By doing this you become more liked by all giving you 10 fame")
-                if slice_up == "lose":
-                    player.health = player.health - Korlox_strength + player.shield
-
-                    print(f"""You see an opening as you attack, you go for a leathal blow but Korlox side steps, returning a blade to the chest.
-                        Korlox has {Korlox_health} health left and you have {player.health} health left.""")
-
-            
-            if attack_2 == "3":
-                foot = random.choice(["sweep","miss","sweep",])
-                if foot == "sweep":
-                    Korlox_health = Korlox_health - player.strength*0.25
-                    if Korlox_health > 0:
-                        print(f"""You sucsessfully sweep the leg of Korlox, cousing him to fall, this is an effective way to tire out Korlox
-                        this puts Korlox down to {Korlox_health} health while your at {player.health} health""")
-                    else:
-                        print(f"As you Sweep Korlox's leg, he falls which gives you enough time throw your {weapon_1} down through Korlax's head, winning the crowd and the Fight.")
-
-                if foot == "miss":
-                    player.health = player.health - Korlox_strength*1.5 +player.shield
-                    print(f"Korlax steps over you {weapon_1} which is swong at his leg, bashing you with his axe, you go down to {player.health} health and Korlax has {Korlox_health} health left")
+        
 
 
-            if attack_2 == "4":
-                stab = random.choice(["big_win","lose","big_lose"])
-                if stab == "big_win":
-                    Korlox_health = Korlox_health - player.strength*2
-                    if Korlox_health > 0:
-                        print(f"""As Korlox swings down his axe, you manage to force the blade into a large stone.  
-                    As Korlox is tring to get his axe free, you manage to impale him with the tip of your {weapon_1}
-                    this puts Korlox at {Korlox_health} health while you have {player.health} health left.""")
-                    else:
-                        print(f'''As Korlox and you exgange blows, you stab Korlox with the tip of your {weapon_1}, forcing it through Korlox you feel the tention be relived
-                        Then you relized that the tip of you {weapon_1} is sticking out the back of Korlox.  You won the battle and the crowd.''')
-                if stab == "lose":
-                    player.health = player.health - Korlox_strength + player.shield
-                    print(f'''You go for the stab on Korlox but your too slow, taking the side of Korlox's axe to your head.
-                    this puts you down to {player.health} health''')
-                
-                if stab == "big_lose":
-                    player.health = player.health - Korlox_strength*2 + player.shield
-                    print(f"""You're starting to get slopy, Korlox is out lasting you. Getting frustrated you go for a risky move that doesn't pay off
-                    With Korlox easily moving out of the way, stabing you in the arm with a non leathal blox.
-                    Your at {player.health} health and Korlox is at {Korlox_health} health.""")
+
+
+
+
         if player.health <= 0:
             print("You died")
             break
@@ -416,7 +321,7 @@ def main():
     He tells you that you opponent is a mean killing machine coming out of retirement and he wants blood.  His name is Tigris of Gaul.  
     After long talk, Proximo tells you that he was a slave once. set free by the emporor. The pnly way to become free is to win the crowd.
     Antonius Proximo tells you that he wasn't great because of his skill but he was great because the crowd loved him.''')
-        import tigris   
+        
         print(f'''As you step out of the roaring gates of the same areana you just won in, you hear both names roaring, {name}, Tigris
     he comes out you size him up. ''')
         
@@ -424,10 +329,6 @@ def main():
 
     print("You DIE. You are not a true gladiator of Rome.")
     #Kaz Ideas
-    def print_stats(current_health,current_strength,current_shield,current_fame):
-        print(f"""your health is {current_health}, 
-        your strength is {current_strength}, 
-        you have a defense of {current_shield}, 
-        and you have {fame} fame""")
+   
 
 main()
