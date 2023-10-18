@@ -1,29 +1,21 @@
 import random
 from characters.character import *
+from attacks import *
 
-<<<<<<< HEAD
-def fight(player_character, enemy_character,):
-=======
-def fight(player_character, enemy_character, fight_number = 1 ):
->>>>>>> 81ab8e7 (Dome)
-    options = [
-        [Attack_1, Attack_2]
-        [Attack_1, Attack_2, Attack_3]
-        [Attack_1, Attack_2, Attack_3, Attack_4]
-        [Attack_1, Attack_2, Attack_3, Attack_4, Attack_5]
-        [Attack_1, Attack_2, Attack_3, Attack_4, Attack_5, Attack_6]
-        [Attack_1, Attack_2, Attack_3, Attack_4, Attack_5, Attack_6, Attack_7]
-        [Attack_1, Attack_2, Attack_3, Attack_4, Attack_5, Attack_6, Attack_7, Attack_8]
-    ]
+
+def fight(player_character, enemy_character,fight_number):
+    options = [ATTACK_1, ATTACK_2, ATTACK_3, ATTACK_4, ATTACK_5, ATTACK_6, ATTACK_7, ATTACK_8]
     input('''The battle begins''') 
     while enemy_character.health > 0 and player_character.health > 0:
-        attack(player_character, enemy_character, options[fight_number])
+        attack(player_character, enemy_character, options[:fight_number + 1])
 
 def attack(player, enemy, attack_options):
-    attack_1_10 = input('''As you clash blades with your opponent you see a few things you can do:
+    attack_1_10 = input('''As you clash blades with your opponent you see a few things you can do''')
+    for index, attack_option in enumerate(attack_options):
+        print(f"({index}) {attack_option}")
 
     if attack_1_10 != ("1") and attack_1_10 != ("2") and attack_1_10 != ("3") and attack_1_10 != ("4") and attack_1_10 != ("5") and attack_1_10 != ("6") and attack_1_10 != ("7") and attack_1_10 != ("8") and attack_1_10 != ("9") and attack_1_10 != ("0"):
-        attack_1_10 == input("please enter a 0-9")
+        attack_1_10 = input(f"please enter a 0-{len(attack_options)-1}")
     if attack_1_10 == ("1"):
         trade_blows_1 = random.choice(["hit","miss","critical miss"])
         if trade_blows_1 == "hit":
@@ -186,6 +178,7 @@ this puts Korlox down to {enemy.health} health while your at {player.health} hea
 
 
 
+fight(Character(100,100,100,100), Character(100,100,100,100), 1)
 
 
 def main():
