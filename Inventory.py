@@ -9,6 +9,8 @@ def fight(player_character, enemy_character,fight_number):
     while enemy_character.health > 0 and player_character.health > 0:
         attack(player_character, enemy_character, options[:fight_number + 1])
 
+    
+
 def attack(player, enemy, attack_options):
     attack_1_10 = input('''As you clash blades with your opponent you see a few things you can do''')
     for index, attack_option in enumerate(attack_options):
@@ -87,7 +89,7 @@ def attack(player, enemy, attack_options):
      with the monsters top half sliding off the his legs, you hear {name} chanting in the crowds. 
     You won the battle but more importantly you won the crowd.''')
         if side_strike == "lose":
-            player.health = player.health - enemy_strength + player.shield
+            player.health = player.health - enemy.strength + player.shield
             print(f"As you attack your opponent you get out played. your opponent steps to the side, causing you to miss your attack and your opponent returns a wooden hilt to the face.  This puts you down to {player.health} health")
 
     if attack_1_10 == "5":
