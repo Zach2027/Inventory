@@ -1,11 +1,19 @@
 import random
 from characters.character import *
 
+<<<<<<< HEAD
 def fight(player_character, enemy_character,):
+=======
+def fight(player_character, enemy_character, fight_number = 1 ):
+>>>>>>> 81ab8e7 (Dome)
     options = [
         [Attack_1, Attack_2]
-        ["Attack", "Critical Attack", "Shield"]
-
+        [Attack_1, Attack_2, Attack_3]
+        [Attack_1, Attack_2, Attack_3, Attack_4]
+        [Attack_1, Attack_2, Attack_3, Attack_4, Attack_5]
+        [Attack_1, Attack_2, Attack_3, Attack_4, Attack_5, Attack_6]
+        [Attack_1, Attack_2, Attack_3, Attack_4, Attack_5, Attack_6, Attack_7]
+        [Attack_1, Attack_2, Attack_3, Attack_4, Attack_5, Attack_6, Attack_7, Attack_8]
     ]
     input('''The battle begins''') 
     while enemy_character.health > 0 and player_character.health > 0:
@@ -13,16 +21,7 @@ def fight(player_character, enemy_character,):
 
 def attack(player, enemy, attack_options):
     attack_1_10 = input('''As you clash blades with your opponent you see a few things you can do:
-(1)Attempt to trade blows trying for the upper hand
-(2)Play it slow and out last your opponent
-(3)Go for the a big blow                      
-(4)Side strike, hoping for a clean hit,                     
-(5)Slice up, attempting for some damage                          
-(6)Go for the foot, trying to trip your openent                          
-(7)Go for a stab praying that you turn your opponent into a human kabob                          
-(8)
-(9)                                                    
-(0)    ''')
+
     if attack_1_10 != ("1") and attack_1_10 != ("2") and attack_1_10 != ("3") and attack_1_10 != ("4") and attack_1_10 != ("5") and attack_1_10 != ("6") and attack_1_10 != ("7") and attack_1_10 != ("8") and attack_1_10 != ("9") and attack_1_10 != ("0"):
         attack_1_10 == input("please enter a 0-9")
     if attack_1_10 == ("1"):
@@ -103,13 +102,8 @@ def attack(player, enemy, attack_options):
         slice_up = random.choice(["big_win","win","lose","lose"])
 
         if slice_up == "big_win":
-<<<<<<< HEAD
-            enemy.health = enemy.health - 2*player.strength
-            if Korlox_health > 0:
-=======
             enemy_1.health = enemy_1.health - 2*player.strength
             if enemy_1.health > 0:
->>>>>>> e1e9c07 (done)
                 print(f"""As you clash the blade of your {weapon_1} against your opponent's axe, you mange to slice his knee of your opponent
 forcing him to open up which you take the opertunity to slice your opponent from his lower abbs to his chest
 forming a deep cut. your opponent has {enemy.health} health left""")
