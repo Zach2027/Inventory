@@ -271,8 +271,8 @@ def main():
 
         input(f'''Your next fight is in one hour, as you prep and resarch for imformation on your oppenent, 
     you find out you're fighting a big guy. The man's name is {enemy.name} the big.  {enemy.name} is 4-0 on all his fights.
-    As you study his past fights, you see that {enemy.name} has {{enemy.name}_health} health when you only have a mere {player.health} health.
-    The upside is that you have {player.strength} strength when {enemy.name} only has {{enemy.name}_strength} strength.
+    As you study his past fights, you see that {enemy.name} has {enemy.health} health when you only have a mere {player.health} health.
+    The upside is that you have {player.strength} strength when {enemy.name} only has {enemy.strength} strength.
     You have {player.shield} defense while {enemy.name} has none.''')
             
         input('''In your next fight, you will have a different type of battle, being able to chose what strike your want to do.
@@ -331,4 +331,4 @@ def main():
     #Kaz Ideas
    
 
-main()
+main()  
