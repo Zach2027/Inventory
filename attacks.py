@@ -6,8 +6,8 @@ ATTACK_5 = "Slice up, attempting for some damage"
 ATTACK_6 = "Go for the foot, trying to trip your opponent"
 ATTACK_7 = "Go for a stab praying that you turn your opponent into a human kabob"
 ATTACK_8 = "Throw your weapon at your opponent, attempting to spear him through the heart"
-ATTACK_9 = ""
-ATTACK_10 = ""
+ATTACK_9 = "You wait for your opponent to lower his guard and go for a kick below the belt"
+ATTACK_10 = "You feint, hoping your oppenent overcommits"
 
 
                          
