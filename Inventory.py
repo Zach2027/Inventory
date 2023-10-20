@@ -26,7 +26,7 @@ def attack(player, enemy, attack_options):
                 print(f"You get a clean hit and you have {player.health} left, your opponent has {enemy.health} health left")
             if enemy.health <= 0:
                 print(f'''As your opponent swings his sword to you, you manage to side step the blow, 
-    retaliating with a strike of you own.  As you swing your {self.weapon} at his head, you get a clean strike
+    retaliating with a strike of you own.  As you swing your {weapon_1} at his head, you get a clean strike
     sliceing his head clean off as you win the fight and the crowd''')
 
         if trade_blows_1 == "miss":
