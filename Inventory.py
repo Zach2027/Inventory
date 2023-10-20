@@ -18,7 +18,7 @@ def attack(player, enemy, attack_options):
 
     if attack_1_10 != ("1") and attack_1_10 != ("2") and attack_1_10 != ("3") and attack_1_10 != ("4") and attack_1_10 != ("5") and attack_1_10 != ("6") and attack_1_10 != ("7") and attack_1_10 != ("8") and attack_1_10 != ("9") and attack_1_10 != ("0"):
         attack_1_10 = input(f"please enter a 0-{len(attack_options)-1}")
-    if attack_1_10 == ("1"):
+    if attack_1_10 == ("0"):
         trade_blows_1 = random.choice(["hit","miss","critical miss"])
         if trade_blows_1 == "hit":
             enemy.health = enemy.health - player.strength
@@ -44,7 +44,7 @@ def attack(player, enemy, attack_options):
             
 
 
-    if attack_1_10 == "2":
+    if attack_1_10 == "1":
         play_slow_1 = random.choice(["lose","win","win","win"])
         if play_slow_1 == "lose":
             player.health = player.health - enemy.strength + player.shield 
@@ -60,7 +60,7 @@ def attack(player, enemy, attack_options):
                 print(f'''  As you clash blades, you slide your {player.weapon} down the blade of your opponents,
     with a little force you mange to cut the guys hands off killing him and winning the fight and the crowd''')
 
-    if attack_1_10 == "3":
+    if attack_1_10 == "2":
         big_blow = random.choice(["win","win","win","lose","lose","lose"])
         if big_blow == "win":
             enemy.health = enemy.health - player.strength*2
@@ -77,7 +77,7 @@ def attack(player, enemy, attack_options):
     stabbing you through your chest, you have {player.health} health and the man has {enemy.health} health left''')
 
 
-    if attack_1_10 == "4":
+    if attack_1_10 == "3":
         side_strike = random.choice(["win", "win", "lose"])
         if side_strike == "win":
             enemy.health = enemy.health - player.strength
@@ -92,7 +92,7 @@ def attack(player, enemy, attack_options):
             player.health = player.health - enemy.strength + player.shield
             print(f"As you attack your opponent you get out played. your opponent steps to the side, causing you to miss your attack and your opponent returns a wooden hilt to the face.  This puts you down to {player.health} health")
 
-    if attack_1_10 == "5":
+    if attack_1_10 == "4":
         slice_up = random.choice(["big_win","win","lose","lose"])
 
         if slice_up == "big_win":
@@ -134,7 +134,7 @@ slicing your opponent right in half, spliting him. As his huge body slams agains
     your opponent has {enemy.health} health left and you have {player.health} health left.""")
 
             
-    if attack_1_10 == "6":
+    if attack_1_10 == "5":
         foot = random.choice(["sweep","miss","sweep",])
         if foot == "sweep":
             enemy.health = enemy.health - player.strength*0.25
@@ -149,7 +149,7 @@ this puts {enemy.name} down to {enemy.health} health while your at {player.healt
             print(f"Korlax steps over you {player.weapon} which is swong at his leg, bashing you with his axe, you go down to {player.health} health and Korlax has {enemy.health} health left")
 
 
-    if attack_1_10 == "7":
+    if attack_1_10 == "6":
         stab = random.choice(["big_win","lose","big_lose"])
         if stab == "big_win":
             enemy.health = enemy.health - player.strength*2
