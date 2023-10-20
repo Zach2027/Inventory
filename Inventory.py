@@ -256,12 +256,12 @@ def main():
         if choice_2 == "3":
             player.shield = player.shield + 3
             input(f'''You find an old man with a lot of gray.  He to is a slave too, as you train, he points something out
-        you relize that this suggestion is meaningful.  You ask if there is anything else that the man sees,
-        in return he offers a leason, you take it and relized that this will help you with your defense.
+        you realize that this suggestion is meaningful.  You ask if there is anything else that the man sees,
+        in return he offers a leason, you take it and realize that this will help you with your defense.
             Your new defense is {player.shield} ''')
 
-        input(f'''As time goes on you heal your injureis, but their is something new, you hear word of a certain Gladiator
-    his name echos threw your camp, all anyone talkes about is a Gladiator named {name}.  Your also relized that you gained 
+        input(f'''As time goes on you heal your injuries, but their is something new, you hear word of a certain Gladiator
+    his name echos threw your camp, all anyone talkes about is a Gladiator named {name}.  Your also realize that you gained 
     fame from your fight, puting you at {fame} fame.''')
         player.health = player.health + 30
 
@@ -271,7 +271,7 @@ def main():
 
 
 
-        input(f'''Your next fight is in one hour, as you prep and resarch for imformation on your oppenent, 
+        input(f'''Your next fight is in one hour, as you prep and research for imformation on your oppenent, 
     you find out you're fighting a big guy. The man's name is {enemy.name} the big.  {enemy.name} is 4-0 on all his fights.
     As you study his past fights, you see that {enemy.name} has {enemy.health} health when you only have a mere {player.health} health.
     The upside is that you have {player.strength} strength when {enemy.name} only has {enemy.strength} strength.
