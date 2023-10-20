@@ -216,20 +216,19 @@ def main():
             player.strength = player.strength + 10
             player.shield = player.shield + 3
         player = Character(name, 100, player.strength, player.shield, weapon_1)
-        enemy_1 = Character("Gladiator", 60, 20, 0)
+        enemy_1 = Character("small_man", 80, 20, 0)
 
         input("As you step out of the gates of rome with your new " + weapon_1 + ", you see your oponent,")
         input(f'''
         you size your self up against your oponent and realize that your bigger. 
     You have {player.health} health while the man only has {enemy_1.health} health
-    you have {player.strength} strength but your not quite sure about the man
-    you also have {player.shield} defense but you also don't know the mans defense''')
-        print('''It is a rather small man who has a sharpend shiny silver sword. 
-        Throughout the battle you're going to see key openings and these openings are where you need to strike.''') 
-        fight(Character(100,100,100,100), Character(100,100,100,100), 1)
+    you have {player.strength} strength and your opponent has {enemy_1.strength}
+    you also have {player.shield} defense and your opponent has {enemy_1.shield}''')
+        print(''' Throughout the battle you're going to see key openings and these openings are where you need to strike.''') 
+        fight(Character, enemy_1, 1)
 
         while enemy_1.health > 0 and player.health > 0:
-            attack(player, enemy, attack_options)
+            attack(player, enemy_1, options)
 
         if player.health <= 0:
             break
