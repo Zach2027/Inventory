@@ -198,10 +198,10 @@ def main():
     (some gear gives you health, strength or maybe defense, 
     these will help you survive in battle)''')
     fame = 0
-    player = Character(name, 100, 0, 0, weapon_1)
+    player = Character(name, 10, 0, 0, 0)
 
 
-   
+    
     while player.health > 0:
         weapon_1 = input("Would like an axe(1) or a long sword(2)")
         while int(weapon_1) != 1 and int(weapon_1) != 2:
@@ -215,7 +215,7 @@ def main():
             weapon_1 = "Long Sword"
             player.strength = player.strength + 10
             player.shield = player.shield + 3
-
+        player = Character(name, 100, player.strength, player.shield, weapon_1)
         enemy_1 = Character("Gladiator", 60, 20, 0)
 
         input("As you step out of the gates of rome with your new " + weapon_1 + ", you see your oponent,")
@@ -233,6 +233,7 @@ def main():
 
         if player.health <= 0:
             break
+        
         input('3 days later')
         fame = fame + 5
         choice_2 = input('''Through out your recoving time, you put your time to good use.
@@ -327,7 +328,7 @@ def main():
         
     
 
-    print("You DIE. You are not a true gladiator of Rome.")
+print("You DIE. You are not a true gladiator of Rome.")
     #Kaz Ideas
    
 
