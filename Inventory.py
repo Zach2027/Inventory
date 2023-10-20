@@ -26,7 +26,7 @@ def attack(player, enemy, attack_options):
                 print(f"You get a clean hit and you have {player.health} left, your opponent has {enemy.health} health left")
             if enemy.health <= 0:
                 print(f'''As your opponent swings his sword to you, you manage to side step the blow, 
-    retaliating with a strike of you own.  As you swing your {silver_sword} at his head, you get a clean strike
+    retaliating with a strike of you own.  As you swing your {player.weapon} at his head, you get a clean strike
     sliceing his head clean off as you win the fight and the crowd''')
 
         if trade_blows_1 == "miss":
@@ -57,7 +57,7 @@ def attack(player, enemy, attack_options):
                 print(f"""  As you play it slow you manage to get a few small hits on your opponent.
     This does little damage and your opponent is at {enemy.health} health while your at {player.health} health.""")
             if enemy.health <= 0:
-                print(f'''  As you clash blades, you slide your {weapon_1} down the blade of your opponents,
+                print(f'''  As you clash blades, you slide your {player.weapon} down the blade of your opponents,
     with a little force you mange to cut the guys hands off killing him and winning the fight and the crowd''')
 
     if attack_1_10 == "3":
@@ -82,7 +82,7 @@ def attack(player, enemy, attack_options):
         if side_strike == "win":
             enemy.health = enemy.health - player.strength
             if enemy.health > 0:
-                print(f"""You clash your {weapon_1} with your opponent's axe, you mange to slide your blade
+                print(f"""You clash your {player.weapon} with your opponent's axe, you mange to slide your blade
     around your opponent's hilt slashing his arm. You have {player.health} health left and your opponent has {enemy.health} health left.""")
             else:
                  input(f'''As your opponent swings his axe down on you, you mange to step to the side and cut your opponent in half.
@@ -142,11 +142,11 @@ slicing your opponent right in half, spliting him. As his huge body slams agains
                 print(f"""You sucsessfully sweep the leg of {enemy.name}, cousing him to fall, this is an effective way to tire out {enemy.name}
 this puts {enemy.name} down to {enemy.health} health while your at {player.health} health""")
             else:
-                print(f"As you Sweep {enemy.name}'s leg, he falls which gives you enough time throw your {weapon_1} down through {enemy.name}'s head, winning the crowd and the Fight.")
+                print(f"As you Sweep {enemy.name}'s leg, he falls which gives you enough time throw your {player.weapon} down through {enemy.name}'s head, winning the crowd and the Fight.")
 
         if foot == "miss":
             player.health = player.health - enemy.strength*1.5 + player.shield
-            print(f"Korlax steps over you {weapon_1} which is swong at his leg, bashing you with his axe, you go down to {player.health} health and Korlax has {enemy.health} health left")
+            print(f"Korlax steps over you {player.weapon} which is swong at his leg, bashing you with his axe, you go down to {player.health} health and Korlax has {enemy.health} health left")
 
 
     if attack_1_10 == "7":
@@ -155,11 +155,11 @@ this puts {enemy.name} down to {enemy.health} health while your at {player.healt
             enemy.health = enemy.health - player.strength*2
             if enemy.health > 0:
                 print(f"""As {enemy.name} swings down his axe, you manage to force the blade into a large stone.  
-    As {enemy.name} is tring to get his axe free, you manage to impale him with the tip of your {weapon_1}
+    As {enemy.name} is tring to get his axe free, you manage to impale him with the tip of your {player.weapon}
     this puts {enemy.name} at {enemy.health} health while you have {player.health} health left.""")
             else:
-                print(f'''As {enemy.name} and you exgange blows, you stab {enemy.name} with the tip of your {weapon_1}, forcing it through {enemy.name} you feel the tention be relived
-    Then you relized that the tip of you {weapon_1} is sticking out the back of {enemy.name}.  You won the battle and the crowd.''')
+                print(f'''As {enemy.name} and you exgange blows, you stab {enemy.name} with the tip of your {player.weapon}, forcing it through {enemy.name} you feel the tention be relived
+    Then you relized that the tip of you {player.weapon} is sticking out the back of {enemy.name}.  You won the battle and the crowd.''')
         if stab == "lose":
             player.health = player.health - enemy.strength + player.shield
             print(f'''You go for the stab on {enemy.name} but your too slow, taking the side of {enemy.name}'s axe to your head.
