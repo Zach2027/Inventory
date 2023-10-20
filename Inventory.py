@@ -35,7 +35,7 @@ def attack(player, enemy, attack_options):
                 print(f"You find a small and doughtful opening that you take, coming off with a small victory.  You have {player.health} left, your opponent has {enemy.health} health left")
             if enemy.health <= 0:
                 print(f'''As a deadly wave of attacks come, you find your self with the high ground but the small man doesn't give up
-    aproching you he tries to swing at your ankles jumping up you bring your {weapon_1} 
+    aproching you he tries to swing at your ankles jumping up you bring your {player.weapon} 
     down in his head spliting it right down the midle, winning the fight and the crowd.''')
         if trade_blows_1 == "critical miss":
             player.health = player.health - enemy.strength*1.5 + player.shield
@@ -86,7 +86,7 @@ def attack(player, enemy, attack_options):
     around your opponent's hilt slashing his arm. You have {player.health} health left and your opponent has {enemy.health} health left.""")
             else:
                  input(f'''As your opponent swings his axe down on you, you mange to step to the side and cut your opponent in half.
-     with the monsters top half sliding off the his legs, you hear {name} chanting in the crowds. 
+     with the monsters top half sliding off the his legs, you hear {player.name} chanting in the crowds. 
     You won the battle but more importantly you won the crowd.''')
         if side_strike == "lose":
             player.health = player.health - enemy.strength + player.shield
@@ -96,14 +96,14 @@ def attack(player, enemy, attack_options):
         slice_up = random.choice(["big_win","win","lose","lose"])
 
         if slice_up == "big_win":
-            enemy_1.health = enemy_1.health - 2*player.strength
-            if enemy_1.health > 0:
+            enemy.health = enemy.health - 2*player.strength
+            if enemy.health > 0:
                 print(f"""As you clash the blade of your {weapon_1} against your opponent's axe, you mange to slice his knee of your opponent
 forcing him to open up which you take the opertunity to slice your opponent from his lower abbs to his chest
 forming a deep cut. your opponent has {enemy.health} health left""")
             else:
                 print(f"""As your opponent swings his axe horizontaly at your head, you duck, sending an uppercut back with you {weapon_1}
-slicing your opponent right in half, spliting him. As his huge body slams against the sand, your hear {name} {name} {name} fill the arena""")
+slicing your opponent right in half, spliting him. As his huge body slams against the sand, your hear {player.name} {player.name} {player.name} fill the arena""")
                         
         if slice_up == "win":
             enemy.health = enemy.health - player.strength*0.75
@@ -167,9 +167,9 @@ this puts {enemy.name} down to {enemy.health} health while your at {player.healt
                 
         if stab == "big_lose":
             player.health = player.health - enemy.strength*2 + player.shield
-            print(f"""You're starting to get slopy, {enemy} is out lasting you. Getting frustrated you go for a risky move that doesn't pay off
+            print(f"""You're starting to get slopy, {enemy.name} is out lasting you. Getting frustrated you go for a risky move that doesn't pay off
     With {enemy.name} easily moving out of the way, stabing you in the arm with a non leathal blox.
-        Your at {player.health} health and {enemy} is at {enemy.health} health.""")
+        Your at {player.health} health and {enemy.name} is at {enemy.health} health.""")
 
 
 
