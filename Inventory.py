@@ -180,7 +180,7 @@ this puts {enemy.name} down to {enemy.health} health while your at {player.healt
 
 
 
-fight(Character(100,100,100,100), Character(100,100,100,100), 1)
+
 
 
 def main():
@@ -224,11 +224,9 @@ def main():
     You have {player.health} health while the man only has {enemy_1.health} health
     you have {player.strength} strength but your not quite sure about the man
     you also have {player.shield} defense but you also don't know the mans defense''')
-        fight(player, enemy_1)
-   
         print('''It is a rather small man who has a sharpend shiny silver sword. 
         Throughout the battle you're going to see key openings and these openings are where you need to strike.''') 
-        input(f"As you clash your {weapon_1} against the man's sword, you see a couple of things you can do")
+        fight(Character(100,100,100,100), Character(100,100,100,100), 1)
 
         while enemy_1.health > 0 and player.health > 0:
             attack(player, enemy, attack_options)
