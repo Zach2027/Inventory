@@ -120,11 +120,11 @@ slicing your opponent right in half, spliting him. As his huge body slams agains
                         break
 
                 if save_life == "1":
-                    fame = fame + 10
-                    ("You slice your opponent's head clean off, gaining 5 fame.")
+                    fame = fame + 5
+                    print("You slice your opponent's head clean off, gaining 5 fame.")
                 if save_life == "2":
                     fame = fame + 10
-                    ("You defy the crowd, sparing your opponent's life.  By doing this you become more liked by all giving you 10 fame")
+                    print("You defy the crowd, sparing your opponent's life.  By doing this you become more liked by all giving you 10 fame")
         if slice_up == "lose":
             player.health = player.health - enemy.strength + player.shield
 
@@ -132,7 +132,7 @@ slicing your opponent right in half, spliting him. As his huge body slams agains
     your opponent has {enemy.health} health left and you have {player.health} health left.""")
 
             
-    if attack_2 == "6":
+    if attack_1_10 == "6":
         foot = random.choice(["sweep","miss","sweep",])
         if foot == "sweep":
             enemy.health = enemy.health - player.strength*0.25
@@ -147,7 +147,7 @@ this puts {enemy.name} down to {enemy.health} health while your at {player.healt
             print(f"Korlax steps over you {weapon_1} which is swong at his leg, bashing you with his axe, you go down to {player.health} health and Korlax has {enemy.health} health left")
 
 
-    if attack_2 == "7":
+    if attack_1_10 == "7":
         stab = random.choice(["big_win","lose","big_lose"])
         if stab == "big_win":
             enemy.health = enemy.health - player.strength*2
@@ -236,7 +236,7 @@ def main():
         input('3 days later')
         fame = fame + 5
         choice_2 = input('''Through out your recoving time, you put your time to good use.
-            You relized that you could (1) workout strengthing your self, (2) get a good healling meal or (3) attepmt to get a lesson from an old Gladiator''')
+            You realize that you could (1) workout strengthing your self, (2) get a good healling meal or (3) attepmt to get a lesson from an old Gladiator''')
         while int(choice_2) != 1 and int(choice_2) != 2 and int(choice_2) != 3:
             choice_2 = input("please enter a 1, 2 or a 3")
             if choice_2 == "1" or choice_2 == "2" or choice_2 == "3":
