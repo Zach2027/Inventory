@@ -198,7 +198,7 @@ def main():
     (some gear gives you health, strength or maybe defense, 
     these will help you survive in battle)''')
     fame = 0
-    player = Character(name, 100, 0, 0)
+    player = Character(name, 100, 0, 0, weapon_1)
 
 
    
