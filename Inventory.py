@@ -220,7 +220,7 @@ def main():
 
         input("As you step out of the gates of rome with your new " + weapon_1 + ", you see your oponent,")
         input(f'''
-        you size your self up against your oponent and relize that your bigger. 
+        you size your self up against your oponent and realize that your bigger. 
     You have {player.health} health while the man only has {enemy_1.health} health
     you have {player.strength} strength but your not quite sure about the man
     you also have {player.shield} defense but you also don't know the mans defense''')
