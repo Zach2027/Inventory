@@ -10,7 +10,8 @@ def fight(player_character, enemy_character,fight_number):
         attack(player_character, enemy_character, options[:fight_number + 1])
 
     
-
+def fight_count(fight_num)
+    fight_num = fight_num + 1
 def attack(player, enemy, attack_options):
     attack_1_10 = input('''As you clash blades with your opponent you see a few things you can do''')
     for index, attack_option in enumerate(attack_options):
@@ -98,11 +99,11 @@ def attack(player, enemy, attack_options):
         if slice_up == "big_win":
             enemy.health = enemy.health - 2*player.strength
             if enemy.health > 0:
-                print(f"""As you clash the blade of your {weapon_1} against your opponent's axe, you mange to slice his knee of your opponent
+                print(f"""As you clash the blade of your {player.weapon} against your opponent's axe, you mange to slice his knee of your opponent
 forcing him to open up which you take the opertunity to slice your opponent from his lower abbs to his chest
 forming a deep cut. your opponent has {enemy.health} health left""")
             else:
-                print(f"""As your opponent swings his axe horizontaly at your head, you duck, sending an uppercut back with you {weapon_1}
+                print(f"""As your opponent swings his axe horizontaly at your head, you duck, sending an uppercut back with you {player.weapon}
 slicing your opponent right in half, spliting him. As his huge body slams against the sand, your hear {player.name} {player.name} {player.name} fill the arena""")
                         
         if slice_up == "win":
@@ -226,7 +227,7 @@ def main():
     you also have {player.shield} defense and your opponent has {enemy_1.shield}''')
         print(''' Throughout the battle you're going to see key openings and these openings are where you need to strike.''') 
         fight(Character, enemy_1, 1)
-        fight_num += 1
+        fight_count(0)
 
         while enemy_1.health > 0 and player.health > 0:
             attack(player, enemy_1, fight_num)
@@ -271,16 +272,16 @@ def main():
 
 
         input(f'''Your next fight is in one hour, as you prep and research for imformation on your oppenent, 
-    you find out you're fighting a big guy. The man's name is {enemy.name} the big.  {enemy.name} is 4-0 on all his fights.
-    As you study his past fights, you see that {enemy.name} has {enemy.health} health when you only have a mere {player.health} health.
-    The upside is that you have {player.strength} strength when {enemy.name} only has {enemy.strength} strength.
-    You have {player.shield} defense while {enemy.name} has none.''')
+    you find out you're fighting a big guy. The man's name is {enemy_1.name} the big.  {enemy_1.name} is 4-0 on all his fights.
+    As you study his past fights, you see that {enemy_1.name} has {enemy_1.health} health when you only have a mere {player.health} health.
+    The upside is that you have {player.strength} strength when {enemy_1.name} only has {enemy_1.strength} strength.
+    You have {player.shield} defense while {enemy_1.name} has none.''')
             
         input('''In your next fight, you will have a different type of battle, being able to chose what strike your want to do.
     Through this you will be able to have more options and the battle will be more intense.''')
         
-        input(f'''You exit the Gates of an old beaten down arena.  {enemy.name} stands infront of you, as you step out,
-        You see {enemy.name} is holding a long axe.  As  the battle begins you start to circle each other, neither one daring to make the fist move
+        input(f'''You exit the Gates of an old beaten down arena.  {enemy_1.name} stands infront of you, as you step out,
+        You see {enemy_1.name} is holding a long axe.  As  the battle begins you start to circle each other, neither one daring to make the fist move
         it is up to you and you see a cople things you can do''')
         
 
