@@ -1,23 +1,22 @@
 import random
 from characters.character import *
 from attacks import *
-fight_num = 0
-def fight(player_character, enemy_character,fight_number):
+def fight(player_character, enemy_character, fight_number):
     options = [ATTACK_1, ATTACK_2, ATTACK_3, ATTACK_4, ATTACK_5, ATTACK_6, ATTACK_7, ATTACK_8]
-
     input('''The battle begins''') 
     while enemy_character.health > 0 and player_character.health > 0:
         attack(player_character, enemy_character, options[:fight_number + 1])
+    if player.health <= 0:
+        print("YOU DIE")
+        
 
-    
-def fight_count(fight_num)
-    fight_num = fight_num + 1
+
 def attack(player, enemy, attack_options):
     attack_1_10 = input('''As you clash blades with your opponent you see a few things you can do''')
     for index, attack_option in enumerate(attack_options):
         print(f"({index}) {attack_option}")
 
-    if attack_1_10 != ("1") and attack_1_10 != ("2") and attack_1_10 != ("3") and attack_1_10 != ("4") and attack_1_10 != ("5") and attack_1_10 != ("6") and attack_1_10 != ("7") and attack_1_10 != ("8") and attack_1_10 != ("9") and attack_1_10 != ("0"):
+    while not attack_1_10.isdigit() or int(attack_1_10) >= len(attack_options): 
         attack_1_10 = input(f"please enter a 0-{len(attack_options)-1}")
     if attack_1_10 == ("0"):
         trade_blows_1 = random.choice(["hit","miss","critical miss"])
@@ -239,15 +238,7 @@ def main():
     you have {player.strength} strength and your opponent has {enemy_1.strength}
     you also have {player.shield} defense and your opponent has {enemy_1.shield}''')
         print(''' Throughout the battle you're going to see key openings and these openings are where you need to strike.''') 
-        fight(Character, enemy_1, 1)
-        fight_count(0)
-
-        while enemy_1.health > 0 and player.health > 0:
-            attack(player, enemy_1, fight_num)
-
-        if player.health <= 0:
-            print("YOU DIE")
-            break
+        fight(player, enemy_1, 1)
         
         input('3 days later')
         fame = fame + 5
