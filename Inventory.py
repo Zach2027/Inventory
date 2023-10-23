@@ -138,9 +138,9 @@ slicing your opponent right in half, spliting him. As his huge body slams agains
     if attack_1_10 == "5":
         foot = random.choice(["sweep","miss","sweep",])
         if foot == "sweep":
-            enemy.health = enemy.health - player.strength*0.25
+            enemy.health = enemy.health - player.strength + enemy.shield
             if enemy.health > 0:
-                print(f"""You sucsessfully sweep the leg of {enemy.name}, cousing him to fall, this is an effective way to tire out {enemy.name}
+                print(f"""You sucsessfully sweep the leg of {enemy.name}, causing him to fall, this is an effective way to tire out {enemy.name}
 this puts {enemy.name} down to {enemy.health} health while your at {player.health} health""")
             else:
                 print(f"As you Sweep {enemy.name}'s leg, he falls which gives you enough time throw your {player.weapon} down through {enemy.name}'s head, winning the crowd and the Fight.")
@@ -172,8 +172,15 @@ this puts {enemy.name} down to {enemy.health} health while your at {player.healt
     With {enemy.name} easily moving out of the way, stabing you in the arm with a non leathal blox.
         Your at {player.health} health and {enemy.name} is at {enemy.health} health.""")
 
-
-
+    if attack_1_10 == "7":
+        fake_dead = random.choice(["fake","big lose"])
+        if fake_dead == "fake":
+            enemy.health = enemy.health - 1.5*player.strenth + enemy.shield
+            fame = fame - 1
+            print(f"you fake a hamstring injury and {enemy.name} looks up at the crowd as they booooooooo.  As {enemy.name} looks up you stab and the crowd boooos more.")
+            print(f"you lost 1 fame and your opponent has {enemy.health} health left")
+        if fake_dead == "big lose":
+            player.health = player.health
 
 
 
@@ -233,6 +240,7 @@ def main():
             attack(player, enemy_1, fight_num)
 
         if player.health <= 0:
+            print("YOU DIE")
             break
         
         input('3 days later')

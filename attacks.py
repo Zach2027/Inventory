@@ -5,9 +5,9 @@ ATTACK_4 = "Side strike, hoping for a clean hit"
 ATTACK_5 = "Slice up, attempting for some damage"
 ATTACK_6 = "Go for the foot, trying to trip your opponent"
 ATTACK_7 = "Go for a stab praying that you turn your opponent into a human kabob"
-ATTACK_8 = "Throw your weapon at your opponent, attempting to spear him through the heart"
-ATTACK_9 = "You wait for your opponent to lower his guard and go for a kick below the belt"
-ATTACK_10 = "You feint, hoping your oppenent overcommits"
+ATTACK_8 = "Fake an injury hoping to catch your opponent off guard"
+ATTACK_9 = "Wait for an opening and try to get in better position"
+ATTACK_10 = "Go for a crowd pleaser and play with your opponent"
 
 
                          
