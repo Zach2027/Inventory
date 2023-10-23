@@ -1,7 +1,7 @@
 import random
 from characters.character import *
 from attacks import *
-
+fight_num = 0
 def fight(player_character, enemy_character,fight_number):
     options = [ATTACK_1, ATTACK_2, ATTACK_3, ATTACK_4, ATTACK_5, ATTACK_6, ATTACK_7, ATTACK_8]
 
@@ -226,9 +226,10 @@ def main():
     you also have {player.shield} defense and your opponent has {enemy_1.shield}''')
         print(''' Throughout the battle you're going to see key openings and these openings are where you need to strike.''') 
         fight(Character, enemy_1, 1)
+        fight_num += 1
 
         while enemy_1.health > 0 and player.health > 0:
-            attack(player, enemy_1, options)
+            attack(player, enemy_1, fight_num)
 
         if player.health <= 0:
             break
@@ -294,7 +295,7 @@ def main():
         fame = fame + 10
         input(f"""Your victory is widely acknowledged.  Lots of people know the name {name}. 
         You become very popular, your fame becomes {fame} as more people cheer for you""")
-        input(f'''The next few days are on the chiller side, you rest eat and sleep. This lasts for about a week before you gain enough strength to train''')    
+        input('''The next few days are on the chiller side, you rest eat and sleep. This lasts for about a week before you gain enough strength to train''')    
         input('''As you strength train, a man comes up to you and starts a conversation about how well you fought. 
         He says that he was a slave in his early days and knows your going to be great and he is willing to help
     all he askes in return is for you to mention his name when you become great. 
@@ -317,7 +318,7 @@ def main():
             
             print(f"You take the light wieght chainmail armor which puts you defense at {player.shield} and you relize that your stronger when you wear this armor puting you at {player.strength} strength")
 
-        input(f'''As you get ready for your 3rd fight and your owner Antonius Proximo tells you that you and him need to talk.
+        input('''As you get ready for your 3rd fight and your owner Antonius Proximo tells you that you and him need to talk.
     He tells you that you opponent is a mean killing machine coming out of retirement and he wants blood.  His name is Tigris of Gaul.  
     After long talk, Proximo tells you that he was a slave once. set free by the emporor. The pnly way to become free is to win the crowd.
     Antonius Proximo tells you that he wasn't great because of his skill but he was great because the crowd loved him.''')
