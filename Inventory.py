@@ -177,13 +177,19 @@ this puts {enemy.name} down to {enemy.health} health while your at {player.healt
         if fake_dead == "fake":
             enemy.health = enemy.health - 1.5*player.strenth + enemy.shield
             fame = fame - 1
-            print(f"you fake a hamstring injury and {enemy.name} looks up at the crowd as they booooooooo.  As {enemy.name} looks up you stab and the crowd boooos more.")
-            print(f"you lost 1 fame and your opponent has {enemy.health} health left")
+            if enemy.health > 0:
+                print(f"you fake a hamstring injury and {enemy.name} looks up at the crowd as they booooooooo.  As {enemy.name} looks up you stab and the crowd boooos more.")
+                print(f"you lost 1 fame and your opponent has {enemy.health} health left")
+            else:
+                print("As you go down you look like you are dying. As you hunch over your enemy gets ready for a final blow.  As he raises his weapon you stab you enemy through his heart winning the battle")
         if fake_dead == "big lose":
-            player.health = player.health
+            player.health = player.health - enemy.strength
+            print(f"""As you fake an injury you opponent stabs you in your exposed hand.  You get up with only {player.health} health left.""")
 
-
-
+    if attack_1_10 == "8":
+        high_ground = random.choice(["rock","trip"])        
+        if high_ground == "rock"
+            enemy.health = enemy.health 
 
 
 
