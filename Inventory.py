@@ -187,7 +187,7 @@ this puts {enemy.name} down to {enemy.health} health while your at {player.healt
 
     if attack_1_10 == "8":
         high_ground = random.choice(["rock","trip"])        
-        if high_ground == "rock"
+        if high_ground == "rock":
             enemy.health = enemy.health 
 
 
