@@ -216,9 +216,10 @@ this puts {enemy.name} down to {enemy.health} health while your at {player.healt
             crowd == "win"
         if crowd == "win":
             enemy.health = enemy.health - 20
-            print("You are the chose Gladiator that will bring the future back to rome.  With that you ar gifted in battle")
+            print(f"You are the chose Gladiator that will bring the future back to rome.  With that you ar gifted in battle.  {enemy.name} is at {enemy.health} health")
         if crowd == "lose":
-            
+            player.health = player.health - 10
+            print(f"You are not the chosen Gladiator and the crowd throws junk at you, a metal ball hits you in the head dealling 10 damage to you.  You are at {player.health} health")
 
 
 def main():
