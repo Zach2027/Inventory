@@ -234,7 +234,7 @@ def main():
         player = gladiator
         enemy_1 = small_man
         
-        ememy_3 = tigris
+        
         enemy_4 = commodus
 
         input("As you step out of the gates of rome with your new " + weapon_1 + ", you see your oponent,")
@@ -312,7 +312,7 @@ def main():
         input('''As you strength train, a man comes up to you and starts a conversation about how well you fought. 
         He says that he was a slave in his early days and knows your going to be great and he is willing to help
     all he askes in return is for you to mention his name when you become great. 
-        The man then brings out 2 pairs of armor and says his name is Marcus Aurelius.''')
+        The man then brings out 2 pairs of armor. You see his face and realize this is your owner, Proximo.''')
 
         armor = input('''Would You like
     (1), A highly armord armor set that is made of heavy metal which will help protect you
@@ -323,7 +323,7 @@ def main():
 
         if armor == "1":
             player.shield = player.shield + 8
-            print(f"Your armor helped your defence mayjorly puting it at {player.shield}")
+            print(f"Your armor helped your defence majorly puting it at {player.shield}")
 
         if armor == "2":
             player.shield = player.shield + 3
@@ -333,12 +333,13 @@ def main():
 
         input('''As you get ready for your 3rd fight and your owner Antonius Proximo tells you that you and him need to talk.
     He tells you that you opponent is a mean killing machine coming out of retirement and he wants blood.  His name is Tigris of Gaul.  
-    After long talk, Proximo tells you that he was a slave once. set free by the emporor. The pnly way to become free is to win the crowd.
+    After long talk, Proximo tells you that he was a slave once. set free by the emporor. The only way to become free is to win the crowd.
     Antonius Proximo tells you that he wasn't great because of his skill but he was great because the crowd loved him.''')
         
         print(f'''As you step out of the roaring gates of the same areana you just won in, you hear both names roaring, {name}, Tigris
     he comes out you size him up. ''')
-        
+        enemy_1 = tigris
+        fight(player, enemy_1, 3)
     
 
     print("You DIE. You are not a true gladiator of Rome.")
