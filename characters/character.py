@@ -10,13 +10,13 @@ class Weapon:
         self.defense = defense
 
     def __str__(self):
-        return f"{self.name} (DMG: {self.damage}, DEF: {self.defense})"
+        return f"{self.name}"
     
 
-
+spear = Weapon("Spear", 25)
 silver_sword = Weapon("Silver Sword", 20)
-sword = Weapon("Sword", 10, 10)
-long_sword = Weapon("Long Sword", 15, 5)
+sword = Weapon("Sword", 15)
+long_sword = Weapon("Long Sword", 10, 3)
 axe = Weapon("Axe", 20)
 fist = Weapon("Unarmed", 1)
 double_daggers = Weapon("Dagger", 15)
@@ -48,8 +48,8 @@ class Character:
         enemy.health -= damage
         print(f"{self.name} attacks {enemy.name} with their {self.weapon.name} for {damage} damage")
 
-small_man = Character("Small Man", 60, 20, 0)
+small_man = Character("Small Man", 60, 15, sword)
 korlox = Character("Korlox", 200, 10,0, axe)
 tigris = Character("Tigris", 100, 20, 10, axe)
-gladiator = Character("Gladiator", 100, 20, 0, axe)
+spartacus = Character("Spartacus", 100, 20, 5, spear)
 commodus = Character("Commodus", 100, 10, 0, double_daggers)

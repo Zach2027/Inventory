@@ -18,7 +18,7 @@ def attack(player, enemy, attack_options):
     while not attack_1_10.isdigit() or int(attack_1_10) >= len(attack_options): 
         attack_1_10 = input(f"please enter a 0-{len(attack_options)-1}")
     if attack_1_10 == ("0"):
-        trade_blows_1 = random.choice(["hit","miss","critical miss"])
+        trade_blows_1 = random.choice(["hit","small hit","critical miss"])
         if trade_blows_1 == "hit":
             enemy.health = enemy.health - player.strength
             if enemy.health > 0:
@@ -28,7 +28,7 @@ def attack(player, enemy, attack_options):
     retaliating with a strike of you own.  As you swing your {player.weapon} at his head, you get a clean strike
     sliceing his head clean off as you win the fight and the crowd''')
 
-        if trade_blows_1 == "miss":
+        if trade_blows_1 == "small hit":
             enemy.health = enemy.health - player.strength*0.5
             if enemy.health > 0:
                 print(f"You find a small and doughtful opening that you take, coming off with a small victory.  You have {player.health} left, your opponent has {enemy.health} health left")
@@ -211,7 +211,7 @@ this puts {enemy.name} down to {enemy.health} health while your at {player.healt
                 else:
                     print(f"As you go for the chest, you swing a bit too hard sliceing {enemy.name} right in half.  As you come away with this brutal victory, you win the crowd")
     if attack_1_10 == "9":
-        crowd = random.choice("lose","lose","lose","lose","lose","lose","lose","lose","lose")
+        crowd = "lose"
         if player.name == "gladiator" or player.name == "Gladiator" or player.name == "Spaniard":
             crowd == "win"
         if crowd == "win":
@@ -228,7 +228,7 @@ def main():
     of battle with rewards and gear, while playing, it will take you through the
     key situations of the duel. With every win you get closer to freedom (reach 100 fame to become free)
     Good luck to you''')
-    player = Character(input("what is your name Gladiator?  "), 10, 0, 0, 0)
+    player = Character(input("what is your name Gladiator?  "), 100, 0, 0, )
     print('''
         You are a slave forced into battle and your first fight awaits.''')
     print('''As you step towards the thundering gates, 
@@ -248,15 +248,18 @@ def main():
                 break
         if weapon_1 == "1":
             player.weapon = axe
+            player.strength += 20
         if weapon_1 == "2":
             player.weapon = long_sword
+            player.strength += 20
+            player.shield += 3
             
-        player = gladiator
+
         enemy_1 = small_man
         
        
 
-        input(f"As you step out of the gates of rome with your new {player.weapon.name}, you see your oponent,")
+        input(f"As you step out of the gates of rome with your new {player.weapon}, you see your oponent,")
         input(f'''
         you size your self up against your oponent and realize that your bigger. 
     You have {player.health} health while the man only has {enemy_1.health} health
@@ -284,7 +287,7 @@ def main():
         you regain some health, bring yourself up to {player.health} health''')
 
         if choice_2 == "3":
-            player.shield = player.shield + 3
+            player.shield = player.shield + 4
             input(f'''You find an old man with a lot of gray.  He to is a slave too, as you train, he points something out
         you realize that this suggestion is meaningful.  You ask if there is anything else that the man sees,
         in return he offers a leason, you take it and realize that this will help you with your defense.
@@ -346,7 +349,7 @@ def main():
 
         if armor == "2":
             player.shield = player.shield + 3
-            player.strength = player.strength + 10
+            player.strength = player.strength + 8
             
             print(f"You take the light wieght chainmail armor which puts you defense at {player.shield} and you relize that your stronger when you wear this armor puting you at {player.strength} strength")
 
@@ -358,6 +361,10 @@ def main():
         print(f'''As you step out of the roaring gates of the same areana you just won in, you hear both names roaring, {player.name}, Tigris
     he comes out you size him up. ''')
         enemy_1 = tigris
+        print(f''' The man's name is {enemy_1.name} the great.  {enemy_1.name} is 7-0 on all his fights.
+    As you study his past fights, you see that {enemy_1.name} has {enemy_1.health} health when you have {player.health} health.
+    You have {player.strength} strength when {enemy_1.name} has {enemy_1.strength} strength.
+    You have {player.shield} defense while {enemy_1.name} has {enemy_1.shield}.''')
         fight(player, enemy_1, 3)
     
 
