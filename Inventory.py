@@ -191,8 +191,11 @@ this puts {enemy.name} down to {enemy.health} health while your at {player.healt
             input(f'You attept a fake that is obvios and {enemy.name} slashes you puting you down to {player.health} health')
         if fake_attack == "miss":
             print(f"You sucsessfully fake out {enemy.name} giving you a few options.")
-
-
+            choice_8 = input("""(0) go for the head
+(1) Go for the chest""")
+            if choice_8 == "0":
+                random.choice(["hit","miss"])
+        
 
 
 
