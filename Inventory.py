@@ -205,7 +205,7 @@ def main():
     of battle with rewards and gear, while playing, it will take you through the
     key situations of the duel. With every win you get closer to freedom (reach 100 fame to become free)
     Good luck to you''')
-    name = input("what is your name Gladiator?  ")
+    player = Character(input("what is your name Gladiator?  "), 10, 0, 0, 0)
     print('''
         You are a slave forced into battle and your first fight awaits.''')
     print('''As you step towards the thundering gates, 
@@ -214,7 +214,6 @@ def main():
     (some gear gives you health, strength or maybe defense, 
     these will help you survive in battle)''')
     fame = 0
-    player = Character(name, 10, 0, 0, 0)
 
 
     
@@ -225,19 +224,17 @@ def main():
             if weapon_1 == "1" or weapon_1 == "2":
                 break
         if weapon_1 == "1":
-            weapon_1 = "Axe"
-            player.strength = int(player.strength) + 15
+            player.weapon = axe
         if weapon_1 == "2":
-            weapon_1 = "Long Sword"
-            player.strength = player.strength + 10
-            player.shield = player.shield + 3
+            player.weapon = long_sword
+            
         player = gladiator
         enemy_1 = small_man
         
         
         enemy_4 = commodus
 
-        input("As you step out of the gates of rome with your new " + weapon_1 + ", you see your oponent,")
+        input("As you step out of the gates of rome with your new " + player.weapon + ", you see your oponent,")
         input(f'''
         you size your self up against your oponent and realize that your bigger. 
     You have {player.health} health while the man only has {enemy_1.health} health
@@ -272,7 +269,7 @@ def main():
             Your new defense is {player.shield} ''')
 
         input(f'''As time goes on you heal your injuries, but their is something new, you hear word of a certain Gladiator
-    his name echos threw your camp, all anyone talkes about is a Gladiator named {name}.  Your also realize that you gained 
+    his name echos threw your camp, all anyone talkes about is a Gladiator named {player.name}.  Your also realize that you gained 
     fame from your fight, puting you at {fame} fame.''')
         player.health = player.health + 30
 
@@ -306,7 +303,7 @@ def main():
             print("You died")
             break
         fame = fame + 10
-        input(f"""Your victory is widely acknowledged.  Lots of people know the name {name}. 
+        input(f"""Your victory is widely acknowledged.  Lots of people know the name {player.name}. 
         You become very popular, your fame becomes {fame} as more people cheer for you""")
         input('''The next few days are on the chiller side, you rest eat and sleep. This lasts for about a week before you gain enough strength to train''')    
         input('''As you strength train, a man comes up to you and starts a conversation about how well you fought. 
@@ -336,7 +333,7 @@ def main():
     After long talk, Proximo tells you that he was a slave once. set free by the emporor. The only way to become free is to win the crowd.
     Antonius Proximo tells you that he wasn't great because of his skill but he was great because the crowd loved him.''')
         
-        print(f'''As you step out of the roaring gates of the same areana you just won in, you hear both names roaring, {name}, Tigris
+        print(f'''As you step out of the roaring gates of the same areana you just won in, you hear both names roaring, {player.name}, Tigris
     he comes out you size him up. ''')
         enemy_1 = tigris
         fight(player, enemy_1, 3)
