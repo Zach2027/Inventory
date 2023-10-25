@@ -195,12 +195,34 @@ this puts {enemy.name} down to {enemy.health} health while your at {player.healt
 (1) Go for the chest""")
             if choice_8 == "0":
                 random.choice(["hit","miss"])
-        
+                if choice_8 == "miss":
+                    print("You stalemate and come off with nothing")
 
+                if choice_8 == "hit":
+                    enemy.health = enemy.health - player.strength*2 + enemy.shield
+                    if enemy.health <= 0:
+                        print("You go for the head, with out any restraint you cut the head clean off winning the crowd and the battle.")
+                    else:
+                        print(f"You get a clean hit on the face couseing a huge gash to form on {enemy.name}'s face")
+            if choice_8 == "1":
+                enemy.health = enemy.health + enemy.shield - player.strength
+                if enemy.health > 0:
+                    print(f"As you go for the chest you slash {enemy.name} through the chest cutting through his armor cousing him to have {enemy.health} health left")
+                else:
+                    print(f"As you go for the chest, you swing a bit too hard sliceing {enemy.name} right in half.  As you come away with this brutal victory, you win the crowd")
+    if attack_1_10 == "9":
+        crowd = random.choice("lose","lose","lose","lose","lose","lose","lose","lose","lose")
+        if player.name == "gladiator" or player.name == "Gladiator" or player.name == "Spaniard":
+            crowd == "win"
+        if crowd == "win":
+            enemy.health = enemy.health - 20
+            print("You are the chose Gladiator that will bring the future back to rome.  With that you ar gifted in battle")
+        if crowd == "lose":
+            
 
 
 def main():
-    print("Gladiator writen by Zach and edited by Kaz")
+    print("Gladiator writen by Zach, modiified, fixed and edited by Kaz")
     print('''This is a gladiator game that will bring you through the depths
     of battle with rewards and gear, while playing, it will take you through the
     key situations of the duel. With every win you get closer to freedom (reach 100 fame to become free)
