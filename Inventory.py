@@ -242,6 +242,7 @@ def main():
     
     while player.health > 0:
         weapon_1 = input("Would like an axe(1) or a long sword(2)")
+
         while int(weapon_1) != 1 and int(weapon_1) != 2:
             weapon_1 = input("please enter a 1 or a 2")
             if weapon_1 == "1" or weapon_1 == "2":
