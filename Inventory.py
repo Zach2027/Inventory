@@ -185,11 +185,12 @@ this puts {enemy.name} down to {enemy.health} health while your at {player.healt
             print(f"""As you fake an injury you opponent stabs you in your exposed hand.  You get up with only {player.health} health left.""")
 
     if attack_1_10 == "8":
-        high_ground = random.choice(["rock","trip"])        
-        if high_ground == "rock":
-            enemy.health = enemy.health 
-
-
+        fake_attack = random.choice(["miss","fake"])        
+        if fake_attack == "miss":
+            player.health = player.health - enemy.strength + player.shield
+            input(f'You attept a fake that is obvios and {enemy.name} slashes you puting you down to {player.health} health')
+        if fake_attack == "miss":
+            print(f"You sucsessfully fake out {enemy.name} giving you a few options.")
 
 
 
