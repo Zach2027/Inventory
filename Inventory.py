@@ -342,7 +342,7 @@ def main():
     (2), A lighter chainmail armor set that will protect to a certain degree but is made to be adgile''')
 
         if armor != "1" and armor != "2":
-            armor = input("please entar a 1 or 2")
+            armor = input("please enter a 1 or 2")
 
         if armor == "1":
             player.shield = player.shield + 8
@@ -367,7 +367,33 @@ def main():
     You have {player.strength} strength when {enemy_1.name} has {enemy_1.strength} strength.
     You have {player.shield} defense while {enemy_1.name} has {enemy_1.shield}.''')
         fight(player, enemy_1, 3)
-    
+        fame += 5
+        print(f''' After you leave the stadium, you hear a small boy shouting {player.name}! Then another person joins in, then another says {player.name}, it starts to multiply one person after another.
+              Eventually every is chanting {player.name}, {player.name}, {player.name}! You now have 3 options ''')
+        crowd_add = input(''' 
+(1) Ignore the crowd
+(2) Start flexing in front of the crowd
+(3) Throw your sword up in the air at the organizers attempting to hype everyone up''')
+                          
+        if crowd_add != "1" and crowd_add != "2" and crowd_add != "3":
+            crowd_add = input("please enter a 1, 2, or 3")
+
+        if crowd_add == "1":
+            fame += 3
+            print(f"The crowd thinks you are as tough as a soldier, you now have {fame} fame")
+
+        if crowd_add == "2":
+            fame += 5
+            print(f"The crowd is amazed by your physique, and roar in approval, you now have {fame} fame")
+        if crowd_add == "3":
+            odds = random.choice([1,2])
+            if odds == 1:
+                fame += -10
+                print(f"You hit a senator in the leg, the crowd cheers, but the senator is well respected, causing you to now only have {fame} fame")
+            else:
+                fame += 10
+                print(f"Your {player.weapon} perfectly spears a pig, sending a wave of laughter through the crowd, they love it, you now have {fame} fame")
+
 
     print("You DIE. You are not a true gladiator of Rome.")
     #Kaz Ideas
