@@ -230,7 +230,7 @@ def main():
             player.shield = player.shield + 3
         player = gladiator
         enemy_1 = small_man
-        enemy_2 = korlox
+        
         ememy_3 = tigris
         enemy_4 = commodus
 
@@ -291,7 +291,8 @@ def main():
         input(f'''You exit the Gates of an old beaten down arena.  {enemy_1.name} stands infront of you, as you step out,
         You see {enemy_1.name} is holding a long axe.  As  the battle begins you start to circle each other, neither one daring to make the fist move
         it is up to you and you see a couple things you can do''')
-        
+        enemy_1 = korlox
+        fight(player, enemy_1, 2)
 
 
 
