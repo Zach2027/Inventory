@@ -49,7 +49,7 @@ class Character:
         print(f"{self.name} attacks {enemy.name} with their {self.weapon.name} for {damage} damage")
 
 small_man = Character("Small Man", 60, 20, 0)
-korlox = Character("Korlox", 200, 15,0, axe)
+korlox = Character("Korlox", 200, 10,0, axe)
 tigris = Character("Tigris", 100, 20, 10, axe)
-gladiator = Character("Gladiator", 200, 20, 0, axe)
+gladiator = Character("Gladiator", 100, 20, 0, axe)
 commodus = Character("Commodus", 100, 10, 0, double_daggers)

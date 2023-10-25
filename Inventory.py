@@ -37,7 +37,7 @@ def attack(player, enemy, attack_options):
     aproching you he tries to swing at your ankles jumping up you bring your {player.weapon} 
     down in his head spliting it right down the midle, winning the fight and the crowd.''')
         if trade_blows_1 == "critical miss":
-            player.health = player.health - enemy.strength*1.5 + player.shield
+            player.health = player.health - enemy.strength + player.shield
             print(f'''  You miss horribly, allowing your opponent to duck your attack slicing your ancle,
     You have {player.health} left, your opponent has {enemy.health} helth left''')
             
@@ -254,10 +254,9 @@ def main():
         player = gladiator
         enemy_1 = small_man
         
-        
-        enemy_4 = commodus
+       
 
-        input("As you step out of the gates of rome with your new " + player.weapon + ", you see your oponent,")
+        input(f"As you step out of the gates of rome with your new {player.weapon.name}, you see your oponent,")
         input(f'''
         you size your self up against your oponent and realize that your bigger. 
     You have {player.health} health while the man only has {enemy_1.health} health
@@ -294,14 +293,14 @@ def main():
         input(f'''As time goes on you heal your injuries, but their is something new, you hear word of a certain Gladiator
     his name echos threw your camp, all anyone talkes about is a Gladiator named {player.name}.  Your also realize that you gained 
     fame from your fight, puting you at {fame} fame.''')
-        player.health = player.health + 30
+        player.health = player.health + 50
 
 
 
 
 
 
-
+        enemy_1 = korlox
         input(f'''Your next fight is in one hour, as you prep and research for imformation on your oppenent, 
     you find out you're fighting a big guy. The man's name is {enemy_1.name} the big.  {enemy_1.name} is 4-0 on all his fights.
     As you study his past fights, you see that {enemy_1.name} has {enemy_1.health} health when you only have a mere {player.health} health.
@@ -314,7 +313,7 @@ def main():
         input(f'''You exit the Gates of an old beaten down arena.  {enemy_1.name} stands infront of you, as you step out,
         You see {enemy_1.name} is holding a long axe.  As  the battle begins you start to circle each other, neither one daring to make the fist move
         it is up to you and you see a couple things you can do''')
-        enemy_1 = korlox
+        
         fight(player, enemy_1, 2)
 
 
