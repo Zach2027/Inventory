@@ -6,8 +6,7 @@ def fight(player_character, enemy_character, fight_number):
     input('''The battle begins''') 
     while enemy_character.health > 0 and player_character.health > 0:
         attack(player_character, enemy_character, options[:fight_number + 1])
-    if player.health <= 0:
-        print("YOU DIE")
+    
         
 
 
@@ -228,8 +227,11 @@ def main():
             weapon_1 = "Long Sword"
             player.strength = player.strength + 10
             player.shield = player.shield + 3
-        player = Character(name, 100, player.strength, player.shield, weapon_1)
-        enemy_1 = Character("small_man", 80, 20, 0)
+        player = gladiator
+        enemy_1 = small_man
+        enemy_2 = korlox
+        ememy_3 = tigris
+        enemy_4 = commodus
 
         input("As you step out of the gates of rome with your new " + weapon_1 + ", you see your oponent,")
         input(f'''
@@ -243,7 +245,7 @@ def main():
         input('3 days later')
         fame = fame + 5
         choice_2 = input('''Through out your recoving time, you put your time to good use.
-            You realize that you could (1) workout strengthing your self, (2) get a good healling meal or (3) attepmt to get a lesson from an old Gladiator''')
+            You realize that you could (1) workout strengthing your self, (2) get a good healing meal or (3) attepmt to get a lesson from an old Gladiator''')
         while int(choice_2) != 1 and int(choice_2) != 2 and int(choice_2) != 3:
             choice_2 = input("please enter a 1, 2 or a 3")
             if choice_2 == "1" or choice_2 == "2" or choice_2 == "3":
@@ -287,7 +289,7 @@ def main():
         
         input(f'''You exit the Gates of an old beaten down arena.  {enemy_1.name} stands infront of you, as you step out,
         You see {enemy_1.name} is holding a long axe.  As  the battle begins you start to circle each other, neither one daring to make the fist move
-        it is up to you and you see a cople things you can do''')
+        it is up to you and you see a couple things you can do''')
         
 
 
