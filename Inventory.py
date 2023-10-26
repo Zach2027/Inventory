@@ -6,6 +6,9 @@ def fight(player_character, enemy_character, fight_number):
     input('''The battle begins''') 
     while enemy_character.health > 0 and player_character.health > 0:
         attack(player_character, enemy_character, options[:fight_number + 1])
+    if player_character.health <= 0:
+        print("You DIE. You are not a true gladiator of Rome.")
+
     
         
 
@@ -216,14 +219,14 @@ this puts {enemy.name} down to {enemy.health} health while your at {player.healt
             crowd == "win"
         if crowd == "win":
             enemy.health = enemy.health - 20
-            print(f"You are the chose Gladiator that will bring the future back to rome.  With that you ar gifted in battle.  {enemy.name} is at {enemy.health} health")
+            print(f"You are the chose Gladiator that will bring the future back to rome.  With that you are gifted in battle.  {enemy.name} is at {enemy.health} health")
         if crowd == "lose":
             player.health = player.health - 10
             print(f"You are not the chosen Gladiator and the crowd throws junk at you, a metal ball hits you in the head dealling 10 damage to you.  You are at {player.health} health")
 
 
 def main():
-    print("Gladiator writen by Zach, modiified, fixed and edited by Kaz")
+    print("Gladiator writen by Zach, and Kaz")
     print('''This is a gladiator game that will bring you through the depths
     of battle with rewards and gear, while playing, it will take you through the
     key situations of the duel. With every win you get closer to freedom (reach 100 fame to become free)
@@ -260,7 +263,7 @@ def main():
         
        
 
-        input(f"As you step out of the gates of rome with your new {player.weapon}, you see your oponent,")
+        input(f"As you step out of the gates of rome with your new {player.weapon}, you see your opponent,")
         input(f'''
         you size your self up against your oponent and realize that your bigger. 
     You have {player.health} health while the man only has {enemy_1.health} health
@@ -271,12 +274,10 @@ def main():
         
         input('3 days later')
         fame = fame + 5
-        choice_2 = input('''Through out your recoving time, you put your time to good use.
-            You realize that you could (1) workout strengthing your self, (2) get a good healing meal or (3) attepmt to get a lesson from an old Gladiator''')
+        choice_2 = input('''Through out your recovering time, you put your time to good use.
+            You realize that you could (1) workout strengthing your self, (2) get a good healing meal or (3) attempt to get a lesson from an old Gladiator''')
         while int(choice_2) != 1 and int(choice_2) != 2 and int(choice_2) != 3:
-            choice_2 = input("please enter a 1, 2 or a 3")
-            if choice_2 == "1" or choice_2 == "2" or choice_2 == "3":
-                break            
+            choice_2 = input("please enter a 1, 2 or a 3")               
 
         if choice_2 == "1":
             player.strength = player.strength + 10
@@ -315,8 +316,7 @@ def main():
     Through this you will be able to have more options and the battle will be more intense.''')
         
         input(f'''You exit the Gates of an old beaten down arena.  {enemy_1.name} stands infront of you, as you step out,
-        You see {enemy_1.name} is holding a long axe.  As  the battle begins you start to circle each other, neither one daring to make the fist move
-        it is up to you and you see a couple things you can do''')
+        You see {enemy_1.name} is holding a long axe''')
         
         fight(player, enemy_1, 2)
 
@@ -368,7 +368,7 @@ def main():
     You have {player.shield} defense while {enemy_1.name} has {enemy_1.shield}.''')
         fight(player, enemy_1, 3)
         fame += 5
-        print(f''' After you leave the stadium, you hear a small boy shouting {player.name}! Then another person joins in, then another says {player.name}, it starts to multiply one person after another.
+        input(f''' After you leave the stadium, you hear a small boy shouting {player.name}! Then another person joins in, then another says {player.name}, it starts to multiply one person after another.
               Eventually every is chanting {player.name}, {player.name}, {player.name}! You now have 3 options ''')
         crowd_add = input(''' 
 (1) Ignore the crowd
@@ -379,24 +379,48 @@ def main():
             crowd_add = input("please enter a 1, 2, or 3")
 
         if crowd_add == "1":
-            fame += 3
+            fame = fame + 3
             print(f"The crowd thinks you are as tough as a soldier, you now have {fame} fame")
 
         if crowd_add == "2":
-            fame += 5
+            fame = fame + 5
             print(f"The crowd is amazed by your physique, and roar in approval, you now have {fame} fame")
         if crowd_add == "3":
             odds = random.choice([1,2])
             if odds == 1:
-                fame += -10
+                fame = fame - 10
                 print(f"You hit a senator in the leg, the crowd cheers, but the senator is well respected, causing you to now only have {fame} fame")
             else:
-                fame += 10
-                print(f"Your {player.weapon} perfectly spears a pig, sending a wave of laughter through the crowd, they love it, you now have {fame} fame")
+                fame = fame + 10
+        enemy_1 = spartacus
+        print(f"Your {player.weapon} perfectly spears a pig, sending a wave of laughter through the crowd, they love it, you now have {fame} fame")
+        pre_fight = input('''A few days pass, and you are about to get into your next fight. 
+                 Before you step into the arena,  you find yourself in a dimly lit chamber, adorned with ancient weaponry and the distant echoes of the crowd's anticipation. 
+                 Your heart is pounding, and the weight of your impending battle pressed heavily upon your shoulders. 
+                 Two options lay before you:
+                    (1) Pray to the gods up above
+                    (2) Consider every tacting a move that could possibly occur''')
+        if pre_fight != "1" and pre_fight != "2":
+            pre_fight = input("please enter a 1 or 2")
+        if pre_fight == "1":
+            print("A flash of dry lightning is heard and seen in the arena, the gods have answered your prayers.")
+            player.strength += 10
+            player.health += 5
+        if pre_fight == "2":
+            print(f'''You think of everything that {enemy_1} could possibly do.
+            You begin rack your brain for what Proximo told you about {enemy_1}'s strategy in his past fights.
+            You remeber how aggresive {enemy_1} is, and replace your shield, getting a better one.''')
+            player.shield += 10
+        print(f'''
+As you step through the grand entrance, the deafening roar of the crowd chanting {enemy_1} louder than {player.name}, is something that sends shivers down your spine.
+You finally see your opponent, who is named {enemy_1.name}. {enemy_1.name} is undefeated. From his past fights, you know that {enemy_1.name} has {enemy_1.health} health compared to your {player.health} health.
+You have {player.strength} strength while {enemy_1.name} has {enemy_1.strength} strength.
+You defense is {player.shield} while {enemy_1.name} has {enemy_1.shield}.''')
+        fight(player, enemy_1, 4)
+        
+         
 
-
-    print("You DIE. You are not a true gladiator of Rome.")
-    #Kaz Ideas
+    
    
 
 main()  
