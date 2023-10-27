@@ -426,8 +426,17 @@ You defense is {player.shield} while {enemy_1.name} has {enemy_1.shield}.''')
         fame += 5
         input = "Two days later..."
         input = '''your body still aches, and the wounds you sustained remind you of the fierce struggle you endured. The cheers of the crowd have faded into memory, replaced by the solemnity of the training grounds as I prepare for my next bout. '''
-        extra_health = input('''The scars on my flesh serve as a reminder of the price I pay for glory in the unforgiving world of the gladiator        
+        extra_health = input('''The scars on my flesh serve as a reminder of the price I pay for glory in the unforgiving world of the gladiator''')        
          
+
+
+
+
+
+
+
+
+        
 
     
    
