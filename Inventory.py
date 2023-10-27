@@ -440,7 +440,7 @@ You defense is {player.shield} while {enemy_1.name} has {enemy_1.shield}.''')
             print(f"The ointment cleans and heals your wounds, it also clears your mind, you now have {player.health} health and {player.shield} defense")
         enemy_1 = lucius_verus
         input(f'''
-As you step through the roaring entrance of a new area, The new arena is quite but as you step out, {enemy_1.name} , {enemy_1.name} grows louder than {player.name}, is something that butterflies through your stomach.
+As you step through the roaring entrance of a new area, The new arena is quiet but as you step out, {enemy_1.name} , {enemy_1.name} booms much more {player.name}, is something that butterflies through your stomach.
 You finally see your opponent, who is named {enemy_1.name}. {enemy_1.name} is 12-0. From his past fights, you know that {enemy_1.name} has {enemy_1.health} health compared to your {player.health} health.
 You have {player.strength} strength while {enemy_1.name} has {enemy_1.strength} strength.
 You defense is {player.shield} while {enemy_1.name} has {enemy_1.shield}.''')
@@ -473,5 +473,11 @@ Your something more.""")
 
     
    
+        enemy_1 = galius
+        input(f'''
+              With the news of the Colosseum in your head, The arena sounds siletn even thought it is roaring {player.name}, is something that butterflies through your stomach.
+You finally see your opponent, who is named {enemy_1.name}. {enemy_1.name} is 12-0. From his past fights, you know that {enemy_1.name} has {enemy_1.health} health compared to your {player.health} health.
+You have {player.strength} strength while {enemy_1.name} has {enemy_1.strength} strength.
+You defense is {player.shield} while {enemy_1.name} has {enemy_1.shield}.''')
 
 main()  
