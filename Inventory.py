@@ -504,6 +504,70 @@ Crafted from sturdy metal, it is meticulously adorned with a multitude of flawle
         if armor_choice_2 == "1":
             player.shield += 10
             fame += 5
+        fame += 5
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        enemy_1 = corvus
+        input(f'''
+You get ready to come out of the gates of the Colusem. {player.name} is roaring throguh the crowd, You see  {enemy_1.name} standing on the other side of the arena. 
+He is a very raw gladitor who is trying to make a name for himself. {enemy_1.name} is only 11-0 . From what you have heard, {enemy_1.name} is a cold killer and has
+{enemy_1.health} health compared to your {player.health} health.
+You have {player.strength} strength while {enemy_1.name} has {enemy_1.strength} strength.
+You defense is {player.shield} while {enemy_1.name} has {enemy_1.shield}.''')
+        fight(player, enemy_1, )
+
+
+        input(f"""As you leave the arena with blood covering you, You hear {player.name}, {player.name}, {player.name}
+You raise your blood drenched {weapon_1.name} and applause fills the arena.  Gaurds come out and circle you with spears pointing at you.
+'Live' 'Live' 'Live' fills the air and you look up and Commodus, Emporer of Rome holds his hand in a fist with his thumb up.  With this, more cheering fills the air.""")
+
+        print("3 days past and you")
+        prep = input(f"""You can 
+(1) Devolop your skills with your {weapon_1.name}
+(2) Plan out a stratagy for next fight""")
+        
+
+        while prep != "1" and prep != "2":
+            print("please enter a 1 or a 2")
+            
+        if prep == "1":
+            player.strength += 15
+            print(f"You focus on building your skills puting you at {player.strength} strength")
+
+        if prep == "2":
+            player.shield += 8
+            print(f'''You mentaly train for your next fight seeing every attack your next opponent could do
+    This puts you at {player.shield} shield''')
+
+
+
+
+
 
 
 main()  
