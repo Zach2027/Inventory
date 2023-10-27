@@ -480,4 +480,30 @@ He is much smaller than expected and {enemy_1.name} is only 5-0 . From what you 
 You have {player.strength} strength while {enemy_1.name} has {enemy_1.strength} strength.
 You defense is {player.shield} while {enemy_1.name} has {enemy_1.shield}.''')
         fight(player, enemy_1, 6) 
+        input(f''' As you travel through the Turkish deserts, you arrive at a town.
+              The town Samsun is bustling with activity. You arrive in the middle of the town and hear some kids saying {player.name} you are me hero!
+              The ask you to follow them and eventually they lead you to a group of vendors.''')
+        input(f'''
+The first vendor has a golden gladiator helmet.
+The golden helmet is a breathtaking masterpiece
+cast from pure, gleaming gold that shimmers under the arena's intense sunlight.
+Its design is elegantly simple yet regal, featuring a rounded shape that fully encases your head and a polished, reflective surface that captures the attention of all who gaze upon it. 
+Engraved on the side is {player.name}''')
+        input('''
+Next you see a beatiful diamond encrusted chestplate. 
+The diamond-encrusted chestplate is a breathtaking masterpiece, a dazzling display of extravagance and strength. 
+Crafted from sturdy metal, it is meticulously adorned with a multitude of flawless, brilliant-cut diamonds, creating a shimmering armor that commands attention on the battlefield.''')
+        armor_choice_2 = input('''Do you choose the:
+(1) The golden helmet
+(2) The diamond encrusted chestplate''')
+        while armor_choice_2 != "1" and armor_choice_2 != "2":
+            armor_choice_2 = input("please enter a 1 or 2")
+        if armor_choice_2 == "1":
+            player.shield += 15
+            fame += 3
+        if armor_choice_2 == "1":
+            player.shield += 10
+            fame += 5
+
+
 main()  
