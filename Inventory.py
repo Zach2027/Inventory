@@ -392,8 +392,8 @@ def main():
                 print(f"You hit a senator in the leg, the crowd cheers, but the senator is well respected, causing you to now only have {fame} fame")
             else:
                 fame = fame + 10
+                print(f"Your {player.weapon} perfectly spears a pig, sending a wave of laughter through the crowd, they love it, you now have {fame} fame")
         enemy_1 = spartacus
-        print(f"Your {player.weapon} perfectly spears a pig, sending a wave of laughter through the crowd, they love it, you now have {fame} fame")
         pre_fight = input('''A few days pass, and you are about to get into your next fight. 
                  Before you step into the arena,  you find yourself in a dimly lit chamber, adorned with ancient weaponry and the distant echoes of the crowd's anticipation. 
                  Your heart is pounding, and the weight of your impending battle pressed heavily upon your shoulders. 
