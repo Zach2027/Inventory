@@ -419,7 +419,11 @@ You finally see your opponent, who is named {enemy_1.name}. {enemy_1.name} is un
 You have {player.strength} strength while {enemy_1.name} has {enemy_1.strength} strength.
 You defense is {player.shield} while {enemy_1.name} has {enemy_1.shield}.''')
         fight(player, enemy_1, 4)
-        
+        player.health += 
+        fame += 5
+        input = "Two days later..."
+        input = '''my body still aches, and the wounds I sustained remind me of the fierce struggle I endured. The cheers of the crowd have faded into memory, replaced by the solemnity of the training grounds as I prepare for my next bout. '''
+        extra_health = The scars on my flesh serve as a reminder of the price I pay for glory in the unforgiving world of the gladiator."        
          
 
     
