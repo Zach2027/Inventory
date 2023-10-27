@@ -271,9 +271,9 @@ def main():
     you also have {player.shield} defense and your opponent has {enemy_1.shield}''')
         print(''' Throughout the battle you're going to see key openings and these openings are where you need to strike.''') 
         fight(player, enemy_1, 1)
-        
+        player.health += 30
+        fame += 5
         input('3 days later')
-        fame = fame + 5
         choice_2 = input('''Through out your recovering time, you put your time to good use.
             You realize that you could (1) workout strengthing your self, (2) get a good healing meal or (3) attempt to get a lesson from an old Gladiator''')
         while int(choice_2) != 1 and int(choice_2) != 2 and int(choice_2) != 3:
@@ -319,6 +319,8 @@ def main():
         You see {enemy_1.name} is holding a long axe''')
         
         fight(player, enemy_1, 2)
+        player.health += 30
+        fame += 5
 
 
 
@@ -367,6 +369,7 @@ def main():
     You have {player.strength} strength when {enemy_1.name} has {enemy_1.strength} strength.
     You have {player.shield} defense while {enemy_1.name} has {enemy_1.shield}.''')
         fight(player, enemy_1, 3)
+        player.health += 30
         fame += 5
         input(f''' After you leave the stadium, you hear a small boy shouting {player.name}! Then another person joins in, then another says {player.name}, it starts to multiply one person after another.
               Eventually every is chanting {player.name}, {player.name}, {player.name}! You now have 3 options ''')
@@ -412,18 +415,18 @@ def main():
             You begin rack your brain for what Proximo told you about {enemy_1}'s strategy in his past fights.
             You remeber how aggresive {enemy_1} is, and replace your shield, getting a better one.''')
             player.shield += 8
-        player.health += 30
+        
         print(f'''
 As you step through the grand entrance, the deafening roar of the crowd chanting {enemy_1} louder than {player.name}, is something that sends shivers down your spine.
 You finally see your opponent, who is named {enemy_1.name}. {enemy_1.name} is undefeated. From his past fights, you know that {enemy_1.name} has {enemy_1.health} health compared to your {player.health} health.
 You have {player.strength} strength while {enemy_1.name} has {enemy_1.strength} strength.
 You defense is {player.shield} while {enemy_1.name} has {enemy_1.shield}.''')
         fight(player, enemy_1, 4)
-        player.health += 
+        player.health += 30
         fame += 5
         input = "Two days later..."
-        input = '''my body still aches, and the wounds I sustained remind me of the fierce struggle I endured. The cheers of the crowd have faded into memory, replaced by the solemnity of the training grounds as I prepare for my next bout. '''
-        extra_health = The scars on my flesh serve as a reminder of the price I pay for glory in the unforgiving world of the gladiator."        
+        input = '''your body still aches, and the wounds you sustained remind you of the fierce struggle you endured. The cheers of the crowd have faded into memory, replaced by the solemnity of the training grounds as I prepare for my next bout. '''
+        extra_health = input('''The scars on my flesh serve as a reminder of the price I pay for glory in the unforgiving world of the gladiator        
          
 
     
