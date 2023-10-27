@@ -424,9 +424,18 @@ You defense is {player.shield} while {enemy_1.name} has {enemy_1.shield}.''')
         fight(player, enemy_1, 4)
         player.health += 30
         fame += 5
-        input = "Two days later..."
-        input = '''your body still aches, and the wounds you sustained remind you of the fierce struggle you endured. The cheers of the crowd have faded into memory, replaced by the solemnity of the training grounds as I prepare for my next bout. '''
-        extra_health = input('''The scars on my flesh serve as a reminder of the price I pay for glory in the unforgiving world of the gladiator''')        
+        input("Two days later...")
+        input("your body still aches, and the wounds you sustained remind you of the fierce struggle you endured. The cheers of the crowd have faded into memory, replaced by the solemnity of the training grounds as you prepare for your next bout")
+        extra_health_1 = input('''The scars on your flesh serve as a reminder of the price you pay for glory in the unforgiving world of the gladiator. You are faced with a choice:
+(1) Wrap your wounds in bandages, as you were taught in your training
+(2) Apply a special ointment, hoping it doesn't poison you''')
+        if extra_health_1 == "1":
+            player.health += 70
+            print(f"The bangdages are healing your wounds, you now have {player.health}health")
+        if extra_health_1 == "2":
+            player.health += 50
+            player.shield += 5
+            print(f"The ointment cleans and heals your wounds, it also clears your mind, you now have {player.health} health and {player.shield} defense")
          
 
 
