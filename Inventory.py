@@ -87,7 +87,7 @@ def attack(player, enemy, attack_options):
                 print(f"""You clash your {player.weapon} with your opponent's axe, you mange to slide your blade
     around your opponent's hilt slashing his arm. You have {player.health} health left and your opponent has {enemy.health} health left.""")
             else:
-                 input(f'''As your opponent swings his axe down on you, you mange to step to the side and cut your opponent in half.
+                input(f'''As your opponent swings his axe down on you, you mange to step to the side and cut your opponent in half.
      with the monsters top half sliding off the his legs, you hear {player.name} chanting in the crowds. 
     You won the battle but more importantly you won the crowd.''')
         if side_strike == "lose":
@@ -400,17 +400,19 @@ def main():
                  Two options lay before you:
                     (1) Pray to the gods up above
                     (2) Consider every tacting a move that could possibly occur''')
+        
         if pre_fight != "1" and pre_fight != "2":
             pre_fight = input("please enter a 1 or 2")
         if pre_fight == "1":
             print("A flash of dry lightning is heard and seen in the arena, the gods have answered your prayers.")
             player.strength += 10
-            player.health += 5
+            player.health += 20
         if pre_fight == "2":
             print(f'''You think of everything that {enemy_1} could possibly do.
             You begin rack your brain for what Proximo told you about {enemy_1}'s strategy in his past fights.
             You remeber how aggresive {enemy_1} is, and replace your shield, getting a better one.''')
-            player.shield += 10
+            player.shield += 8
+        player.health += 30
         print(f'''
 As you step through the grand entrance, the deafening roar of the crowd chanting {enemy_1} louder than {player.name}, is something that sends shivers down your spine.
 You finally see your opponent, who is named {enemy_1.name}. {enemy_1.name} is undefeated. From his past fights, you know that {enemy_1.name} has {enemy_1.health} health compared to your {player.health} health.
