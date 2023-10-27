@@ -460,10 +460,16 @@ Your something more.""")
             break
         
         if upgrade == "1":
-            
+            player.strength += 10
+            print("You Shapen your Weapon and you gain strength shapening")
+        if upgrade == "2":
+            player.shield += 8
+            print("Your work on toughness.  Strengthing your muscles and bones you gain some shield")
 
-
-
+        if upgrade == "3":
+            player.strength += 15
+            player.shield += 10
+            print("You work on both becoming more toughness and strength.")
 
     
    
