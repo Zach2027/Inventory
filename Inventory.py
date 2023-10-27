@@ -436,16 +436,32 @@ You defense is {player.shield} while {enemy_1.name} has {enemy_1.shield}.''')
             player.health += 50
             player.shield += 5
             print(f"The ointment cleans and heals your wounds, it also clears your mind, you now have {player.health} health and {player.shield} defense")
-         
+        enemy_1 = lucius_verus
+        input(f'''
+As you step through the roaring entrance of a new area, The new arena is quite but as you step out, {enemy_1.name} , {enemy_1.name} grows louder than {player.name}, is something that butterflies through your stomach.
+You finally see your opponent, who is named {enemy_1.name}. {enemy_1.name} is 12-0. From his past fights, you know that {enemy_1.name} has {enemy_1.health} health compared to your {player.health} health.
+You have {player.strength} strength while {enemy_1.name} has {enemy_1.strength} strength.
+You defense is {player.shield} while {enemy_1.name} has {enemy_1.shield}.''')
+        fight(player, enemy_1, 5)
+        input("""As you walk away from your fallen enemy you walk right out, no reaction.  This leads rumors of your victory that your not human.  
+Your something more.""")
+        fame += 5
 
+        print("""5 days pass and you have a lot of down time.  You are stuck inside, when a messenger tells you that you are invited to the Colosseum.
+    You can't fight there without at least an 8-0 record so you need to fight more.""")
 
-
-
-
-
-
-
+        upgrade = input(f"""As time passes you have a couple options:
+(1) Sharpen your sword
+(2) Do ab drils to increase you toughness""")
+        while upgrade != "1" and upgrade != "2" and upgrade != "3":
+            print("please enter a 1 or a 2")
+            break
         
+        if upgrade == "1":
+            
+
+
+
 
     
    
