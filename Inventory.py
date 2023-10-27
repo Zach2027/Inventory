@@ -452,16 +452,16 @@ Your something more.""")
         print("""5 days pass and you have a lot of down time.  You are stuck inside, when a messenger tells you that you are invited to the Colosseum.
     You can't fight there without at least an 8-0 record so you need to fight more.""")
 
-        upgrade = input(f"""As time passes you have a couple options:
-(1) Sharpen your sword
-(2) Do ab drils to increase you toughness""")
+        upgrade = input("""As time passes you have a couple options:
+(1) Sharpen your sword, with a fine grade rock
+(2) Do ab drils to increase you toughness and endurance""")
         while upgrade != "1" and upgrade != "2" and upgrade != "3":
             print("please enter a 1 or a 2")
             break
         
         if upgrade == "1":
             player.strength += 10
-            print("You Shapen your Weapon and you gain strength shapening")
+            print("You Sharpen your Weapon and you gain strength sharpening")
         if upgrade == "2":
             player.shield += 8
             print("Your work on toughness.  Strengthing your muscles and bones you gain some shield")
@@ -475,9 +475,9 @@ Your something more.""")
    
         enemy_1 = galius
         input(f'''
-              With the news of the Colosseum in your head, The arena sounds siletn even thought it is roaring {player.name}, is something that butterflies through your stomach.
-You finally see your opponent, who is named {enemy_1.name}. {enemy_1.name} is 12-0. From his past fights, you know that {enemy_1.name} has {enemy_1.health} health compared to your {player.health} health.
+With the news of the Colosseum in your head, The arena sounds silent even thought it is roaring {player.name}, You finally see  {enemy_1.name}. 
+He is much smaller than expected and {enemy_1.name} is only 5-0 . From what you have heard, you know that {enemy_1.name} has {enemy_1.health} health compared to your {player.health} health.
 You have {player.strength} strength while {enemy_1.name} has {enemy_1.strength} strength.
 You defense is {player.shield} while {enemy_1.name} has {enemy_1.shield}.''')
-
+        fight(player, enemy_1, 6) 
 main()  
