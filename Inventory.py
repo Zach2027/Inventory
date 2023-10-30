@@ -123,9 +123,11 @@ your opponent has {enemy.health} health left and you have {player.health} health
 
                 if save_life == "1":
                     fame = fame + 5
-                    print("You slice your opponent's head clean off, gaining 5 fame.")
+                    player.name = player.name + "the Mercyfull"
+                    print("You slice your opponent's head clean off, gaining 5 fameand the new name .")
                 if save_life == "2":
                     fame = fame + 10
+                    player.name += "the Mercyless"
                     print("You defy the crowd, sparing your opponent's life.  By doing this you become more liked by all giving you 10 fame")
         if slice_up == "lose":
             player.health = player.health - enemy.strength + player.shield
@@ -146,7 +148,7 @@ this puts {enemy.name} down to {enemy.health} health while your at {player.healt
 
         if foot == "miss":
             player.health = player.health - enemy.strength*1.5 + player.shield
-            print(f"Korlax steps over you {player.weapon} which is swong at his leg, bashing you with his weapon, you go down to {player.health} health and Korlax has {enemy.health} health left")
+            print(f"{enemy.name} steps over you {player.weapon} which is swong at his leg, bashing you with his weapon, you go down to {player.health} health and Korlax has {enemy.health} health left")
 
 
     if attack_1_10 == "6":
@@ -507,7 +509,11 @@ Crafted from sturdy metal, it is meticulously adorned with a multitude of flawle
 
 
 
-        enemy_1 = corvus
+
+
+
+
+        enemy_1 = decimus
         input(f'''
 You get ready to come out of the gates of the Colusem. {player.name} is roaring throguh the crowd, You see  {enemy_1.name} standing on the other side of the arena. 
 He is a very raw gladitor who is trying to make a name for himself. {enemy_1.name} is only 5-0 . 
@@ -515,7 +521,7 @@ From what you have heard, {enemy_1.name} is a cold killer and has
 {enemy_1.health} health compared to your {player.health} health.
 You have {player.strength} strength while {enemy_1.name} has {enemy_1.strength} strength.
 You defense is {player.shield} while {enemy_1.name} has {enemy_1.shield}.''')
-        fight(player, enemy_1, 8)
+        fight(player, enemy_1, )
 
 
         input(f"""As you leave the arena with blood covering you, You hear {player.name}, {player.name}, {player.name}
@@ -540,6 +546,27 @@ Commodus, Emporer of Rome holds his hand in a fist with his thumb up.  With this
             player.shield += 8
             print(f'''You mentaly train for your next fight seeing every attack your next opponent could do
     This puts you at {player.shield} shield''')
+
+
+
+    enemy_1 = corvus
+    input(f'''You are getting ready for battle when you hear news that the emporer is a big fan of yours
+He will be watching this fight as well as he was keeping track of your last few fights.
+Athough he apears as a fan you know deep down that he has hated you ever sense your 4th fight.
+You also have hated him when he made the choice to leave you out to die in the battle field
+This can't get in the way of the fight so you start to look at {enemy_1}''')
+    input(f'''You have {player.health} when {enemy_1.name} has {enemy_1.health}
+You have{player.strength} while {enemy_1.name} has {enemy_1.strength}
+You have {player.shield} while {enemy_1.name} has {enemy_1.shield}''')
+    
+    fight(player, enemy_1, 8)
+
+    input(f"""It has been a long fight with blood on your hands and blood on your {weapon_1.name}.
+50 or so soldiers apear, spears out ready to kill.  All around you when the emperor comes out, he wants to meet you.
+'I am Commodus, Emperor of Rome""")
+
+
+
 
 
 
