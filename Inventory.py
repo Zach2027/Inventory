@@ -3,14 +3,13 @@ from characters.character import *
 from attacks import *
 def fight(player_character, enemy_character, fight_number):
     options = [ATTACK_1, ATTACK_2, ATTACK_3, ATTACK_4, ATTACK_5, ATTACK_6, ATTACK_7, ATTACK_8]
-    input('''The battle begins''') 
+    input('''The battle begins''')
     while enemy_character.health > 0 and player_character.health > 0:
         attack(player_character, enemy_character, options[:fight_number + 1])
     if player_character.health <= 0:
         print("You DIE. You are not a true gladiator of Rome.")
 
-    
-        
+
 
 
 def attack(player, enemy, attack_options):
@@ -18,38 +17,37 @@ def attack(player, enemy, attack_options):
     for index, attack_option in enumerate(attack_options):
         print(f"({index}) {attack_option}")
 
-    while not attack_1_10.isdigit() or int(attack_1_10) >= len(attack_options): 
+    while not attack_1_10.isdigit() or int(attack_1_10) >= len(attack_options):
         attack_1_10 = input(f"please enter a 0-{len(attack_options)-1}")
     if attack_1_10 == ("0"):
         trade_blows_1 = random.choice(["hit","small hit","critical miss"])
         if trade_blows_1 == "hit":
-            enemy.health = enemy.health - player.strength
+            enemy.health = enemy.health - player.strength + enemy.shield
             if enemy.health > 0:
                 print(f"You get a clean hit and you have {player.health} left, your opponent has {enemy.health} health left")
             if enemy.health <= 0:
-                print(f'''As your opponent swings his sword to you, you manage to side step the blow, 
+                print(f'''As your opponent swings his sword to you, you manage to side step the blow,
     retaliating with a strike of you own.  As you swing your {player.weapon} at his head, you get a clean strike
     sliceing his head clean off as you win the fight and the crowd''')
 
         if trade_blows_1 == "small hit":
-            enemy.health = enemy.health - player.strength*0.5
+            enemy.health = enemy.health - player.strength * 0.5 + enemy.shield
             if enemy.health > 0:
-                print(f"You find a small and doughtful opening that you take, coming off with a small victory.  You have {player.health} left, your opponent has {enemy.health} health left")
+                print(f"You find a small and doubtful opening that you take, coming off with a small victory.  You have {player.health} left, your opponent has {enemy.health} health left")
             if enemy.health <= 0:
-                print(f'''As a deadly wave of attacks come, you find your self with the high ground but the small man doesn't give up
+                print(f'''As a deadly wave of attacks come, you find your self with the high ground but {enemy.name} doesn't give up
     approaching you, he tries to swing at your ankles jumping up you bring your {player.weapon} 
     down in his head spliting it right down the middle, winning the fight and the crowd.''')
         if trade_blows_1 == "critical miss":
             player.health = player.health - enemy.strength + player.shield
             print(f'''  You miss horribly, allowing your opponent to duck your attack slicing your ankle,
     You have {player.health} left, your opponent has {enemy.health} health left''')
-            
 
 
     if attack_1_10 == "1":
         play_slow_1 = random.choice(["lose","win","win","win"])
         if play_slow_1 == "lose":
-            player.health = player.health - enemy.strength + player.shield 
+            player.health = player.health - enemy.strength + player.shield
             print(f'''  As you play it safe, you opponent finds an opening,
     throwing a rock at you leg causing a deep cut to form, you have {player.health} 
     left while your opponent has {enemy.health} health left''')
@@ -60,12 +58,12 @@ def attack(player, enemy, attack_options):
     This does little damage and your opponent is at {enemy.health} health while you are at {player.health} health.""")
             if enemy.health <= 0:
                 print(f'''  As you clash blades, you slide your {player.weapon} down the blade of your opponents,
-    with a little force you manage to cut the guys hands off killing him and winning the fight but not the crowd''')
+    with a little force you manage to cut {enemy.name}'s hands off killing him and winning the fight but not the crowd''')
 
     if attack_1_10 == "2":
-        big_blow = random.choice(["win","win","win","lose","lose","lose"])
+        big_blow = random.choice(["win","win","lose","lose","lose"])
         if big_blow == "win":
-            enemy.health = enemy.health - player.strength*2
+            enemy.health = enemy.health - player.strength*1.5
             if enemy.health > 0:
                 print(f"""  You perform an amazing counter to the charging man, slashing him through his chest,
     although this is non lethal, it does a huge amount of damage, you have {player.health} health left
@@ -74,7 +72,7 @@ def attack(player, enemy, attack_options):
                 print('''As the small man presses you, you see an opening on his leg, 
     taking it you cut his leg off and go for the arm, sliceing it clean off, wining the battle, the day and the crowd.''')
         if big_blow == "lose":
-            player.health = player.health - enemy.strength
+            player.health = player.health - enemy.strength + player.shield
             print(f'''As you take a wrong step forward, the man sees this before you even make your move,
     stabbing you through your chest, you have {player.health} health and the man has {enemy.health} health left''')
 
@@ -82,7 +80,7 @@ def attack(player, enemy, attack_options):
     if attack_1_10 == "3":
         side_strike = random.choice(["win", "win", "lose"])
         if side_strike == "win":
-            enemy.health = enemy.health - player.strength
+            enemy.health = enemy.health - player.strength + enemy.shield
             if enemy.health > 0:
                 print(f"""You clash your {player.weapon} with your opponent's weapon, you manage to slide your blade
     around your opponent's hilt slashing his arm. You have {player.health} health left and your opponent has {enemy.health} health left.""")
@@ -106,12 +104,12 @@ forming a deep cut. Your opponent has {enemy.health} health left""")
             else:
                 print(f"""As your opponent swings his weapon horizontaly at your head, you duck, sending an uppercut back with you {player.weapon}
 slicing your opponent right in half, spliting him. As his huge body slams against the sand, your hear {player.name} {player.name} {player.name} fill the arena""")
-                        
+
         if slice_up == "win":
             enemy.health = enemy.health - player.strength*0.75
             if enemy.health > 0:
                 print(f"""You manage to find a little opeing of your opponent's chest, swinging up, you make a small cut on his chest
-            your opponent has {enemy.health} health left and you have {player.health} health left.""")
+your opponent has {enemy.health} health left and you have {player.health} health left.""")
                     
             else:
                 print("""As your opponent lunges at you, you manage to side step the attack, sliceing your opponent's hands off.  
@@ -132,7 +130,7 @@ slicing your opponent right in half, spliting him. As his huge body slams agains
         if slice_up == "lose":
             player.health = player.health - enemy.strength + player.shield
 
-            print(f"""You see an opening as you attack, you go for a leathal blow but your opponent side steps, returning a blade to the chest.
+            print(f"""You see an opening as you attack, you go for a lethal blow but your opponent side steps, returning a blade to the chest.
     your opponent has {enemy.health} health left and you have {player.health} health left.""")
 
             
@@ -154,7 +152,7 @@ this puts {enemy.name} down to {enemy.health} health while your at {player.healt
     if attack_1_10 == "6":
         stab = random.choice(["big_win","lose","big_lose"])
         if stab == "big_win":
-            enemy.health = enemy.health - player.strength*2
+            enemy.health = enemy.health - player.strength*2 + enemy.shield
             if enemy.health > 0:
                 print(f"""As {enemy.name} swings down his weapon, you manage to force the blade into a large stone.  
     As {enemy.name} is tring to get his weapon free, you manage to impale him with the tip of your {player.weapon}
@@ -184,7 +182,7 @@ this puts {enemy.name} down to {enemy.health} health while your at {player.healt
             else:
                 print("As you go down you look like you are dying. As you hunch over your enemy gets ready for a final blow.  As he raises his weapon you stab you enemy through his heart winning the battle")
         if fake_dead == "big lose":
-            player.health = player.health - enemy.strength
+            player.health = player.health - enemy.strength + player.shield
             print(f"""As you fake an injury you opponent stabs you in your exposed hand.  You get up with only {player.health} health left.""")
 
     if attack_1_10 == "8":
@@ -215,8 +213,8 @@ this puts {enemy.name} down to {enemy.health} health while your at {player.healt
                     print(f"As you go for the chest, you swing a bit too hard sliceing {enemy.name} right in half.  As you come away with this brutal victory, you win the crowd")
     if attack_1_10 == "9":
         crowd = "lose"
-        if player.name == "gladiator" or player.name == "Gladiator" or player.name == "Spaniard":
-            crowd == "win"
+        if player.name == "gladiator" or player.name == "Gladiator" or player.name == "Spaniard" or player.name =="spaniard":
+            crowd = "win"
         if crowd == "win":
             enemy.health = enemy.health - 20
             print(f"You are the chose Gladiator that will bring the future back to rome.  With that you are gifted in battle.  {enemy.name} is at {enemy.health} health")
@@ -227,6 +225,7 @@ this puts {enemy.name} down to {enemy.health} health while your at {player.healt
 
 def main():
     print("Gladiator writen by Zach, and Kaz")
+    print("Some Storyline requires you to hit enter to advance")
     print('''This is a gladiator game that will bring you through the depths
     of battle with rewards and gear, while playing, it will take you through the
     key situations of the duel. With every win you get closer to freedom (reach 100 fame to become free)
@@ -508,30 +507,6 @@ Crafted from sturdy metal, it is meticulously adorned with a multitude of flawle
 
 
 
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         enemy_1 = corvus
         input(f'''
 You get ready to come out of the gates of the Colusem. {player.name} is roaring throguh the crowd, You see  {enemy_1.name} standing on the other side of the arena. 
@@ -539,7 +514,7 @@ He is a very raw gladitor who is trying to make a name for himself. {enemy_1.nam
 {enemy_1.health} health compared to your {player.health} health.
 You have {player.strength} strength while {enemy_1.name} has {enemy_1.strength} strength.
 You defense is {player.shield} while {enemy_1.name} has {enemy_1.shield}.''')
-        fight(player, enemy_1, )
+        fight(player, enemy_1, 8)
 
 
         input(f"""As you leave the arena with blood covering you, You hear {player.name}, {player.name}, {player.name}
@@ -547,7 +522,7 @@ You raise your blood drenched {weapon_1.name} and applause fills the arena.  Gau
 'Live' 'Live' 'Live' fills the air and you look up and Commodus, Emporer of Rome holds his hand in a fist with his thumb up.  With this, more cheering fills the air.""")
 
         print("3 days past and you")
-        prep = input(f"""You can 
+        prep = input(f"""You can:
 (1) Devolop your skills with your {weapon_1.name}
 (2) Plan out a stratagy for next fight""")
         

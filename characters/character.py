@@ -48,8 +48,8 @@ class Character:
         enemy.health -= damage
         print(f"{self.name} attacks {enemy.name} with their {self.weapon.name} for {damage} damage")
 
-small_man = Character("Small Man", 60, 15, sword)
-korlox = Character("Korlox", 200, 10,0, axe)
+small_man = Character("Small Man", 60, 15, 0, sword)
+korlox = Character("Korlox", 200, 10, 0, axe)
 tigris = Character("Tigris", 100, 20, 10, axe)
 spartacus = Character("Spartacus", 100, 20, 5, spear)
 lucius_verus = Character("Lucius Verus", 200, 20, 10, silver_sword)
