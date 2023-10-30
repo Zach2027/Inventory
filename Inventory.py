@@ -498,11 +498,11 @@ Crafted from sturdy metal, it is meticulously adorned with a multitude of flawle
         while armor_choice_2 != "1" and armor_choice_2 != "2":
             armor_choice_2 = input("please enter a 1 or 2")
         if armor_choice_2 == "1":
-            player.shield += 15
-            fame += 3
-        if armor_choice_2 == "1":
-            player.shield += 10
+            player.shield += 5
             fame += 5
+        if armor_choice_2 == "2":
+            player.shield += 10
+            
         fame += 5
 
 
@@ -510,7 +510,8 @@ Crafted from sturdy metal, it is meticulously adorned with a multitude of flawle
         enemy_1 = corvus
         input(f'''
 You get ready to come out of the gates of the Colusem. {player.name} is roaring throguh the crowd, You see  {enemy_1.name} standing on the other side of the arena. 
-He is a very raw gladitor who is trying to make a name for himself. {enemy_1.name} is only 11-0 . From what you have heard, {enemy_1.name} is a cold killer and has
+He is a very raw gladitor who is trying to make a name for himself. {enemy_1.name} is only 5-0 . 
+From what you have heard, {enemy_1.name} is a cold killer and has
 {enemy_1.health} health compared to your {player.health} health.
 You have {player.strength} strength while {enemy_1.name} has {enemy_1.strength} strength.
 You defense is {player.shield} while {enemy_1.name} has {enemy_1.shield}.''')
@@ -519,7 +520,8 @@ You defense is {player.shield} while {enemy_1.name} has {enemy_1.shield}.''')
 
         input(f"""As you leave the arena with blood covering you, You hear {player.name}, {player.name}, {player.name}
 You raise your blood drenched {weapon_1.name} and applause fills the arena.  Gaurds come out and circle you with spears pointing at you.
-'Live' 'Live' 'Live' fills the air and you look up and Commodus, Emporer of Rome holds his hand in a fist with his thumb up.  With this, more cheering fills the air.""")
+'Live' 'Live' 'Live' fills the air and you look up and 
+Commodus, Emporer of Rome holds his hand in a fist with his thumb up.  With this, more cheering fills the air.""")
 
         print("3 days past and you")
         prep = input(f"""You can:
