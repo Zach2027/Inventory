@@ -230,7 +230,7 @@ this puts {enemy.name} down to {enemy.health} health while your at {player.healt
 
 
 def main():
-    print("Gladiator writen by Zach, and Kaz")
+    print("Gladiator writen by Zach, edited and modified by Kaz based on the movie Gladiator")
     print("Some Storyline requires you to hit enter to advance")
     print('''This is a gladiator game that will bring you through the depths
     of battle with rewards and gear, while playing, it will take you through the
@@ -581,9 +581,10 @@ You have {player.shield} while {enemy_1.name} has {enemy_1.shield}''')
     input(f"""I am {real_name}
     'Why won't you just die'
 Gasps fall over the crowd becuase you were the greatest General in all of rome, now forced to fight.
-You are now standing in front of the man who killed your family and he knows it.  I sign of relief falls over Commodus's face when he says
+You are now standing in front of the man who killed your family and he knows it.  A sign of relief falls over Commodus's face when he says
 'I will fight you to the death in one weeks time to prove my strength as your Emperor' Commodus Yells out
 The crowd aplauses and the great battle will happen in 1 week.""")
+
 
     input(f"""Time zips by when you realize you have 1 hour until you take your revenge.  
     Out of no where 4 guards rush in and you black out
@@ -605,6 +606,7 @@ The battle begins as Comodus walks out.""")
         ''')
     else:
         print("The people honor you, but as nothing more than a martyr. They give you a hero's funeral.")
+
 
 
 main()  
