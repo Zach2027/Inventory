@@ -69,7 +69,7 @@ def attack(player, enemy, attack_options):
     although this is non lethal, it does a huge amount of damage, you have {player.health} health left
     and your bleeding opponent has {enemy.health} health left.""")
             if enemy.health <= 0:
-                print('''As the small man presses you, you see an opening on his leg, 
+                print(f'''As {enemy.name} presses you, you see an opening on his leg, 
     taking it you cut his leg off and go for the arm, sliceing it clean off, wining the battle, the day and the crowd.''')
         if big_blow == "lose":
             player.health = player.health - enemy.strength + player.shield
@@ -290,7 +290,7 @@ def main():
         You now have {player.strength} strength.''')
         if choice_2 == "2":
             player.health = player.health + 50
-            input(f'''You find a good meal, healling your self up.  As you enjoy your warm meal,
+            input(f'''You find a good meal, healing your self up.  As you enjoy your warm meal,
         you regain some health, bring yourself up to {player.health} health''')
 
         if choice_2 == "3":
@@ -346,7 +346,7 @@ def main():
 
         armor = input('''Would You like
     (1), A highly armord armor set that is made of heavy metal which will help protect you
-    (2), A lighter chainmail armor set that will protect to a certain degree but is made to be adgile''')
+    (2), A lighter chainmail armor set that will protect to a certain degree but is made to be agile''')
 
         while armor != "1" and armor != "2":
             armor = input("please enter a 1 or 2")
@@ -519,7 +519,7 @@ Crafted from sturdy metal, it is meticulously adorned with a multitude of flawle
 
         enemy_1 = decimus
         input(f'''
-You get ready to come out of the gates of the Colusem. {player.name} is roaring throguh the crowd, You see  {enemy_1.name} standing on the other side of the arena. 
+You get ready to come out of the gates of the Colosseum. {player.name} is roaring throguh the crowd, You see  {enemy_1.name} standing on the other side of the arena. 
 He is a very raw gladitor who is trying to make a name for himself. {enemy_1.name} is only 5-0 . 
 From what you have heard, {enemy_1.name} is a cold killer and has
 {enemy_1.health} health compared to your {player.health} health.
