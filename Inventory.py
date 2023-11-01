@@ -123,11 +123,11 @@ your opponent has {enemy.health} health left and you have {player.health} health
 
                 if save_life == "1":
                     fame = fame + 5
-                    player.name = player.name + "the Mercyfull"
+                    player.name = player.name + " the Mercyfull"
                     print("You slice your opponent's head clean off, gaining 5 fameand the new name .")
                 if save_life == "2":
                     fame = fame + 10
-                    player.name += "the Mercyless"
+                    player.name += " the Mercyless"
                     print("You defy the crowd, sparing your opponent's life.  By doing this you become more liked by all giving you 10 fame")
         if slice_up == "lose":
             player.health = player.health - enemy.strength + player.shield
@@ -215,7 +215,7 @@ this puts {enemy.name} down to {enemy.health} health while your at {player.healt
                     print(f"As you go for the chest, you swing a bit too hard sliceing {enemy.name} right in half.  As you come away with this brutal victory, you win the crowd")
     if attack_1_10 == "9":
         crowd = "lose"
-        if player.name == "gladiator" or player.name == "Gladiator" or player.name == "Spaniard" or player.name =="spaniard":
+        if player.name == "gladiator" or player.name == "Gladiator" or player.name == "Spaniard" or player.name =="spaniard" or player.name == "gladiator the Mercyfull" or player.name == "Gladiator the Mercyfull" or player.name == "Spaniard the Mercyfull" or player.name =="spaniard the Mercyfull":
             crowd = "win"
         if crowd == "win":
             enemy.health = enemy.health - 20
@@ -521,7 +521,7 @@ From what you have heard, {enemy_1.name} is a cold killer and has
 {enemy_1.health} health compared to your {player.health} health.
 You have {player.strength} strength while {enemy_1.name} has {enemy_1.strength} strength.
 You defense is {player.shield} while {enemy_1.name} has {enemy_1.shield}.''')
-        fight(player, enemy_1, )
+        fight(player, enemy_1, 7)
 
 
         input(f"""As you leave the arena with blood covering you, You hear {player.name}, {player.name}, {player.name}
