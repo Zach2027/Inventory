@@ -529,13 +529,13 @@ You defense is {player.shield} while {enemy_1.name} has {enemy_1.shield}.''')
 
 
         input(f"""As you leave the arena with blood covering you, You hear {player.name}, {player.name}, {player.name}
-You raise your blood drenched {weapon_1.name} and applause fills the arena.  Gaurds come out and circle you with spears pointing at you.
+You raise your blood drenched {weapon_1} and applause fills the arena.  Gaurds come out and circle you with spears pointing at you.
 'Live' 'Live' 'Live' fills the air and you look up and 
 Commodus, Emporer of Rome holds his hand in a fist with his thumb up.  With this, more cheering fills the air.""")
 
         print("3 days past and you")
         prep = input(f"""You can:
-(1) Devolop your skills with your {weapon_1.name}
+(1) Devolop your skills with your {weapon_1}
 (2) Plan out a stratagy for next fight""")
         
 
@@ -578,23 +578,34 @@ You have {player.shield} while {enemy_1.name} has {enemy_1.shield}''')
     enemy_1 = commodus
 
 
-    input(f"""I am{real_name}
+    input(f"""I am {real_name}
     'Why won't you just die'
-Gasps fall over the crowd becuase you were the greatest Genral in all of rome, now forced to fight.
-You are now standing in front of the man who killed your family and he knows it.  I sign of relif falls over Commoduses face when he says
-'I will fight you to the death in one weeks time to prove my strength as your Emporier' Commodus Yells out
-The crowd Aplases and the greats battle will happen in 1 week.""")
+Gasps fall over the crowd becuase you were the greatest General in all of rome, now forced to fight.
+You are now standing in front of the man who killed your family and he knows it.  I sign of relief falls over Commodus's face when he says
+'I will fight you to the death in one weeks time to prove my strength as your Emperor' Commodus Yells out
+The crowd aplauses and the great battle will happen in 1 week.""")
 
-    input(f"""Time zips by when you relize you have 1 hour until you take your revenge.  
+    input(f"""Time zips by when you realize you have 1 hour until you take your revenge.  
     Out of no where 4 guards rush in and you black out
           
 When you wake you relize the Commodus is standing in front of you. 'This is going to be an easy fight he says as he stabs you through the chest.
-    Your armor gets put on top and you get draged out into the colosume.  Your weak but you need to get your revenge in this life or the next
+    Your armor gets put on top, concealing your wound and you get dragged out into the Colosseum.  Your weak but you need to get your revenge in this life or the next
 You have {player.health} health, you have {player.shield} shield and {player.strength}
 The battle begins as Comodus walks out.""")
     fight(player, enemy_1, 9)
-
-
+    fame += 20
+    input(f''' As you take in the chanting of the surrounding crowd, all you can think about is your sweet sweet revenge. 
+        You, {real_name} have gotten your revenge on the tyrant who murdered your family, and Marcus Aurelius the True King of Rome. 
+        The chanting begins to fade, and a sharp pain is felt all over your body. As you begin to limp your legs go numb, and you collapse.
+        The only thought in your mind is of your late family, and the glory you have brought to Rome.''')
+    if fame > 100:
+        input(f'''Your Supporters storm the arena, bringing your lifeless body to a medical bay, attempting to save you.
+        You wake up, and see a crowd of thousands chanting king, king, king. A man walks up to you with a crown. He says '{real_name}' you are the only Emperor of Rome, and hands you a crown.
+        You walk out and place the crown atop your head. You greet your people, and recite 'I {real_name} am your true emperor. You shall be treated as the true people of Rome.'
+        ''')
+    else:
+        print("The people honor you, but as nothing more than a martyr. They give you a hero's funeral.")
+        https://sites.google.com/view/games-unblockedd/stickman-rope-heroes 
 
 
 
