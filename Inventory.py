@@ -563,7 +563,9 @@ You have {player.shield} while {enemy_1.name} has {enemy_1.shield}''')
 
     input(f"""It has been a long fight with blood on your hands and blood on your {weapon_1.name}.
 50 or so soldiers apear, spears out ready to kill.  All around you when the emperor comes out, he wants to meet you.
-'I am Commodus, Emperor of Rome""")
+'I am Commodus, Emperor of Rome and who are you.
+'I am {player.name}'
+'tell me your real name slave' """)
 
 
 
