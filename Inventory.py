@@ -124,7 +124,7 @@ your opponent has {enemy.health} health left and you have {player.health} health
                 if save_life == "1":
                     fame = fame + 5
                     player.name = player.name + " the Mercyfull"
-                    print("You slice your opponent's head clean off, gaining 5 fameand the new name .")
+                    print("You slice your opponent's head clean off, gaining 5 fame and the new name .")
                 if save_life == "2":
                     fame = fame + 10
                     player.name += " the Mercyless"
@@ -215,12 +215,16 @@ this puts {enemy.name} down to {enemy.health} health while your at {player.healt
                     print(f"As you go for the chest, you swing a bit too hard sliceing {enemy.name} right in half.  As you come away with this brutal victory, you win the crowd")
     if attack_1_10 == "9":
         crowd = "lose"
-        if player.name == "gladiator" or player.name == "Gladiator" or player.name == "Spaniard" or player.name =="spaniard" or player.name == "gladiator the Mercyfull" or player.name == "Gladiator the Mercyfull" or player.name == "Spaniard the Mercyfull" or player.name =="spaniard the Mercyfull":
+        if player.name == "gladiator" or player.name == "Gladiator" or player.name == "Spaniard" or player.name =="spaniard":
+            crowd = "win"
+        elif player.name == "gladiator the Mercyfull" or player.name == "Gladiator the Mercyfull" or player.name == "Spaniard the Mercyfull" or player.name =="spaniard the Mercyfull":
+            crowd = "win"
+        elif player.name == "gladiator the Mercyless" or player.name == "Gladiator the Mercyless" or player.name == "Spaniard the Mercyless" or player.name =="spaniard the Mercyless":
             crowd = "win"
         if crowd == "win":
             enemy.health = enemy.health - 20
             print(f"You are the chose Gladiator that will bring the future back to rome.  With that you are gifted in battle.  {enemy.name} is at {enemy.health} health")
-        if crowd == "lose":
+        else:
             player.health = player.health - 10
             print(f"You are not the chosen Gladiator and the crowd throws junk at you, a metal ball hits you in the head dealling 10 damage to you.  You are at {player.health} health")
 
