@@ -570,11 +570,29 @@ You have {player.shield} while {enemy_1.name} has {enemy_1.shield}''')
 'I am Commodus, Emperor of Rome and who are you.
 'I am {player.name}'
 'tell me your real name slave' """)
+    real_name = input("Your real name")
+    real_name = real_name + random.choice([" the commander of the Armies of the North, General of the Felix Legions","the Commander of the Armies of the South, General of the Shadow Legions", "the Commander of the Armies of the East, General of the Fire Legions"])
+    player.strength = 15
+    player.shield = 5
+    player.health = 60
+    enemy_1 = commodus
 
 
+    input(f"""I am{real_name}
+    'Why won't you just die'
+Gasps fall over the crowd becuase you were the greatest Genral in all of rome, now forced to fight.
+You are now standing in front of the man who killed your family and he knows it.  I sign of relif falls over Commoduses face when he says
+'I will fight you to the death in one weeks time to prove my strength as your Emporier' Commodus Yells out
+The crowd Aplases and the greats battle will happen in 1 week.""")
 
-
-
+    input(f"""Time zips by when you relize you have 1 hour until you take your revenge.  
+    Out of no where 4 guards rush in and you black out
+          
+When you wake you relize the Commodus is standing in front of you. 'This is going to be an easy fight he says as he stabs you through the chest.
+    Your armor gets put on top and you get draged out into the colosume.  Your weak but you need to get your revenge in this life or the next
+You have {player.health} health, you have {player.shield} shield and {player.strength}
+The battle begins as Comodus walks out.""")
+    fight(player, enemy_1, 9)
 
 
 

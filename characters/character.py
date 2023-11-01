@@ -58,7 +58,7 @@ decimus = Character("Decimus", 150, 30, 15, sword)
 corvus = Character("Corvus the Crusher", 250, 40, 10, axe)
 quintus = Character("Quintus the Quick", 120, 50, 20, silver_sword)
 
-commodus = Character("Commodus", 100, 10, 5, double_daggers)
+commodus = Character("Commodus", 100, 15, 5, double_daggers)
 
 
 
