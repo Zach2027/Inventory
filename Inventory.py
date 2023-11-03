@@ -341,6 +341,7 @@ def main():
             print("You died")
             break
         fame = fame + 10
+        player.health = player.health + 30
         input(f"""Your victory is widely acknowledged.  Lots of people know the name {player.name}. 
         You become very popular, your fame becomes {fame} as more people cheer for you""")
         input('''The next few days are on the chiller side, you rest eat and sleep. This lasts for about a week before you gain enough strength to train''')    
@@ -458,7 +459,7 @@ You defense is {player.shield} while {enemy_1.name} has {enemy_1.shield}.''')
         input("""As you walk away from your fallen enemy you walk right out, no reaction.  This leads rumors of your victory that your not human.  
 Your something more.""")
         fame += 5
-
+        player.health = player.health + 30
         print("""5 days pass and you have a lot of down time.  You are stuck inside, when a messenger tells you that you are invited to the Colosseum.
     You can't fight there without at least an 8-0 record so you need to fight more.""")
 
@@ -515,6 +516,7 @@ Crafted from sturdy metal, it is meticulously adorned with a multitude of flawle
             player.shield += 10
             
         fame += 5
+        player.health = player.health + 30
 
 
 
@@ -531,8 +533,8 @@ From what you have heard, {enemy_1.name} is a cold killer and has
 You have {player.strength} strength while {enemy_1.name} has {enemy_1.strength} strength.
 You defense is {player.shield} while {enemy_1.name} has {enemy_1.shield}.''')
         fight(player, enemy_1, 7)
-
-
+        player.health = player.health + 30
+        fame += 10
         input(f"""As you leave the arena with blood covering you, You hear {player.name}, {player.name}, {player.name}
 You raise your blood drenched {weapon_1} and applause fills the arena.  Gaurds come out and circle you with spears pointing at you.
 'Live' 'Live' 'Live' fills the air and you look up and 
