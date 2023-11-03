@@ -4,7 +4,8 @@ from attacks import *
 def full_credits(name):
     print(f'''Congratulations {name} for playing Gladiator!
 Gladiator is based of off the real 2000 film Gladiator.
-Gladiator was writen by Zach and Kaz.''')
+Gladiator was writen by Zach and Kaz.
+Well done in your final fight.''')
 def fight(player_character, enemy_character, fight_number):
     options = [ATTACK_1, ATTACK_2, ATTACK_3, ATTACK_4, ATTACK_5, ATTACK_6, ATTACK_7, ATTACK_8]
     input('''The battle begins''')
@@ -613,6 +614,11 @@ The battle begins as Comodus walks out.""")
     CREDITS = input("would you like to see the full credits?")
     if CREDITS.lower().startswith("y"):
         full_credits(player.name)
+    extra_fight = input(" ")
+    if extra_fight == "final fight":
+        enemy_1 = maximus
+        print("You have discovered our easter egg! Good Job!")
+        fight(player, enemy_1, 10)
         
 
 
