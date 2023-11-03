@@ -605,8 +605,6 @@ The battle begins as Comodus walks out.""")
         ''')
     else:
         print("The people honor you, but as nothing more than a martyr. They give you a hero's funeral.")
-        https://sites.google.com/view/games-unblockedd/stickman-rope-heroes 
-
 
 
 main()  
