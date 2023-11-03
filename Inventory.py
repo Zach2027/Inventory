@@ -569,9 +569,8 @@ This can't get in the way of the fight so you start to look at {enemy_1}''')
     input(f'''You have {player.health} when {enemy_1.name} has {enemy_1.health}
 You have{player.strength} while {enemy_1.name} has {enemy_1.strength}
 You have {player.shield} while {enemy_1.name} has {enemy_1.shield}''')
-    
     fight(player, enemy_1, 8)
-
+    player.health = player.health + 30
     input(f"""It has been a long fight with blood on your hands and blood on your {weapon_1.name}.
 50 or so soldiers apear, spears out ready to kill.  All around you when the emperor comes out, he wants to meet you.
 'I am Commodus, Emperor of Rome and who are you.
@@ -605,7 +604,7 @@ You have {player.health} health, you have {player.shield} shield and {player.str
 The battle begins as Comodus walks out.""")
     fight(player, enemy_1, 9)
     fame += 20
-    
+
     player.shield = real_shield
     player.strength = real_strength 
     player.health = real_health 
