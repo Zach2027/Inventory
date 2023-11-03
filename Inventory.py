@@ -1,14 +1,18 @@
 import random
 from characters.character import *
 from attacks import *
+def full_credits(name):
+    print(f'''Congratulations {name} for playing Gladiator!
+Gladiator is based of off the real 2000 film Gladiator.
+Gladiator was writen by Zach and Kaz.''')
 def fight(player_character, enemy_character, fight_number):
     options = [ATTACK_1, ATTACK_2, ATTACK_3, ATTACK_4, ATTACK_5, ATTACK_6, ATTACK_7, ATTACK_8]
     input('''The battle begins''')
     while enemy_character.health > 0 and player_character.health > 0:
         attack(player_character, enemy_character, options[:fight_number + 1])
-    if player_character.health <= 0:
-        print("You DIE. You are not a true gladiator of Rome.")
-
+        if player_character.health <= 0:
+            print("You DIE. You are not a true gladiator of Rome.")
+            main()
 
 
 
@@ -230,12 +234,11 @@ this puts {enemy.name} down to {enemy.health} health while your at {player.healt
 
 
 def main():
-    print("Gladiator writen by Zach, edited and modified by Kaz based on the movie Gladiator")
-    print("Some Storyline requires you to hit enter to advance")
     print('''This is a gladiator game that will bring you through the depths
     of battle with rewards and gear, while playing, it will take you through the
     key situations of the duel. With every win you get closer to freedom (reach 100 fame to become free)
     Good luck to you''')
+    print("Some Storyline requires you to hit enter to advance")
     player = Character(input("what is your name Gladiator?  "), 100, 0, 0, )
     print('''
         You are a slave forced into battle and your first fight awaits.''')
@@ -607,6 +610,10 @@ The battle begins as Comodus walks out.""")
     else:
         print("The people honor you, but as nothing more than a martyr. They give you a hero's funeral.")
 
+    CREDITS = input("would you like to see the full credits?")
+    if CREDITS.lower().startswith("y"):
+        full_credits(player.name)
+        
 
 
-main()  
+main()
