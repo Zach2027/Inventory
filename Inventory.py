@@ -5,6 +5,7 @@ def full_credits(name):
     print(f'''Congratulations {name} for playing Gladiator!
 Gladiator is based of off the real 2000 film Gladiator.
 Gladiator was writen by Zach and Kaz.
+ChatGPT was used for names of characters.
 Well done in your final fight.''')
 def fight(player_character, enemy_character, fight_number):
     options = [ATTACK_1, ATTACK_2, ATTACK_3, ATTACK_4, ATTACK_5, ATTACK_6, ATTACK_7, ATTACK_8]
