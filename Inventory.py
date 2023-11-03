@@ -577,8 +577,11 @@ You have {player.shield} while {enemy_1.name} has {enemy_1.shield}''')
 'tell me your real name slave' """)
     real_name = input("Your real name")
     real_name = real_name + random.choice([" the commander of the Armies of the North, General of the Felix Legions","the Commander of the Armies of the South, General of the Shadow Legions", "the Commander of the Armies of the East, General of the Fire Legions"])
+    real_strength = player.strength
     player.strength = 15
+    real_shield = player.shield 
     player.shield = 5
+    real_health = player.health
     player.health = 60
     enemy_1 = commodus
 
@@ -600,6 +603,10 @@ You have {player.health} health, you have {player.shield} shield and {player.str
 The battle begins as Comodus walks out.""")
     fight(player, enemy_1, 9)
     fame += 20
+    
+    player.shield = real_shield
+    player.strength = real_strength 
+    player.health = real_health 
     input(f''' As you take in the chanting of the surrounding crowd, all you can think about is your sweet sweet revenge. 
         You, {real_name} have gotten your revenge on the tyrant who murdered your family, and Marcus Aurelius the True King of Rome. 
         The chanting begins to fade, and a sharp pain is felt all over your body. As you begin to limp your legs go numb, and you collapse.
@@ -611,7 +618,7 @@ The battle begins as Comodus walks out.""")
         ''')
     else:
         print("The people honor you, but as nothing more than a martyr. They give you a hero's funeral.")
-
+      
     CREDITS = input("would you like to see the full credits?")
     if CREDITS.lower().startswith("y"):
         full_credits(player.name)
