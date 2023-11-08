@@ -14,6 +14,18 @@ def fight(player_character, enemy_character, fight_number):
         attack(player_character, enemy_character, options[:fight_number + 1])
         if player_character.health <= 0:
             print("You DIE. You are not a true gladiator of Rome.")
+            global small_man, korlox, tigris, spartacus, lucius_verus, galius, decimus, corvus, quintus, commodus, maximus
+            small_man = Character("Small Man", 60, 15, 0, sword)
+            korlox = Character("Korlox", 200, 10, 0, axe)
+            tigris = Character("Tigris", 100, 20, 10, axe)
+            spartacus = Character("Spartacus", 100, 25, 5, spear)
+            lucius_verus = Character("Lucius Verus", 200, 20, 10, silver_sword)
+            galius = Character("Galius", 200, 60, 5, spear)
+            decimus = Character("Decimus", 150, 40, 20, sword)
+            corvus = Character("Corvus the Crusher", 250, 45, 15, axe)
+            quintus = Character("Quintus the Quick", 120, 70, 30, silver_sword)
+            commodus = Character("Commodus", 100, 30, 5, double_daggers)
+            maximus = Character("Maximus the Merciless", 1000, 60, 50, sword)
             main()
 
 

@@ -39,6 +39,7 @@ class Character:
 
     def __repr__(self):
         return f'{self.name}\nHP: {self.health}\nSTR: {self.strength}\nShield: {self.shield}'
+
     def critical_attack(self, enemy):
         damage = 2 * (self.strength + self.weapon.damage) - (enemy.shield + enemy.weapon.defense)
         enemy.health -= damage
@@ -63,3 +64,5 @@ commodus = Character("Commodus", 100, 30, 5, double_daggers)
 
 
 maximus = Character("Maximus the Merciless", 1000, 60, 50, sword)
+
+
