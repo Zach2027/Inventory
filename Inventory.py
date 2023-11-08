@@ -99,7 +99,7 @@ def attack(player, enemy, attack_options):
             print(f"As you attack your opponent you get out played. Your opponent steps to the side, causing you to miss your attack and your opponent returns a wooden hilt to the face.  This puts you down to {player.health} health")
 
     if attack_1_10 == "4":
-        slice_up = random.choice(["big_win","win","lose","lose"])
+        slice_up = random.choice(["big_win","win","win","lose","lose"])
 
         if slice_up == "big_win":
             enemy.health = enemy.health - 2*player.strength
@@ -128,13 +128,13 @@ your opponent has {enemy.health} health left and you have {player.health} health
                         break
 
                 if save_life == "1":
-                    fame = fame + 5
+                    
                     player.name = player.name + " the Mercyfull"
-                    print("You slice your opponent's head clean off, gaining 5 fame and the new name .")
+                    print(f"You slice your opponent's head clean off, {player.name} fills the arena .")
                 if save_life == "2":
-                    fame = fame + 10
+                    
                     player.name += " the Mercyless"
-                    print("You defy the crowd, sparing your opponent's life.  By doing this you become more liked by all giving you 10 fame")
+                    print(f"You defy the crowd, sparing your opponent's life.  With this {player.name} fills the arena")
         if slice_up == "lose":
             player.health = player.health - enemy.strength + player.shield
 
@@ -183,7 +183,7 @@ this puts {enemy.name} down to {enemy.health} health while your at {player.healt
         fake_dead = random.choice(["fake","big lose"])
         if fake_dead == "fake":
             enemy.health = enemy.health - 1.5*player.strenth + enemy.shield
-            fame = fame - 1
+            
             if enemy.health > 0:
                 print(f"you fake a hamstring injury and {enemy.name} looks up at the crowd as they booooooooo.  As {enemy.name} looks up you stab and the crowd boooos more.")
                 print(f"you lost 1 fame and your opponent has {enemy.health} health left")
