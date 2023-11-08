@@ -67,7 +67,7 @@ def attack(player, enemy, attack_options):
     with a little force you manage to cut {enemy.name}'s hands off killing him and winning the fight but not the crowd''')
 
     if attack_1_10 == "2":
-        big_blow = random.choice(["win","win","lose","lose","lose"])
+        big_blow = random.choice(["win","win","win","win","lose","lose","lose","lose","lose","lose","lose"])
         if big_blow == "win":
             enemy.health = enemy.health - player.strength*1.5
             if enemy.health > 0:
@@ -122,7 +122,7 @@ your opponent has {enemy.health} health left and you have {player.health} health
     Although this is a non lethal strike, you have one the battle. Your opponent drops to the ground, defenseless. 'kill!' 'kill!' 'kill!' 
     start to fill the air. your opponent's life is in your hands.""")
                 save_life = input("Do you (1) listen to the crowd or (2), spare the fighters life")
-                while int(save_life) != 1 and int(save_life) != 2:
+                while save_life != "1" and save_life != "2":
                     save_life = input("please enter a 1 or a 2")
                     if save_life == "1" or save_life == "2":
                         break
@@ -237,9 +237,9 @@ this puts {enemy.name} down to {enemy.health} health while your at {player.healt
 
 def main():
     print('''This is a gladiator game that will bring you through the depths
-    of battle with rewards and gear, while playing, it will take you through the
-    key situations of the duel. With every win you get closer to freedom (reach 100 fame to become free)
-    Good luck to you''')
+of battle with rewards and gear, while playing, it will take you through the
+key situations of the duel. With every win you get closer to freedom (reach 100 fame to become free)
+Good luck to you''')
     print("Some Storyline requires you to hit enter to advance")
     player = Character(input("what is your name Gladiator?  "), 100, 0, 0, )
     print('''
@@ -286,7 +286,7 @@ def main():
         input('3 days later')
         choice_2 = input('''Through out your recovering time, you put your time to good use.
             You realize that you could (1) workout strengthing your self, (2) get a good healing meal or (3) attempt to get a lesson from an old Gladiator''')
-        while int(choice_2) != 1 and int(choice_2) != 2 and int(choice_2) != 3:
+        while choice_2 != "1" and choice_2 != "2" and choice_2 != "3":
             choice_2 = input("please enter a 1, 2 or a 3")               
 
         if choice_2 == "1":
@@ -428,7 +428,7 @@ def main():
             player.shield += 8
         
         print(f'''
-As you step through the grand entrance, the deafening roar of the crowd chanting {enemy_1} louder than {player.name}, is something that sends shivers down your spine.
+As you step through the grand entrance, the deafening roar of the crowd chanting {enemy_1.name} louder than {player.name}, is something that sends shivers down your spine.
 You finally see your opponent, who is named {enemy_1.name}. {enemy_1.name} is undefeated. From his past fights, you know that {enemy_1.name} has {enemy_1.health} health compared to your {player.health} health.
 You have {player.strength} strength while {enemy_1.name} has {enemy_1.strength} strength.
 You defense is {player.shield} while {enemy_1.name} has {enemy_1.shield}.''')
@@ -596,9 +596,9 @@ The crowd aplauses and the great battle will happen in 1 week.""")
 
 
     input(f"""Time zips by when you realize you have 1 hour until you take your revenge.  
-    Out of no where 4 guards rush in and you black out
+    Out of nowhere 4 guards rush in and you black out
           
-When you wake you relize the Commodus is standing in front of you. 'This is going to be an easy fight he says as he stabs you through the chest.
+When you wake you realize the Commodus is standing in front of you. 'This is going to be an easy fight' he says as he stabs you through the chest.
     Your armor gets put on top, concealing your wound and you get dragged out into the Colosseum.  Your weak but you need to get your revenge in this life or the next
 You have {player.health} health, you have {player.shield} shield and {player.strength}
 The battle begins as Comodus walks out.""")
