@@ -99,7 +99,7 @@ def attack(player, enemy, attack_options):
             print(f"As you attack your opponent you get out played. Your opponent steps to the side, causing you to miss your attack and your opponent returns a wooden hilt to the face.  This puts you down to {player.health} health")
 
     if attack_1_10 == "4":
-        slice_up = random.choice(["big_win","win","win","lose","lose"])
+        slice_up = random.choice(["big_win","win","lose","lose"])
 
         if slice_up == "big_win":
             enemy.health = enemy.health - 2*player.strength
@@ -147,7 +147,7 @@ your opponent has {enemy.health} health left and you have {player.health} health
         if foot == "sweep":
             enemy.health = enemy.health - player.strength + enemy.shield
             if enemy.health > 0:
-                print(f"""You sucsessfully sweep the leg of {enemy.name}, causing him to fall, this is an effective way to tire out {enemy.name}
+                print(f"""You successfully sweep the leg of {enemy.name}, causing him to fall, this is an effective way to tire out {enemy.name}
 this puts {enemy.name} down to {enemy.health} health while your at {player.health} health""")
             else:
                 print(f"As you Sweep {enemy.name}'s leg, he falls which gives you enough time throw your {player.weapon} down through {enemy.name}'s head, winning the crowd and the Fight.")
