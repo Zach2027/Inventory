@@ -572,34 +572,34 @@ Commodus, Emporer of Rome holds his hand in a fist with his thumb up.  With this
 
 
 
-    enemy_1 = corvus
-    input(f'''You are getting ready for battle when you hear news that the emporer is a big fan of yours
+        enemy_1 = corvus
+        input(f'''You are getting ready for battle when you hear news that the emporer is a big fan of yours
 He will be watching this fight as well as he was keeping track of your last few fights.
 Athough he apears as a fan you know deep down that he has hated you ever sense your 4th fight.
 You also have hated him when he made the choice to leave you out to die in the battle field
 This can't get in the way of the fight so you start to look at {enemy_1}''')
-    input(f'''You have {player.health} when {enemy_1.name} has {enemy_1.health}
+        input(f'''You have {player.health} when {enemy_1.name} has {enemy_1.health}
 You have{player.strength} while {enemy_1.name} has {enemy_1.strength}
 You have {player.shield} while {enemy_1.name} has {enemy_1.shield}''')
-    fight(player, enemy_1, 8)
-    player.health = player.health + 30
-    input(f"""It has been a long fight with blood on your hands and blood on your {weapon_1.name}.
+        fight(player, enemy_1, 8)
+        player.health = player.health + 30
+        input(f"""It has been a long fight with blood on your hands and blood on your {weapon_1.name}.
 50 or so soldiers apear, spears out ready to kill.  All around you when the emperor comes out, he wants to meet you.
 'I am Commodus, Emperor of Rome and who are you.
 'I am {player.name}'
 'tell me your real name slave' """)
-    real_name = input("Your real name")
-    real_name = real_name + random.choice([" the commander of the Armies of the North, General of the Felix Legions","the Commander of the Armies of the South, General of the Shadow Legions", "the Commander of the Armies of the East, General of the Fire Legions"])
-    real_strength = player.strength
-    player.strength = 15
-    real_shield = player.shield 
-    player.shield = 5
-    real_health = player.health
-    player.health = 60
-    enemy_1 = commodus
+        real_name = input("Your real name")
+        real_name = real_name + random.choice([" the commander of the Armies of the North, General of the Felix Legions","the Commander of the Armies of the South, General of the Shadow Legions", "the Commander of the Armies of the East, General of the Fire Legions"])
+        real_strength = player.strength
+        player.strength = 15
+        real_shield = player.shield 
+        player.shield = 5
+        real_health = player.health
+        player.health = 60
+        enemy_1 = commodus
 
 
-    input(f"""I am {real_name}
+        input(f"""I am {real_name}
     'Why won't you just die'
 Gasps fall over the crowd becuase you were the greatest General in all of rome, now forced to fight.
 You are now standing in front of the man who killed your family and he knows it.  A sign of relief falls over Commodus's face when he says
@@ -607,25 +607,25 @@ You are now standing in front of the man who killed your family and he knows it.
 The crowd aplauses and the great battle will happen in 1 week.""")
 
 
-    input(f"""Time zips by when you realize you have 1 hour until you take your revenge.  
+        input(f"""Time zips by when you realize you have 1 hour until you take your revenge.  
     Out of nowhere 4 guards rush in and you black out
           
 When you wake you realize the Commodus is standing in front of you. 'This is going to be an easy fight' he says as he stabs you through the chest.
     Your armor gets put on top, concealing your wound and you get dragged out into the Colosseum.  Your weak but you need to get your revenge in this life or the next
 You have {player.health} health, you have {player.shield} shield and {player.strength}
 The battle begins as Comodus walks out.""")
-    fight(player, enemy_1, 9)
-    fame += 20
+        fight(player, enemy_1, 9)
+        fame += 20
 
-    player.shield = real_shield
-    player.strength = real_strength 
-    player.health = real_health 
-    input(f''' As you take in the chanting of the surrounding crowd, all you can think about is your sweet sweet revenge. 
+        player.shield = real_shield
+        player.strength = real_strength 
+        player.health = real_health 
+        input(f''' As you take in the chanting of the surrounding crowd, all you can think about is your sweet sweet revenge. 
         You, {real_name} have gotten your revenge on the tyrant who murdered your family, and Marcus Aurelius the True King of Rome. 
         The chanting begins to fade, and a sharp pain is felt all over your body. As you begin to limp your legs go numb, and you collapse.
         The only thought in your mind is of your late family, and the glory you have brought to Rome.''')
-    if fame > 100:
-        input(f'''Your Supporters storm the arena, bringing your lifeless body to a medical bay, attempting to save you.
+        if fame > 100:
+            input(f'''Your Supporters storm the arena, bringing your lifeless body to a medical bay, attempting to save you.
         You wake up, and see a crowd of thousands chanting king, king, king. A man walks up to you with a crown. He says '{real_name}' you are the only Emperor of Rome, and hands you a crown.
         You walk out and place the crown atop your head. You greet your people, and recite 'I {real_name} am your true emperor. You shall be treated as the true people of Rome.'
         ''')
